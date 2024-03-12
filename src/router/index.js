@@ -7,6 +7,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: () => import('../views/HomeView.vue')
+    },
+    {
+      path: '/zyra',
+      name: 'Zyra',
+      component: () => import('../views/ZyraView.vue')
     }
   ]
 })
