@@ -14,15 +14,15 @@ main {
     justify-content: center;
     align-items: center;
     animation: loadingAnim 1s backwards ease-in-out;
-    top: 100%;
+    right: 100%;
 }
 
 @keyframes loadingAnim{
     0%,25%{
-        top: 0;
+        right: 0;
     }
     100%{
-        top: 100%;
+        right: 100%;
     }
 }
 span {

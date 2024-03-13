@@ -1,33 +1,32 @@
 <script setup>
-import {ref} from 'vue'
-
+import { ref } from 'vue'
+import {
+    CheckCircle,
+    EyeOffOutline,
+    EyeOutline
+} from '@/components/icons'
 import LoadingComponent from '@/components/LoadingComponent.vue';
-
-import CheckCircle from 'vue-material-design-icons/CheckCircle.vue';
-import EyeOffOutline from 'vue-material-design-icons/EyeOffOutline.vue';
-import EyeOutline from 'vue-material-design-icons/EyeOutline.vue';
-
 const verSenha = ref(false)
 </script>
 
 <template>
     <main>
-        <LoadingComponent/>
+        <LoadingComponent />
         <form>
             <h1>Entrar</h1>
             <label>
                 <p>Usuário</p>
                 <div class="input-container">
                     <input type="email">
-                    <CheckCircle/>
+                    <CheckCircle />
                 </div>
             </label>
             <label>
                 <p>Senha</p>
                 <div class="input-container">
                     <input type="email">
-                    <EyeOutline v-if="!verSenha" @click="verSenha = !verSenha"/>
-                    <EyeOffOutline v-if="verSenha" @click="verSenha = !verSenha"/>
+                    <EyeOutline v-if="!verSenha" @click="verSenha = !verSenha" />
+                    <EyeOffOutline v-if="verSenha" @click="verSenha = !verSenha" />
                 </div>
             </label>
             <button>Entrar</button>
@@ -52,11 +51,12 @@ label {
     border-radius: 9px;
     margin-top: 1%;
 }
-.input-container span{
+
+.input-container span {
     height: 20px;
 }
 
-input{
+input {
     background-color: transparent;
     color: #716F6F;
 }
@@ -101,7 +101,7 @@ p {
 
 h1 {
     margin-bottom: 10%;
-font-weight: 500;
+    font-weight: 500;
 }
 
 h1,
