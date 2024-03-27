@@ -1,3 +1,3 @@
-import LoadingComponent from "./LoadingComponent.vue";
+import LoadingComponent from "./Login/LoadingComponent.vue";
 
 export { LoadingComponent }
