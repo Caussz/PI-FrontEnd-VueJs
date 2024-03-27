@@ -3,15 +3,18 @@ import { ref } from 'vue'
 import LoadingComponent from '@/components/Login/LoadingComponent.vue';
 
 import { useMonitor } from '@/composables/monitor';
+import { useScreen } from '@/composables/screen';
 
 const { login } = useMonitor()
 
 const verSenha = ref(false)
+const {isMobile} = useScreen()
+console.log(isMobile)
 </script>
 
 <template>
     <main>
-        <LoadingComponent />
+        <LoadingComponent v-if="isMobile"/>
         <component :is="login"/>
     </main>
 </template>
