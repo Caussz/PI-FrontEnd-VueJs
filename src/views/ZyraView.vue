@@ -1,0 +1,44 @@
+<script setup>
+import { ref } from 'vue'
+import LoadingComponent from '@/components/Login/LoadingComponent.vue';
+
+import { useMonitor } from '@/composables/monitor';
+
+const { login } = useMonitor()
+
+const verSenha = ref(false)
+</script>
+
+<template>
+    <main>
+        <LoadingComponent />
+        <component :is="login"/>
+    </main>
+</template>
+
+<style scoped>
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1E1E1E;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+h1 {
+    margin-bottom: 10%;
+    font-weight: 500;
+}
+
+h1,
+p {
+    color: #FFFFFF;
+}
+</style>
