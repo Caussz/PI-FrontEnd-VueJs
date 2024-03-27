@@ -16,14 +16,14 @@ const verSenha = ref(false)
         <label>
             <p>Usuário</p>
             <div class="input-container">
-                <input type="email">
+                <input type="text" placeholder="Digite seu usuário">
                 <CheckCircle />
             </div>
         </label>
         <label>
             <p>Senha</p>
             <div class="input-container">
-                <input type="email">
+                <input type="password" placeholder="⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁">
                 <EyeOutline v-if="!verSenha" @click="verSenha = !verSenha" />
                 <EyeOffOutline v-if="verSenha" @click="verSenha = !verSenha" />
             </div>

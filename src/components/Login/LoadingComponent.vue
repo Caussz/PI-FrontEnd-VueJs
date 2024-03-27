@@ -15,6 +15,7 @@ main {
     align-items: center;
     animation: loadingAnim 1s backwards ease-in-out;
     right: 100%;
+    z-index: 5;
 }
 
 @keyframes loadingAnim{
