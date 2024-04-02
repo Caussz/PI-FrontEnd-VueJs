@@ -7,7 +7,7 @@ import {
     EyeOutline
 } from '@/components/icons'
 
-const verSenha = ref(false)
+const showPass = ref(false)
 </script>
 
 <template>
@@ -24,8 +24,8 @@ const verSenha = ref(false)
             <p>Senha</p>
             <div class="input-container">
                 <input type="password" placeholder="⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁">
-                <EyeOutline v-if="!verSenha" @click="verSenha = !verSenha" />
-                <EyeOffOutline v-if="verSenha" @click="verSenha = !verSenha" />
+                <EyeOutline v-if="!showPass" @click="showPass = !showPass" />
+                <EyeOffOutline v-if="showPass" @click="showPass = !showPass" />
             </div>
         </label>
         <button>Entrar</button>
@@ -41,7 +41,7 @@ label {
     width: 100%;
     background-color: #3a3a3ab5;
     border: 1px solid #505050;
-    display: flex;
+    display: flex;  
     align-items: center;
     justify-content: space-around;
     color: #716F6F;
@@ -107,5 +107,12 @@ h1 {
 h1,
 p {
     color: #FFFFFF;
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+    .input-container {
+        width: 130%;
+    }
+
 }
 </style>
