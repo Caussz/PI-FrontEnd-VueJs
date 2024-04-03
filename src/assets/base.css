@@ -1,3 +1,6 @@
 :root {
+  /* color definition: --whatItIs-whereItFrom-color */
     --input-back-color: #3a3a3ab5;
+    --button-login-color: #99B898;
+    --border-button-login-color: #505050;
   }

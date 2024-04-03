@@ -39,8 +39,8 @@ label {
 
 .input-container {
     width: 100%;
-    background-color: #3a3a3ab5;
-    border: 1px solid #505050;
+    background-color: var(--input-back-color);
+    border: 1px solid var(--border-button-login-color);
     display: flex;  
     align-items: center;
     justify-content: space-around;
@@ -67,7 +67,7 @@ input:focus-visible {
 
 button {
     margin-top: 15%;
-    background-color: #99B898;
+    background-color: var(--button-login-color);
     color: #000000;
     font-weight: 500;
     width: 100%;
