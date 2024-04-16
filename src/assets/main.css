@@ -8,3 +8,20 @@
   text-decoration: none;
   font-family: "Poppins", sans-serif;
 }
+
+body {
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: #1E1E1E !important;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background: linear-gradient(45deg, #1E1E1E 20%, #292929 50%, #1E1E1E 80%);
+  }
+
+}
