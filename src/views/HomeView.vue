@@ -1,5 +1,7 @@
+<script setup>
+import HomeMobileComponent from '../components/mobile/home/HomeMobileComponent.vue';
+</script>
+
 <template>
-  <main>
-    <h1>Inicio</h1>
-  </main>
+    <HomeMobileComponent />
 </template>
