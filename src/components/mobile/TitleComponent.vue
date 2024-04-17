@@ -4,7 +4,6 @@
     })
 </script>
 
-
 <template>
     <h1>
     {{ props.text }}
