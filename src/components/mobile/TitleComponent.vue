@@ -25,7 +25,7 @@ const props = defineProps({
 .container {
     position: relative;
     color: #FFFFFF;
-    margin-top: 5%;
+    margin: 7% 0 2% 0;
 }
 
 span {
