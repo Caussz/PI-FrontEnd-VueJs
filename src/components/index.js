@@ -4,8 +4,9 @@ import TitleComponent from './mobile/TitleComponent.vue'
 import LastUpdates from './mobile/home/LastUpdates.vue'
 import UpdateCard from './mobile/home/UpdateCard.vue'
 import SubjectsComponent from './mobile/home/SubjectsComponent.vue';
-import SubjectCard from './mobile/home/SubjectCard.vue';
+import TextCard from './mobile/TextCard.vue';
 import Header from "./mobile/home/Header.vue";
+import PlaceMobile from './mobile/subjectPlace/PlaceMobile.vue'
 
 export {
     LoadingComponent,
@@ -14,6 +15,7 @@ export {
     LastUpdates,
     UpdateCard,
     SubjectsComponent,
-    SubjectCard,
-    Header
+    TextCard,
+    Header,
+    PlaceMobile
 }

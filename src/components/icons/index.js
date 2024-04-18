@@ -6,6 +6,7 @@ import NotebookMultiple from 'vue-material-design-icons/NotebookMultiple.vue';
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
 import ChevronRight from 'vue-material-design-icons/ChevronRight.vue';
 import DotsVertical from 'vue-material-design-icons/DotsVertical.vue';
+import CalendarBlankOutline from 'vue-material-design-icons/CalendarBlankOutline.vue';
 
 export {
     CheckCircle,
@@ -15,5 +16,6 @@ export {
     NotebookMultiple,
     ChevronLeft,
     ChevronRight,
-    DotsVertical
+    DotsVertical,
+    CalendarBlankOutline
 }
