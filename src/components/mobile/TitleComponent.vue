@@ -1,19 +1,37 @@
 <script setup>
+import { ChevronLeft } from '../icons';
+
 const props = defineProps({
-    text: String
+    text: String,
+    outHome: Boolean
 })
 </script>
 
 <template>
-    <h1>
-        {{ props.text }}
-    </h1>
+    <div class="container">
+        <span v-if="outHome">
+            <ChevronLeft />
+        </span>
+        <h1>
+            {{ props.text }}
+        </h1>
+    </div>
 </template>
 
 <style scoped>
+.container {
+    position: relative;
+    color: #FFFFFF;
+    margin-top: 5%;
+}
+
+span{
+    position: absolute;
+    left: 5%;
+}
+
 h1 {
     text-align: center;
     font-size: 1rem;
-    color: #FFFFFF;
 }
 </style>
