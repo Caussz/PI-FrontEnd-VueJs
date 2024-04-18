@@ -31,6 +31,7 @@ const props = defineProps({
 span {
     position: absolute;
     left: 5%;
+    color: #FFFFFF;
 }
 
 h1 {
