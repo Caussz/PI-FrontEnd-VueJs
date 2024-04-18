@@ -8,7 +8,6 @@ const props = defineProps({
 })
 </script>
 
-
 <template>
     <div class="container">
         <div class="icon-container">
