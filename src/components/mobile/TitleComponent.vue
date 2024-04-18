@@ -28,7 +28,7 @@ const props = defineProps({
     margin-top: 5%;
 }
 
-span{
+span {
     position: absolute;
     left: 5%;
 }
