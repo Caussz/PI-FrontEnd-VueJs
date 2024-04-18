@@ -20,6 +20,5 @@ export {
     Header,
     Search,
     TextCard,
-    Header,
     PlaceMobile
 }
