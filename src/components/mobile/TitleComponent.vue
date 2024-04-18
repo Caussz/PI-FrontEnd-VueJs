@@ -9,8 +9,10 @@ const props = defineProps({
 
 <template>
     <div class="container">
-        <span v-if="outHome">
-            <ChevronLeft />
+        <span>
+            <router-link to="/">
+                <ChevronLeft />
+            </router-link>
         </span>
         <h1>
             {{ props.text }}
@@ -25,7 +27,7 @@ const props = defineProps({
     margin-top: 5%;
 }
 
-span{
+span {
     position: absolute;
     left: 5%;
 }
