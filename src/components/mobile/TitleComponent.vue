@@ -8,7 +8,12 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="title-container">
+    <div class="container">
+        <span>
+            <router-link to="/">
+                <ChevronLeft />
+            </router-link>
+        </span>
         <h1>
             {{ props.text }}
         </h1>
@@ -22,10 +27,15 @@ const props = defineProps({
 </template>
 
 <style scoped>
-.title-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.container {
+    position: relative;
+    color: #FFFFFF;
+    margin-top: 5%;
+}
+
+span {
+    position: absolute;
+    left: 5%;
 }
 
 h1 {
