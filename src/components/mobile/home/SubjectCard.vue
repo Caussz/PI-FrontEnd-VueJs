@@ -1,10 +1,9 @@
 <script setup>
-import { ChevronLeft, ChevronRight } from '../../icons/index.js'
+import { NotebookMultiple, DotsVertical } from '../../icons/index.js'
 
 const props = defineProps({
     subject: String,
-    desc: String,
-    date: String
+    room: String,
 })
 </script>
 
@@ -12,20 +11,25 @@ const props = defineProps({
 <template>
     <div class="container">
         <div class="icon-container">
-            <ChevronLeft />
+            <NotebookMultiple />
         </div>
         <div class="infos">
-            <p> {{ props.subject }}- {{ props.date }}</p>
-            <p class="gradient-text">{{ props.desc }}</p>
+            <p>{{ props.subject }}</p>
+            <p class="gradient-text">{{ props.room }}</p>
         </div>
         <div class="icon-container">
-            <ChevronRight />
+            <DotsVertical />
         </div>
     </div>
 
 </template>
 
 <style scoped>
+.infos {
+    width: 70%;
+    overflow-x: hidden;
+}
+
 .icon-container {
     translate: 0 15%;
 }
@@ -36,7 +40,7 @@ const props = defineProps({
     align-items: center;
     justify-content: space-around;
     width: 90%;
-    margin: 2% auto 5% auto;
+    margin: 2% auto;
     border: #505050 solid 1px;
     background-color: #242424;
     padding: 1rem 0;
@@ -45,11 +49,6 @@ const props = defineProps({
 
 .container p:nth-child(1) {
     color: #FFFFFF;
-}
-
-.infos {
-    width: 70%;
-    overflow-x: hidden;
 }
 
 .gradient-text {
