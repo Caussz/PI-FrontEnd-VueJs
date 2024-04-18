@@ -30,7 +30,6 @@ const props = defineProps({
 
 h1 {
     font-size: 1rem;
-    color: #FFFFFF;
 }
 
 span {
