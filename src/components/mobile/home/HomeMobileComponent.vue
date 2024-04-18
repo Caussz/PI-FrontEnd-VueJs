@@ -1,12 +1,12 @@
 <script setup>
-import Header from './Header.vue';
-import LastUpdates from '../home/LastUpdates.vue'
+import {SubjectsComponent, Header, LastUpdates} from '../../index';
 </script>
 
 <template>
   <Header />
   <main>
     <LastUpdates/>
+    <SubjectsComponent/>
   </main>
 </template>
 
