@@ -2,7 +2,7 @@
 import { TitleComponent, UpdateCard } from '../../index.js'
 
 const update = [
-    { subject: 'Matemática', desc: 'Tarefa atualizada', date: '11/09/2024' }
+    { subject: 'Matemática', desc: 'Tarefa alterada', date: '11/09/2024' }
 ]
 </script>
 
