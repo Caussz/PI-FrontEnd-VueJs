@@ -6,6 +6,7 @@ import UpdateCard from './mobile/home/UpdateCard.vue'
 import SubjectsComponent from './mobile/home/SubjectsComponent.vue';
 import SubjectCard from './mobile/home/SubjectCard.vue';
 import Header from "./mobile/home/Header.vue";
+import Search from '@/components/Search.vue';
 
 export {
     LoadingComponent,
@@ -15,5 +16,6 @@ export {
     UpdateCard,
     SubjectsComponent,
     SubjectCard,
-    Header
+    Header,
+    Search
 }
