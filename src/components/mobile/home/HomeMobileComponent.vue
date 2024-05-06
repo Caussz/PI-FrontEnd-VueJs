@@ -1,10 +1,11 @@
 <script setup>
-import { SubjectsComponent, Header, LastUpdates } from '../../index';
+import { SubjectsComponent, Header, LastUpdates, Search } from '../../index';
 </script>
 
 <template>
   <Header />
   <main>
+    <Search />
     <LastUpdates />
     <SubjectsComponent />
   </main>
