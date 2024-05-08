@@ -25,20 +25,22 @@ main {
         right: 100%;
     }
 }
+
 span {
     color: #99B898;
     rotate:270deg;
     font-family: "Kodchasan", sans-serif;
     font-size: 6rem;
     font-weight: 400;
-
 }
+
 span::before, span::after{
     content: "";
     display: block;
     height: 0;
     width: 0;
 }
+
 span::before{
     margin-top: -2rem;
 }
