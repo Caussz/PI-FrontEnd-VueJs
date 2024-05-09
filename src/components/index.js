@@ -7,7 +7,7 @@ import SubjectsComponent from './mobile/home/SubjectsComponent.vue';
 import TextCard from './mobile/TextCard.vue';
 import Header from "./mobile/home/Header.vue";
 import Search from '@/components/Search.vue';
-import PlaceMobile from './mobile/subjectPlace/PlaceMobile.vue'
+import PlaceMobile from './mobile/subjectPlace/PlaceMobile.vue';
 
 export {
     LoadingComponent,
