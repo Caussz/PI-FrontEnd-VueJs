@@ -7,7 +7,7 @@ const update = [
 </script>
 
 <template>
-    <TitleComponent text="Ultimas atualizações" />
+    <TitleComponent text="Ultimas atualizações" :more="true" />
     <UpdateCard :subject='update[0].subject' :desc='update[0].desc' :date="update[0].date" />
 </template>
 

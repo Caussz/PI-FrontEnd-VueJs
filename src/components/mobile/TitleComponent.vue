@@ -9,37 +9,26 @@ const props = defineProps({
 
 <template>
     <div class="container">
-        <span v-if="outHome">
-            <router-link to="/">
-                <ChevronLeft />
-            </router-link>
-        </span>
         <h1>
             {{ props.text }}
         </h1>
-        <span>
+        <span v-if="more">
             <p>Ver Mais</p>
             <ChevronRight size="18" />
         </span>
     </div>
-
-
 </template>
 
 <style scoped>
 .container {
-    position: relative;
-    color: #FFFFFF;
-    margin: 7% 0 2% 0;
-}
-
-span {
-    position: absolute;
-    left: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 h1 {
     font-size: 1rem;
+    color: #FFFFFF;
 }
 
 span {

@@ -8,6 +8,7 @@ import TextCard from './mobile/TextCard.vue';
 import Header from "./mobile/home/Header.vue";
 import Search from '@/components/Search.vue';
 import PlaceMobile from './mobile/subjectPlace/PlaceMobile.vue';
+import SubjectCard from "./mobile/home/SubjectCard.vue";
 
 export {
     LoadingComponent,
@@ -17,7 +18,6 @@ export {
     UpdateCard,
     SubjectsComponent,
     SubjectCard,
-    Header,
     Search,
     TextCard,
     Header,
