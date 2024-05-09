@@ -12,30 +12,23 @@ const props = defineProps({
         <h1>
             {{ props.text }}
         </h1>
-        <span>
+        <span v-if="more">
             <p>Ver Mais</p>
             <ChevronRight size="18" />
         </span>
     </div>
-
-
 </template>
 
 <style scoped>
 .container {
-    position: relative;
-    color: #FFFFFF;
-    margin: 7% 0 2% 0;
-}
-
-span {
-    position: absolute;
-    left: 5%;
-    color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 h1 {
     text-align: center;
     font-size: 1rem;
+    color: #FFFFFF;
 }
 </style>
