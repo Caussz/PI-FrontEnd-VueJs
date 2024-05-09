@@ -31,4 +31,11 @@ h1 {
     font-size: 1rem;
     color: #FFFFFF;
 }
+
+span {
+    display: flex;
+    color: #525252;
+    font-size: .8rem;
+    align-items: center;
+}
 </style>
