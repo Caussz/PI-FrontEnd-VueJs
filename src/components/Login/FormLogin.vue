@@ -1,118 +1,119 @@
 <script setup>
 import { ref } from 'vue'
 
-import {
-    CheckCircle,
-    EyeOffOutline,
-    EyeOutline
-} from '@/components/icons'
+import { CheckCircle, EyeOffOutline, EyeOutline } from '@/components/icons'
 
 const showPass = ref(false)
 </script>
 
 <template>
-    <form>
-        <h1>Entrar</h1>
-        <label>
-            <p>Usuário</p>
-            <div class="input-container">
-                <input type="text" placeholder="Digite seu usuário">
-                <CheckCircle />
-            </div>
-        </label>
-        <label>
-            <p>Senha</p>
-            <div class="input-container">
-                <input type="password" placeholder="⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁">
-                <EyeOutline v-if="!showPass" @click="showPass = !showPass" />
-                <EyeOffOutline v-if="showPass" @click="showPass = !showPass" />
-            </div>
-        </label>
-        <button>Entrar</button>
-    </form>
+  <form>
+    <h1>Entrar</h1>
+    <label>
+      <p>Usuário</p>
+      <div class="input-container">
+        <input type="text" placeholder="Digite seu usuário" />
+        <CheckCircle />
+      </div>
+    </label>
+    <label>
+      <p>Senha</p>
+      <div class="input-container">
+        <input type="password" placeholder="⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁" />
+        <EyeOutline v-if="!showPass" @click="showPass = !showPass" />
+        <EyeOffOutline v-if="showPass" @click="showPass = !showPass" />
+      </div>
+    </label>
+    <button>Entrar</button>
+  </form>
 </template>
 
 <style scoped>
 label {
-    width: 100%;
+  width: 100%;
 }
 
 .input-container {
-    width: 100%;
-    background-color: var(--input-back-color);
-    border: 1px solid var(--border-button-login-color);
-    display: flex;  
-    align-items: center;
-    justify-content: space-around;
-    color: #716F6F;
-    padding: 5% 0;
-    border-radius: 9px;
-    margin-top: 1%;
+  width: 100% !important;
+  background-color: var(--input-back-color);
+  border: 1px solid var(--border-button-login-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #716f6f;
+  padding: 5% 0;
+  border-radius: 9px;
+  margin-top: 1%;
 }
-.input-container:focus-within{
-    border: solid 1px #99b89873;
+.input-container:focus-within {
+  border: solid 1px #99b89873;
 }
 .input-container span {
-    height: 20px;
+  height: 20px;
 }
 
 input {
-    background-color: transparent;
-    color: #716F6F;
+  background-color: transparent;
+  color: #716f6f;
 }
 
 input:focus-visible {
-    outline: 0;
+  outline: 0;
 }
 
 button {
-    margin-top: 15%;
-    background-color: var(--button-login-color);
-    color: #000000;
-    font-weight: 500;
-    width: 100%;
-    padding-block: 1rem;
-    border-radius: 5rem;
-    font-size: 1.1rem;
+  margin-top: 15%;
+  background-color: var(--button-login-color);
+  color: #000000;
+  font-weight: 500;
+  width: 100%;
+  padding-block: 1rem;
+  border-radius: 5rem;
+  font-size: 1.1rem;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 85%;
-    gap: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  gap: 2vh;
 }
 
 main {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-color: #1E1E1E;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1e1e1e;
+  justify-content: center;
+  align-items: center;
 }
 
 p {
-    font-weight: 300;
-    font-size: .8rem;
+  font-weight: 300;
+  font-size: 0.9rem;
 }
 
 h1 {
-    margin-bottom: 10%;
-    font-weight: 500;
+  margin-bottom: 10%;
+  font-weight: 500;
 }
 
 h1,
 p {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 @media (max-width: 1200px) and (min-width: 768px) {
-    .input-container {
-        width: 130%;
-    }
+  .input-container {
+    width: 130%;
+  }
+}
 
+@media (max-width: 756px) {
+    p, input {
+        font-size: 1.1em;
+    }
 }
 </style>
