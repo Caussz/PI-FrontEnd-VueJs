@@ -12,7 +12,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div :class="bgCard? 'container bg-card': 'container'">
+    <div :class="bgCard ? 'container bg-card' : 'container'">
         <div class="icon-container" v-if="props.icon == 'book'">
             <NotebookMultiple />
         </div>
@@ -20,7 +20,7 @@ const props = defineProps({
             <CalendarBlankOutline />
         </div>
         <div class="infos">
-            <p>{{ props.title }}</p>
+            <p class="title">{{ props.title }}</p>
             <p :class="props.infoColor">{{ props.information }}</p>
         </div>
         <div class="icon-container" v-if="props.actionIcon == 'dots'">
@@ -53,6 +53,11 @@ const props = defineProps({
 .infos {
     width: 70%;
     overflow-x: hidden;
+}
+
+.title {
+    overflow: hidden;
+    max-height: 3rem;
 }
 
 .icon-container {
