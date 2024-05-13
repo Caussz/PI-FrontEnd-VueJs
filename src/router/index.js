@@ -15,6 +15,11 @@ const router = createRouter({
       path: '/zyra',
       name: 'Zyra',
       component: () => import('../views/ZyraView.vue')
+    },
+    {
+      path: '/place',
+      name: 'Place',
+      component: () => import('../views/SubjectPlaceView.vue')
     }
   ]
 })

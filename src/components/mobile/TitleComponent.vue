@@ -8,27 +8,26 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="title-container">
+    <div class="container">
         <h1>
             {{ props.text }}
         </h1>
-        <span>
+        <span v-if="more">
             <p>Ver Mais</p>
             <ChevronRight size="18" />
         </span>
     </div>
-
-
 </template>
 
 <style scoped>
-.title-container {
+.container {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 h1 {
+    text-align: center;
     font-size: 1rem;
     color: #FFFFFF;
 }
