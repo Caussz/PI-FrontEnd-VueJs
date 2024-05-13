@@ -22,6 +22,11 @@ const router = createRouter({
           path: '/bulletin',
           name: 'bulletin',
           component: () => import('../views/BulletinView.vue')
+        },
+        {
+          path: '/profile',
+          name: 'profile',
+          component: () => import('../views/ProfileView.vue')
         }
       ],
       meta: {
