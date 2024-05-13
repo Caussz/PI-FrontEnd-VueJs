@@ -21,6 +21,8 @@ import Help from 'vue-material-design-icons/Help.vue';
 import Logout from 'vue-material-design-icons/Logout.vue'
 import Close from 'vue-material-design-icons/Close.vue'
 import Check from 'vue-material-design-icons/Check.vue';
+import CameraOutline from 'vue-material-design-icons/CameraOutline.vue';
+
 
 export {
     CheckCircle,
@@ -46,4 +48,5 @@ export {
     Logout,
     Close,
     Check,
+    CameraOutline
 }
