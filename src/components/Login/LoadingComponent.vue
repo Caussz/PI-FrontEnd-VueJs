@@ -10,7 +10,6 @@ main {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: #1E1E1E;
     justify-content: center;
     align-items: center;
     animation: loadingAnim 1s backwards ease-in-out;
@@ -27,7 +26,7 @@ main {
     }
 }
 span {
-    color: #99B898;
+    color: var(--text-loading-color);
     rotate:270deg;
     font-family: "Kodchasan", sans-serif;
     font-size: 6rem;
