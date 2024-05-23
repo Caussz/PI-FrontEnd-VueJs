@@ -40,7 +40,7 @@ label {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color: #716f6f;
+  color: var(--icon-login-color);
   padding: 5% 0;
   border-radius: 9px;
   margin-top: 1%;
@@ -54,7 +54,7 @@ label {
 
 input {
   background-color: transparent;
-  color: #716f6f;
+  color: red;
 }
 
 input:focus-visible {
@@ -64,7 +64,7 @@ input:focus-visible {
 button {
   margin-top: 15%;
   background-color: var(--button-login-color);
-  color: #000000;
+  color: var(--text-butto-color);
   font-weight: 500;
   width: 100%;
   padding-block: 1rem;
@@ -81,15 +81,6 @@ form {
   gap: 2vh;
 }
 
-main {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  background-color: #1e1e1e;
-  justify-content: center;
-  align-items: center;
-}
-
 p {
   font-weight: 300;
   font-size: 0.9rem;
@@ -102,7 +93,7 @@ h1 {
 
 h1,
 p {
-  color: #ffffff;
+  color: var(--text-login-color);
 }
 
 @media (max-width: 1200px) and (min-width: 768px) {

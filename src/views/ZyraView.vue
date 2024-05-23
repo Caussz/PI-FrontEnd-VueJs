@@ -23,7 +23,7 @@ main {
     display: flex;
     width: 100vw;
     height: 100vh;
-    background-color: #1E1E1E;
+    background-color: var(--background-home-color);
     justify-content: center;
     align-items: center;
 }
@@ -36,10 +36,5 @@ p {
 h1 {
     margin-bottom: 10%;
     font-weight: 500;
-}
-
-h1,
-p {
-    color: #FFFFFF;
 }
 </style>
