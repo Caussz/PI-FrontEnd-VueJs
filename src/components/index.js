@@ -9,6 +9,9 @@ import Header from "./mobile/home/Header.vue";
 import Search from '@/components/Search.vue';
 import PlaceMobile from './mobile/subjectPlace/PlaceMobile.vue';
 import SubjectCard from "./mobile/home/SubjectCard.vue";
+import MobileLoginForm from '@/components/Form/Login/Mobile/MobileLoginForm.vue'
+import DesktopLoginForm from '@/components/Form/Login/Desktop/DesktopLoginForm.vue'
+import DefaultLoginForm from '@/components/Form/Login/DefaultLoginForm.vue'
 
 export {
     LoadingComponent,
@@ -21,5 +24,8 @@ export {
     Search,
     TextCard,
     PlaceMobile,
-    Header
+    Header,
+    MobileLoginForm,
+    DesktopLoginForm,
+    DefaultLoginForm
 }
