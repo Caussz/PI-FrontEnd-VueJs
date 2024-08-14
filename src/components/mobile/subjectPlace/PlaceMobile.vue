@@ -14,5 +14,6 @@ import { TitleComponent, TextCard } from "../../index.js"
 <style scoped>
 .cards-container{
     margin-top: 5%;
+    padding: 0 1rem;
 }
 </style>
