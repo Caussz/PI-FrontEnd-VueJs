@@ -1,5 +1,5 @@
 <script setup>
-import { NotebookMultiple, DotsVertical, CalendarBlankOutline, ChevronRight } from '../icons/index.js'
+import { NotebookMultiple, DotsVertical, CalendarBlankOutline, ChevronRight } from '@/components/icons';
 
 const props = defineProps({
     title: String,
@@ -8,7 +8,7 @@ const props = defineProps({
     icon: String,
     actionIcon: String,
     bgCard: Boolean
-})
+});
 </script>
 
 <template>

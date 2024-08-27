@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.11.1",
+    "axios": "^1.7.4",
     "pinia": "^2.1.7",
     "vite-plugin-pwa": "^0.19.7",
     "vue": "^3.4.15",

@@ -1,7 +1,17 @@
 <script setup>
-import HomeMobileComponent from '../components/mobile/home/HomeMobileComponent.vue';
+import { CurricularComponent, LastUpdates, SearchBar } from '@/components';
 </script>
 
 <template>
-    <HomeMobileComponent />
+  <main>
+    <SearchBar />
+    <LastUpdates />
+    <CurricularComponent />
+  </main>
 </template>
+
+<style scoped>
+main {
+  padding: 0 7%;
+}
+</style>

@@ -1,11 +1,11 @@
 <script setup>
-import { ArrowRight } from '../../icons/index.js'
+import { ArrowRight } from '@/components/icons';
 
 const props = defineProps({
     subject: String,
     desc: String,
     date: String
-})
+});
 </script>
 
 <template>

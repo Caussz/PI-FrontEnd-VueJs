@@ -1,10 +1,10 @@
 <script setup>
-import { NotebookMultiple, DotsVertical } from '../../icons/index.js'
+import { NotebookMultiple, DotsVertical } from '@/components/icons';
 
 const props = defineProps({
     subject: String,
     room: String,
-})
+});
 </script>
 
 <template>

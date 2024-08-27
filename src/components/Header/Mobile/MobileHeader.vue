@@ -1,13 +1,16 @@
 <script setup>
-  import Menu from 'vue-material-design-icons/Menu.vue'
+import { useUserStore } from '@/stores';
+import { Menu } from '@/components/icons';
+
+const { user } = useUserStore()
 </script>
 
 <template>
   <header>
-    <img src="https://i.ibb.co/4ty80mN/image.png" alt="" />
+    <img :src="user.photo" :alt="user.name" />
     <div class="user-info">
-      <p>Nome do usuário</p>
-      <p>123456789</p>
+      <p>{{user.name}}</p>
+      <p>{{user.matricula}}</p>
     </div>
     <div class="menu-icon">
       <Menu size="35"/>
@@ -43,7 +46,8 @@ header {
 }
 
 img {
-  width: 15%;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
 }
 </style>

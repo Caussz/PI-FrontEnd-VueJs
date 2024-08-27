@@ -1,24 +1,24 @@
-import './assets/main.css'
+import './assets/main.css';
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 
-import App from './App.vue'
-import router from './router'
+import App from './App.vue';
+import router from './router';
 
-const app = createApp(App)
+import { useUserStore } from './stores';
 
-app.use(createPinia())
-app.use(router)
+const app = createApp(App);
 
-const user = {
-    loggedIn: false
-};
+app.use(createPinia());
+app.use(router);
+
+const userStore = useUserStore();
 
 router.beforeEach((to, from, next) => {
     const requiresAuth = to.meta.requiresAuth;
-    if (requiresAuth && !user.loggedIn) {
-      next('/zyra')
+    if (requiresAuth && !userStore.user.loggedIn) {
+      next('/login')
     } else {
       next()
     }

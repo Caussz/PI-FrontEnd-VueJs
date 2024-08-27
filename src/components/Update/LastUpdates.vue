@@ -1,5 +1,5 @@
 <script setup>
-import { TitleComponent, UpdateCard } from '../../index.js'
+import { TitleComponent, UpdateCard } from '@/components';
 
 const update = [
     { subject: 'Matemática', desc: 'Tarefa alterada', date: '11/09/2024' }

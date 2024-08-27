@@ -1,5 +1,5 @@
 <script setup>
-import { Magnify } from './icons';
+import { Magnify } from '@/components/icons';
 </script>
 
 <template>

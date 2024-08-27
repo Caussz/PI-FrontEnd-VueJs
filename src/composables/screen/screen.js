@@ -8,10 +8,12 @@ export function useScreen() {
   const onBrowserResize = () => {
     browserWidth.value = window.innerWidth;
     deviceWidth.value = screen.width;
+
     isMobile.value = window.innerWidth < 768;
   };
 
   onMounted(() => {
+    onBrowserResize()
     window.addEventListener('resize', onBrowserResize);
   });
 

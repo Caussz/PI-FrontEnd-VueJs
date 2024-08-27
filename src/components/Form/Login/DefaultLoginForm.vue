@@ -3,7 +3,6 @@ import { MobileLoginForm, DesktopLoginForm } from "@/components";
 import { useScreen } from "@/composables";
 
 const { isMobile } = useScreen();
-console.log(isMobile);
 </script>
 
 <template>

@@ -1,11 +1,11 @@
 <script setup>
-import { ChevronRight, ChevronLeft } from '../icons';
+import { ChevronRight, ChevronLeft } from '@/components/icons';
 
 const props = defineProps({
     text: String,
     more: Boolean,
     outHome: Boolean
-})
+});
 </script>
 
 <template>

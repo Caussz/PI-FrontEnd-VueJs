@@ -6,20 +6,34 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('../views/HomeView.vue'),
-      // meta: {
-      //   requiresAuth: true
-      // }
+      component: () => import('../layouts/DefaultLayout.vue'),
+      children: [
+        {
+          path: '/',
+          name: 'home',
+          component: () => import('../views/HomeView.vue'),
+        },
+        {
+          path: '/place',
+          name: 'place',
+          component: () => import('../views/SubjectPlaceView.vue'),
+        }
+      ],
+      meta: {
+        requiresAuth: true
+      }
     },
     {
-      path: '/zyra',
-      name: 'Zyra',
-      component: () => import('../views/ZyraView.vue')
-    },
-    {
-      path: '/place',
-      name: 'Place',
-      component: () => import('../views/SubjectPlaceView.vue')
+      path: '/login',
+      name: 'login',
+      component: () => import('../layouts/BlanckLayout.vue'),
+      children: [
+        {
+          path: '/login',
+          name: 'login',
+          component: () => import('../views/LoginView.vue'),
+        }
+      ]
     }
   ]
 })

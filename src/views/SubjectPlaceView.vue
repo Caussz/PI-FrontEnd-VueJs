@@ -1,9 +1,7 @@
 <script setup>
-import { PlaceMobile } from '../components/index.js';
+import { Defaultplace } from '@/components';
 </script>
 
 <template>
-    <PlaceMobile />
+    <Defaultplace />
 </template>
-
-<style scoped></style>
