@@ -1,20 +1,21 @@
-<script>
+<script setup>
 import {
     ChevronLeft,
-    CameraOutline
+    CameraOutline,
 } from '@/components/icons'
 </script>
 <template>
 <main>
+    <CheckCircle />
     <div class="top">
         <div class="back-button">
-            <ChevronLeft class="icon" />
+            <ChevronLeft class="icon-arrow" />
         </div>
         <div class="user-image">
             <div class="image">
                 <img src="https://cdn-icons-png.flaticon.com/512/6326/6326055.png" alt="" />
                 <div class="camera">
-                    <CameraOutline class="icon" size="23" />
+                    <CameraOutline class="icon-cam" size="15" />
                 </div>
             </div>
             <p class="name">Oliver Calenbard</p>
@@ -56,8 +57,8 @@ import {
 
 <style scoped>
 main {
-    background-image: url(https://i.ibb.co/gtQnpZj/Splash-screen-design-3.png);
-    background-repeat: no-repeat;
+    background-image: url(https://i.ibb.co/dMvLSTz/Splash-screen-design-2.png);
+    background-repeat: round;
     background-size: cover;
     background-color: #1e1e1e;
     width: 100vw;
@@ -70,8 +71,9 @@ main {
 
 .container {
     display: grid;
-    grid-template-columns: 27vw 27vw;
+    grid-template-columns: 29vw 27vw;
     margin: 2vw 0;
+    
 }
 
 .info div {
@@ -109,7 +111,7 @@ input:focus {
 
     & .image {
         & img {
-            width: 7vw;
+            width: 8vw;
         }
     }
 
@@ -137,19 +139,24 @@ input:focus {
     padding: 0.3vw;
 }
 
-.icon {
+.icon-arrow /* remover  */ {
     margin: 0.3vw 0.3vw 0 0.2vw;
-    /* remover  */
 }
 
+.icon-cam /* remover  */ {
+    margin: 0.2vw 0 0 0;
+}
 .camera {
     background-color: #181818;
     border-radius: 2vw;
     border: #505050 solid 1px;
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 1.3vw;
+    height: 1.3vw;
     position: relative;
-    left: 4vw;
-    bottom: 2vw
+    left: 5.5vw;
+    bottom: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 </style>
