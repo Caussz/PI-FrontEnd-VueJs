@@ -4,6 +4,8 @@ import { useRouter } from "vue-router";
 import { CheckCircle, EyeOffOutline, EyeOutline } from "@/components/icons";
 import { useUserStore } from "@/stores";
 import { AuthService } from "@/services"
+import PopUp from '../../../PopUp/PopUpLoginComponent.vue'
+// import PopUpFinish from '../../../PopUp/PopUpLoginComponent.vue'
 
 const { getUserImage, getinfo, getUserFormat } = useUserStore()
 
@@ -46,6 +48,8 @@ const entrar = async () => {
         </div>
       </label>
       <button @click.prevent="entrar">Entrar</button>
+      <PopUp />
+      <!-- <PopUpFinish /> -->
     </div>
   </main>
 </template>
