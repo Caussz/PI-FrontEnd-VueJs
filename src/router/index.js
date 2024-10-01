@@ -16,13 +16,18 @@ const router = createRouter({
     //     {
     //       path: '/place',
     //       name: 'place',
-    //       component: () => import('../views/SubjectPlaceView.vue')
+    //       component: () => import('../views/SubjectPlaceView.vue'),
     //     }
     //   ],
     //   meta: {
     //     requiresAuth: true
     //   }
     // },
+    {
+      path: '/',
+      name: 'home',
+      component: () => import('../views/HomeView.vue'),
+    },
     {
       path: '/login',
       name: 'login',
@@ -31,19 +36,9 @@ const router = createRouter({
         {
           path: '/login',
           name: 'login',
-          component: () => import('../views/LoginView.vue')
+          component: () => import('../views/LoginView.vue'),
         }
       ]
-    },
-    {
-      path: '/home-desktop',
-      name: 'home-desktop',
-      component: () => import('../components/Home/Desktop/DesktopHome.vue')
-    },
-    {
-      path: '/',
-      name: 'home',
-      component: () => import('../views/HomeView.vue')
     }
   ]
 })
