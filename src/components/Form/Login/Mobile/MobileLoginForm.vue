@@ -3,7 +3,10 @@ import { ref, reactive } from "vue";
 import { useRouter } from "vue-router";
 import { CheckCircle, EyeOffOutline, EyeOutline } from "@/components/icons";
 import { useUserStore } from "@/stores";
-import { AuthService } from "@/services"
+import { AuthService } from "@/services";
+import PopUp from "../../../Lazy/PopUpLoginComponent.vue"; 
+
+const showModal = ref(false);
 
 const { getUserImage, getinfo, getUserFormat } = useUserStore()
 
@@ -47,6 +50,7 @@ const entrar = async () => {
       </label>
       <button @click.prevent="entrar">Entrar</button>
     </div>
+    <PopUp />
   </main>
 </template>
 

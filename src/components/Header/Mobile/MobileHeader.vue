@@ -10,7 +10,7 @@ const { user } = useUserStore()
     <img :src="user.photo" :alt="user.name" />
     <div class="user-info">
       <p>{{user.name}}</p>
-      <p>{{user.matricula}}</p>
+      <p>{{user.matricula}}</p> 
     </div>
     <div class="menu-icon">
       <Menu size="35"/>
