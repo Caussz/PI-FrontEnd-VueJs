@@ -3,17 +3,17 @@ import { ref, reactive } from "vue";
 import { useRouter } from "vue-router";
 import { CheckCircle, EyeOffOutline, EyeOutline } from "@/components/icons";
 import { useUserStore } from "@/stores";
-import { AuthService } from "@/services"
-import PopUp from '../../../PopUp/PopUpLoginComponent.vue'
-// import PopUpFinish from '../../../PopUp/PopUpLoginComponent.vue'
+import { AuthService } from "@/services";
+import PopUp from "../../../PopUp/PopUpLoginComponent.vue";
+import PopUpFinish from "../../../PopUp/PopUpLoginComponent.vue";
 
-const { getUserImage, getinfo, getUserFormat } = useUserStore()
+const { getUserImage, getinfo, getUserFormat } = useUserStore();
 
 const user = reactive({
   name: "",
-  pass: '',
-  image: null
-})
+  pass: "",
+  image: null,
+});
 
 const router = useRouter();
 const verSenha = ref(false);
@@ -22,14 +22,13 @@ const entrar = async () => {
   const { studentInfo } = await AuthService.getUserInfo(user.name, user.pass);
   getinfo(studentInfo);
   getUserImage(studentInfo?.photo);
-  getUserFormat(studentInfo?.name)
-  router.push({name: 'home'})
+  getUserFormat(studentInfo?.name);
+  router.push({ name: "home" });
 };
 </script>
 
 <template>
   <main>
-
     <div class="form">
       <h1>Entrar</h1>
       <label>
@@ -48,6 +47,9 @@ const entrar = async () => {
         </div>
       </label>
       <button @click.prevent="entrar">Entrar</button>
+      <p class="terms-text">
+        Li e concordo com os termos da <a>politica de privacidade</a>
+      </p>
       <PopUp />
       <!-- <PopUpFinish /> -->
     </div>
@@ -55,6 +57,14 @@ const entrar = async () => {
 </template>
 
 <style scoped>
+.terms-text {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+.terms-text a {
+  color: #99b898;
+}
+
 label {
   width: 100%;
 }
@@ -66,7 +76,7 @@ label {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color: #716F6F;
+  color: #716f6f;
   padding: 1rem 0;
   border-radius: 9px;
   margin-top: 1%;
@@ -78,7 +88,7 @@ label {
 
 input {
   background-color: transparent;
-  color: #716F6F;
+  color: #716f6f;
 }
 
 input:focus-visible {
@@ -87,7 +97,7 @@ input:focus-visible {
 
 button {
   margin-top: 15%;
-  background-color: #99B898;
+  background-color: #99b898;
   color: #000000;
   font-weight: 500;
   width: 100%;
@@ -109,14 +119,14 @@ main {
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   justify-content: center;
   align-items: center;
 }
 
 p {
-  font-weight: 300;
-  font-size: .8rem;
+  font-weight: 400;
+  font-size: 0.8rem;
 }
 
 h1 {
@@ -126,6 +136,6 @@ h1 {
 
 h1,
 p {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 </style>

@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <div class="fade">
+  <div class="background-blur">
     <div class="modal">
       <h2>Cadastro</h2>
       <p>
@@ -16,13 +16,12 @@
   </div>
 </template>
 <style scoped>
-.fade {
+.background-blur {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.205);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,6 +50,7 @@ h2 {
 p {
   color: white;
   font-weight: 500;
+  font-size: .76rem;
 }
 
 input {
@@ -58,9 +58,8 @@ input {
     border: #99B898 1px solid;
     outline: none;
     width: 60vw;
-    padding: 2vw;
+    padding: 2vh 2.3vw;
     border-radius: 5px;
-    height: 5vw;
     color: #716F6F;
 }
 
@@ -71,6 +70,6 @@ button {
   width: 100%;
   padding-block: 1rem;
   border-radius: 5rem;
-  font-size: 1.1rem;
+  font-size: .9rem;
 }
 </style>
