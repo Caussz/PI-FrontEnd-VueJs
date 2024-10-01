@@ -1,8 +1,8 @@
 <script setup>
-import { Check } from '@/components/icons'
+import { Check } from "@/components/icons";
 </script>
 <template>
-  <div class="fade">
+  <div class="background-blur">
     <div class="modal">
       <Check class="icon" size="90" />
       <p>Seu cadastro foi concluido com sucesso!</p>
@@ -11,13 +11,12 @@ import { Check } from '@/components/icons'
   </div>
 </template>
 <style scoped>
-.fade {
+.background-blur {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.205);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +46,7 @@ import { Check } from '@/components/icons'
 p {
   color: white;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 0.9rem;
   display: flex;
   text-align: center;
 }
