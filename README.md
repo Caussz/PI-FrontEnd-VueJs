@@ -4,10 +4,10 @@ This template should help get you started developing with Vue 3 in Vite.
 
 ## Integrantes da equipe
 
-Caua Vinicius Silva
-Giulia Raphaela Nobre
-Luiz Felipe Nunes
-Isadora Alcântara Xavier da Silva 
+Caua Vinicius Silva </br>
+Giulia Raphaela Nobre </br>
+Luiz Felipe Nunes </br>
+Isadora Alcântara Xavier da Silva </br>
 
 ## Recommended IDE Setup
 
