@@ -9,6 +9,7 @@ import DotsVertical from 'vue-material-design-icons/DotsVertical.vue';
 import ArrowRight from 'vue-material-design-icons/ArrowRight.vue';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
 import CalendarBlankOutline from 'vue-material-design-icons/CalendarBlankOutline.vue';
+import Check from 'vue-material-design-icons/Check.vue';
 
 export {
     CheckCircle,
@@ -21,5 +22,6 @@ export {
     DotsVertical,
     ArrowRight,
     Magnify,
-    CalendarBlankOutline
+    CalendarBlankOutline,
+    Check,
 }
