@@ -1,5 +1,5 @@
 <script setup>
-import DesktopHome from "../Home/Desktop/DesktopHome.vue";
+import DesktopHome from "./Desktop/DesktopHome.vue";
 import MobileHome from "../Home/Mobile/MobileHome.vue";
 import { useScreen } from "@/composables";
 

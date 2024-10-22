@@ -10,6 +10,9 @@ import ArrowRight from 'vue-material-design-icons/ArrowRight.vue';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
 import CalendarBlankOutline from 'vue-material-design-icons/CalendarBlankOutline.vue';
 
+// svg
+import NoteBookSvg from "./NoteBookSvg.vue"
+
 export {
     CheckCircle,
     EyeOffOutline,
@@ -21,5 +24,6 @@ export {
     DotsVertical,
     ArrowRight,
     Magnify,
-    CalendarBlankOutline
+    CalendarBlankOutline,
+    NoteBookSvg
 }

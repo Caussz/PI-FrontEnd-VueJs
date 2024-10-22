@@ -1,6 +1,6 @@
 <script setup>
 import SearchBar from '../../Search/SearchBar.vue'
-import { ChevronRight } from '@/components/icons'
+import { ChevronRight, NoteBookSvg } from '@/components/icons'
 </script>
 <template>
   <SearchBar class="search-bar" />
@@ -33,10 +33,49 @@ import { ChevronRight } from '@/components/icons'
         <h2>Local</h2>
         <h2>Horário</h2>
       </div>
+      <div class="line">
+        <NoteBookSvg />
+        <p class="discipline">Matemática</p>
+        <p>Local</p>
+        <p>3M34 (15/02/2024 - 11/12/2024)</p>
+      </div>
+      <hr>
+      <div class="line">
+        <NoteBookSvg />
+        <p class="discipline">Matemática</p>
+        <p>Local</p>
+        <p>3M34 (15/02/2024 - 11/12/2024)</p>
+      </div>
+      <hr>
+      <div class="line">
+        <NoteBookSvg />
+        <p class="discipline">Matemática</p>
+        <p>Local</p>
+        <p>3M34 (15/02/2024 - 11/12/2024)</p>
+      </div>
+      <hr>
+      <div class="line">
+        <NoteBookSvg />
+        <p class="discipline">Matemática</p>
+        <p>Local</p>
+        <p>3M34 (15/02/2024 - 11/12/2024)</p>
+      </div>
+      <hr>
+      <div class="line">
+        <NoteBookSvg />
+        <p class="discipline">Matemática</p>
+        <p>Local</p>
+        <p>3M34 (15/02/2024 - 11/12/2024)</p>
+      </div>
     </div>
   </div>
 </template>
 <style scoped>
+hr{
+  background-color: #FFFFFF2E;
+  height: 1px;
+}
+
 .center {
   display: flex;
   flex-direction: column;
@@ -80,8 +119,9 @@ import { ChevronRight } from '@/components/icons'
 
 .cards-guidance {
   display: flex;
-  gap: 13vw;
-  width: 100%;
+  /* gap: 13vw; */
+  justify-content: space-between;
+  width: 95%;
 
   p {
     color: #ffffff3b;
@@ -104,9 +144,30 @@ import { ChevronRight } from '@/components/icons'
 .curricular-guidance {
   display: flex;
   color: white;
+  justify-content: space-around;
+  padding: 1vw;
 
   & h2 {
     font-size: 1em;
   }
+}
+
+.curricular-container {
+  width: 100%;
+}
+
+.line {
+  display: flex;
+  justify-content: space-around;
+  color: #99B898;
+  padding: 1vw;
+}
+
+.line:hover {
+  background-color: #FFFFFF08;
+}
+
+.discipline {
+  color: white;
 }
 </style>
