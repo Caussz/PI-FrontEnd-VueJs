@@ -9,9 +9,13 @@ import DotsVertical from 'vue-material-design-icons/DotsVertical.vue';
 import ArrowRight from 'vue-material-design-icons/ArrowRight.vue';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
 import CalendarBlankOutline from 'vue-material-design-icons/CalendarBlankOutline.vue';
-
-// svg
-import NoteBookSvg from "./NoteBookSvg.vue"
+import NotebookOutline from 'vue-material-design-icons/NotebookOutline.vue';
+import HomeOutline from 'vue-material-design-icons/HomeOutline.vue';
+import ListBoxOutline from 'vue-material-design-icons/ListBoxOutline.vue';
+import CalendarWeekOutline from 'vue-material-design-icons/CalendarWeekOutline.vue'
+import AlertBoxOutline from 'vue-material-design-icons/AlertBoxOutline.vue';
+import SchoolOutline from 'vue-material-design-icons/SchoolOutline.vue';
+import AccountGroup from 'vue-material-design-icons/AccountGroup.vue';
 
 export {
     CheckCircle,
@@ -25,5 +29,11 @@ export {
     ArrowRight,
     Magnify,
     CalendarBlankOutline,
-    NoteBookSvg
+    NotebookOutline,
+    HomeOutline,
+    ListBoxOutline,
+    CalendarWeekOutline,
+    AlertBoxOutline,
+    SchoolOutline,
+    AccountGroup,
 }

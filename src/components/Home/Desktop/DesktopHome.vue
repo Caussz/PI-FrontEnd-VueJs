@@ -1,82 +1,158 @@
 <script setup>
 import SearchBar from '../../Search/SearchBar.vue'
-import { ChevronRight, NoteBookSvg } from '@/components/icons'
+import {
+  ChevronRight,
+  NotebookOutline,
+  HomeOutline,
+  ListBoxOutline,
+  CalendarWeekOutline,
+  AlertBoxOutline,
+  SchoolOutline,
+  AccountGroup
+} from '@/components/icons'
 </script>
 <template>
-  <SearchBar class="search-bar" />
-  <div class="center">
-    <!-- MUDAR NOME DA CLASS -->
-    <div class="cards-guidance">
-      <h2>Últimas atualizações</h2>
-      <div>
-        <p>Ver mais</p>
-        <ChevronRight class="icon" size="20" />
+  <main>
+    <div class="side-bar">
+      <div class="navigation">
+        <router-link to="/">
+          <HomeOutline />
+          <p>Home</p>
+        </router-link>
+        <div>
+          <ListBoxOutline />
+          <p>Atividades</p>
+        </div>
+        <div>
+          <CalendarWeekOutline />
+          <p>Calêndario acâdemico</p>
+        </div>
+        <div>
+          <AlertBoxOutline />
+          <p>Comunicados importantes</p>
+        </div>
+        <div>
+          <SchoolOutline />
+          <p>Notas</p>
+        </div>
+        <div>
+          <AccountGroup />
+          <p>Turma</p>
+        </div>
       </div>
     </div>
-    <div class="card">
-      <div>
-        <h2>Matemática</h2>
-        <p>Tarefa alterda</p>
+    <!-- <nav>
+      <SearchBar class="search-bar" />
+    </nav> -->
+    <div class="discipline-container">
+      <div class="cards-guidance">
+        <h2>Últimas atualizações</h2>
+        <div>
+          <p>Ver mais</p>
+          <ChevronRight class="icon" size="20" />
+        </div>
       </div>
-      <p>05/10/2024</p>
+      <div class="card">
+        <div>
+          <h2>Matemática</h2>
+          <p>Tarefa alterda</p>
+        </div>
+        <p>05/10/2024</p>
+      </div>
+      <div class="card">
+        <div>
+          <h2>Matemática</h2>
+          <p>Tarefa alterda</p>
+        </div>
+        <p>05/10/2024</p>
+      </div>
+      <div class="curricular-container">
+        <div class="curricular-guidance">
+          <h2>Componente curricular</h2>
+          <h2>Local</h2>
+          <h2>Horário</h2>
+        </div>
+        <div class="line">
+          <NotebookOutline />
+          <p class="discipline">Matemática</p>
+          <p>Local</p>
+          <p>3M34 (15/02/2024 - 11/12/2024)</p>
+        </div>
+        <hr />
+        <div class="line">
+          <NotebookOutline />
+          <p class="discipline">Matemática</p>
+          <p>Local</p>
+          <p>3M34 (15/02/2024 - 11/12/2024)</p>
+        </div>
+        <hr />
+        <div class="line">
+          <NotebookOutline />
+          <p class="discipline">Matemática</p>
+          <p>Local</p>
+          <p>3M34 (15/02/2024 - 11/12/2024)</p>
+        </div>
+        <hr />
+        <div class="line">
+          <NotebookOutline />
+          <p class="discipline">Matemática</p>
+          <p>Local</p>
+          <p>3M34 (15/02/2024 - 11/12/2024)</p>
+        </div>
+        <hr />
+        <div class="line">
+          <NotebookOutline />
+          <p class="discipline">Matemática</p>
+          <p>Local</p>
+          <p>3M34 (15/02/2024 - 11/12/2024)</p>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <div>
-        <h2>Matemática</h2>
-        <p>Tarefa alterda</p>
-      </div>
-      <p>05/10/2024</p>
-    </div>
-    <div class="curricular-container">
-      <div class="curricular-guidance">
-        <h2>Componente curricular</h2>
-        <h2>Local</h2>
-        <h2>Horário</h2>
-      </div>
-      <div class="line">
-        <NoteBookSvg />
-        <p class="discipline">Matemática</p>
-        <p>Local</p>
-        <p>3M34 (15/02/2024 - 11/12/2024)</p>
-      </div>
-      <hr>
-      <div class="line">
-        <NoteBookSvg />
-        <p class="discipline">Matemática</p>
-        <p>Local</p>
-        <p>3M34 (15/02/2024 - 11/12/2024)</p>
-      </div>
-      <hr>
-      <div class="line">
-        <NoteBookSvg />
-        <p class="discipline">Matemática</p>
-        <p>Local</p>
-        <p>3M34 (15/02/2024 - 11/12/2024)</p>
-      </div>
-      <hr>
-      <div class="line">
-        <NoteBookSvg />
-        <p class="discipline">Matemática</p>
-        <p>Local</p>
-        <p>3M34 (15/02/2024 - 11/12/2024)</p>
-      </div>
-      <hr>
-      <div class="line">
-        <NoteBookSvg />
-        <p class="discipline">Matemática</p>
-        <p>Local</p>
-        <p>3M34 (15/02/2024 - 11/12/2024)</p>
-      </div>
-    </div>
-  </div>
+  </main>
 </template>
 <style scoped>
-hr{
-  background-color: #FFFFFF2E;
+main {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20vw 80vw;
+}
+
+/* side-bar */
+.side-bar {
+  background-color: #1c1b1b;
+  width: 100%;
+}
+
+.navigation {
+  color: white;
+
+  & div {
+    /* background-color: red; */
+    display: flex;
+    gap: 1vw;
+    padding: 0.2vw 2vw;
+  }
+
+  & .router-link-active {
+    display: flex;
+    gap: 1vw;
+    text-decoration: none;
+    color: white;
+    background-color: #83838323;
+    width: 79%;
+    padding: 0.2vw 2vw;
+    border-right: white 3px solid;
+  }
+}
+
+/* discipline-container */
+hr {
+  background-color: #43424246;
   height: 1px;
 }
 
-.center {
+.discipline-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,12 +235,12 @@ hr{
 .line {
   display: flex;
   justify-content: space-around;
-  color: #99B898;
+  color: #99b898;
   padding: 1vw;
 }
 
 .line:hover {
-  background-color: #FFFFFF08;
+  background-color: #ffffff08;
 }
 
 .discipline {
