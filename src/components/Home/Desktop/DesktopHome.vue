@@ -14,29 +14,30 @@ import {
 <template>
   <main>
     <div class="side-bar">
+      <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="">
       <div class="navigation">
         <router-link to="/">
-          <HomeOutline />
+          <HomeOutline size="20" />
           <p>Home</p>
         </router-link>
         <div>
-          <ListBoxOutline />
+          <ListBoxOutline size="20" />
           <p>Atividades</p>
         </div>
         <div>
-          <CalendarWeekOutline />
+          <CalendarWeekOutline size="20" />
           <p>Calêndario acâdemico</p>
         </div>
         <div>
-          <AlertBoxOutline />
+          <AlertBoxOutline size="20" />
           <p>Comunicados importantes</p>
         </div>
         <div>
-          <SchoolOutline />
+          <SchoolOutline size="20" />
           <p>Notas</p>
         </div>
         <div>
-          <AccountGroup />
+          <AccountGroup size="20" />
           <p>Turma</p>
         </div>
       </div>
@@ -75,38 +76,43 @@ import {
         <div class="line">
           <NotebookOutline />
           <p class="discipline">Matemática</p>
-          <p>Local</p>
+          <p>E-305</p>
           <p>3M34 (15/02/2024 - 11/12/2024)</p>
         </div>
         <hr />
         <div class="line">
           <NotebookOutline />
           <p class="discipline">Matemática</p>
-          <p>Local</p>
+          <p>E-305</p>
           <p>3M34 (15/02/2024 - 11/12/2024)</p>
         </div>
         <hr />
         <div class="line">
           <NotebookOutline />
           <p class="discipline">Matemática</p>
-          <p>Local</p>
+          <p>E-305</p>
           <p>3M34 (15/02/2024 - 11/12/2024)</p>
         </div>
         <hr />
         <div class="line">
           <NotebookOutline />
           <p class="discipline">Matemática</p>
-          <p>Local</p>
+          <p>E-305</p>
           <p>3M34 (15/02/2024 - 11/12/2024)</p>
         </div>
         <hr />
         <div class="line">
           <NotebookOutline />
           <p class="discipline">Matemática</p>
-          <p>Local</p>
+          <p>E-305</p>
           <p>3M34 (15/02/2024 - 11/12/2024)</p>
         </div>
       </div>
+    </div>
+    <div class="profile-container">
+      <img src="https://wallpapers.com/images/hd/solid-light-blue-background-q4ei4i2ruw3b5gp9.jpg" alt="">
+      <h2>Oliver Calenbard</h2>
+      <p>2022305854</p>
     </div>
   </main>
 </template>
@@ -115,7 +121,7 @@ main {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: 20vw 80vw;
+  grid-template-columns: 20vw 40vw 40vw;
 }
 
 /* side-bar */
@@ -124,11 +130,17 @@ main {
   width: 100%;
 }
 
+img {
+  display: flex;
+  margin: 3vw auto;
+}
+
+
 .navigation {
   color: white;
+  font-size: 0.9em;
 
   & div {
-    /* background-color: red; */
     display: flex;
     gap: 1vw;
     padding: 0.2vw 2vw;
@@ -195,7 +207,6 @@ hr {
 
 .cards-guidance {
   display: flex;
-  /* gap: 13vw; */
   justify-content: space-between;
   width: 95%;
 
@@ -245,5 +256,32 @@ hr {
 
 .discipline {
   color: white;
+}
+
+/* profile */
+.profile-container {
+  border: #505050 solid 1px;
+  border-radius: 20px;
+  width: 18vw;
+  height: 18vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h2 {
+    font-size: 1.1em;
+  }
+
+  & p {
+    font-size: 0.8em;
+  }
+
+  & img {
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    margin: 3vw 0 2vw 0;
+  }
 }
 </style>
