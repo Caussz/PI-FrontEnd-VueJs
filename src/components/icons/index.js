@@ -16,6 +16,7 @@ import CalendarWeekOutline from 'vue-material-design-icons/CalendarWeekOutline.v
 import AlertBoxOutline from 'vue-material-design-icons/AlertBoxOutline.vue';
 import SchoolOutline from 'vue-material-design-icons/SchoolOutline.vue';
 import AccountGroup from 'vue-material-design-icons/AccountGroup.vue';
+import AccountOutline from 'vue-material-design-icons/AccountOutline.vue';
 
 export {
     CheckCircle,
@@ -36,4 +37,5 @@ export {
     AlertBoxOutline,
     SchoolOutline,
     AccountGroup,
+    AccountOutline,
 }

@@ -8,13 +8,14 @@ import {
   CalendarWeekOutline,
   AlertBoxOutline,
   SchoolOutline,
-  AccountGroup
+  AccountGroup,
+  AccountOutline,
 } from '@/components/icons'
 </script>
 <template>
-  <main>
-    <div class="side-bar">
-      <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="">
+  <div id="layout-large">
+    <aside>
+      <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="" />
       <div class="navigation">
         <router-link to="/">
           <HomeOutline size="20" />
@@ -41,100 +42,126 @@ import {
           <p>Turma</p>
         </div>
       </div>
-    </div>
-    <!-- <nav>
+    </aside>
+    <header>
       <SearchBar class="search-bar" />
-    </nav> -->
-    <div class="discipline-container">
-      <div class="cards-guidance">
-        <h2>Últimas atualizações</h2>
-        <div>
-          <p>Ver mais</p>
-          <ChevronRight class="icon" size="20" />
+      <div class="header-buttons">
+        <button>
+
+        </button>
+        <button class="profile">
+          <AccountOutline />
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="discipline-container">
+        <div class="cards-guidance">
+          <h2>Últimas atualizações</h2>
+          <div>
+            <p>Ver mais</p>
+            <ChevronRight class="icon" size="20" />
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <h2>Matemática</h2>
+            <p>Tarefa alterda</p>
+          </div>
+          <p>05/10/2024</p>
+        </div>
+        <div class="card">
+          <div>
+            <h2>Matemática</h2>
+            <p>Tarefa alterda</p>
+          </div>
+          <p>05/10/2024</p>
+        </div>
+        <div class="curricular-container">
+          <div class="curricular-guidance">
+            <h2>Componente curricular</h2>
+            <h2>Local</h2>
+            <h2>Horário</h2>
+          </div>
+          <div class="line">
+            <NotebookOutline />
+            <p class="discipline">Matemática</p>
+            <p>E-305</p>
+            <p>3M34 (15/02/2024 - 11/12/2024)</p>
+          </div>
+          <hr />
+          <div class="line">
+            <NotebookOutline />
+            <p class="discipline">Matemática</p>
+            <p>E-305</p>
+            <p>3M34 (15/02/2024 - 11/12/2024)</p>
+          </div>
+          <hr />
+          <div class="line">
+            <NotebookOutline />
+            <p class="discipline">Matemática</p>
+            <p>E-305</p>
+            <p>3M34 (15/02/2024 - 11/12/2024)</p>
+          </div>
+          <hr />
+          <div class="line">
+            <NotebookOutline />
+            <p class="discipline">Matemática</p>
+            <p>E-305</p>
+            <p>3M34 (15/02/2024 - 11/12/2024)</p>
+          </div>
+          <hr />
+          <div class="line">
+            <NotebookOutline />
+            <p class="discipline">Matemática</p>
+            <p>E-305</p>
+            <p>3M34 (15/02/2024 - 11/12/2024)</p>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div>
-          <h2>Matemática</h2>
-          <p>Tarefa alterda</p>
-        </div>
-        <p>05/10/2024</p>
+      <div class="profile-container">
+        <img
+          src="https://wallpapers.com/images/hd/solid-light-blue-background-q4ei4i2ruw3b5gp9.jpg"
+          alt=""
+        />
+        <h2>Oliver Calenbard</h2>
+        <p>2022305854</p>
       </div>
-      <div class="card">
-        <div>
-          <h2>Matemática</h2>
-          <p>Tarefa alterda</p>
-        </div>
-        <p>05/10/2024</p>
-      </div>
-      <div class="curricular-container">
-        <div class="curricular-guidance">
-          <h2>Componente curricular</h2>
-          <h2>Local</h2>
-          <h2>Horário</h2>
-        </div>
-        <div class="line">
-          <NotebookOutline />
-          <p class="discipline">Matemática</p>
-          <p>E-305</p>
-          <p>3M34 (15/02/2024 - 11/12/2024)</p>
-        </div>
-        <hr />
-        <div class="line">
-          <NotebookOutline />
-          <p class="discipline">Matemática</p>
-          <p>E-305</p>
-          <p>3M34 (15/02/2024 - 11/12/2024)</p>
-        </div>
-        <hr />
-        <div class="line">
-          <NotebookOutline />
-          <p class="discipline">Matemática</p>
-          <p>E-305</p>
-          <p>3M34 (15/02/2024 - 11/12/2024)</p>
-        </div>
-        <hr />
-        <div class="line">
-          <NotebookOutline />
-          <p class="discipline">Matemática</p>
-          <p>E-305</p>
-          <p>3M34 (15/02/2024 - 11/12/2024)</p>
-        </div>
-        <hr />
-        <div class="line">
-          <NotebookOutline />
-          <p class="discipline">Matemática</p>
-          <p>E-305</p>
-          <p>3M34 (15/02/2024 - 11/12/2024)</p>
-        </div>
-      </div>
-    </div>
-    <div class="profile-container">
-      <img src="https://wallpapers.com/images/hd/solid-light-blue-background-q4ei4i2ruw3b5gp9.jpg" alt="">
-      <h2>Oliver Calenbard</h2>
-      <p>2022305854</p>
-    </div>
-  </main>
+    </main>
+  </div>
 </template>
 <style scoped>
-main {
-  width: 100vw;
-  height: 100vh;
+#layout-large {
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 20vw 40vw 40vw;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 0.5fr 6fr;
+  grid-template-areas:
+    "aside header"
+    "aside main";
 }
 
-/* side-bar */
-.side-bar {
-  background-color: #1c1b1b;
-  width: 100%;
+main {
+  display: flex;
+  grid-area: main;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  padding: 1vw;
+  justify-content: flex-end;
+  gap: 20vw;
+}
+
+aside {
+  grid-area: aside;
 }
 
 img {
   display: flex;
   margin: 3vw auto;
 }
-
 
 .navigation {
   color: white;
@@ -283,5 +310,23 @@ hr {
     border-radius: 50%;
     margin: 3vw 0 2vw 0;
   }
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1vw;
+}
+
+button {
+  background-color: #242424;
+  border: #505050 solid 1px;
+  color: white;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+}
+
+.search-bar {
+  margin: 0;
 }
 </style>
