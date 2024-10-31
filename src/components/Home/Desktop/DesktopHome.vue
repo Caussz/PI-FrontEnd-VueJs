@@ -10,6 +10,8 @@ import {
   SchoolOutline,
   AccountGroup,
   AccountOutline,
+  Help,
+  Logout,
 } from '@/components/icons'
 </script>
 <template>
@@ -42,6 +44,16 @@ import {
           <p>Turma</p>
         </div>
       </div>
+      <div class="aside-bottom">
+        <div>
+          <Help size="20"/>
+          <p>Suporte</p>
+        </div>
+        <div>
+          <Logout size="20" />
+          <p>Sair</p>
+        </div>
+      </div>
     </aside>
     <header>
       <SearchBar class="search-bar" />
@@ -49,7 +61,7 @@ import {
         <button>
 
         </button>
-        <button class="profile">
+        <button>
           <AccountOutline />
         </button>
       </div>
@@ -151,11 +163,12 @@ header {
   display: flex;
   padding: 1vw;
   justify-content: flex-end;
-  gap: 20vw;
+  gap: 26vw;
 }
 
 aside {
   grid-area: aside;
+  background-color: #13131396;
 }
 
 img {
@@ -179,9 +192,24 @@ img {
     text-decoration: none;
     color: white;
     background-color: #83838323;
-    width: 79%;
+    width: 75%;
     padding: 0.2vw 2vw;
     border-right: white 3px solid;
+  }
+}
+
+.aside-bottom {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 27vw;
+  padding: 0.2vw 2vw;
+
+  & div {
+    display: flex;
+    padding: 0.2vw 0;
+    gap: 1vw;
   }
 }
 
@@ -195,8 +223,8 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30vw;
-  margin: 3vw 5vw;
+  width: 40vw;
+  margin: 1.5vw 9vw;
 }
 
 .search-bar {
@@ -210,13 +238,13 @@ hr {
   border-radius: 20px;
   width: 100%;
   margin: 0.7vw;
-  height: 6vw;
+  height: 7.5vw;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7em;
-  gap: 12vw;
+  font-size: 0.9em;
+  gap: 16vw;
 
   & div > p {
     color: #ffffff61;
@@ -239,7 +267,7 @@ hr {
 
   p {
     color: #ffffff3b;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 
   div {
@@ -247,7 +275,7 @@ hr {
   }
   h2 {
     color: white;
-    font-size: 0.9em;
+    font-size: 1.1em;
   }
 }
 
@@ -295,6 +323,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 1vw;
 
   & h2 {
     font-size: 1.1em;
