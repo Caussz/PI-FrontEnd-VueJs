@@ -11,7 +11,7 @@ import {
   AccountGroup,
   AccountOutline,
   Help,
-  Logout,
+  Logout
 } from '@/components/icons'
 </script>
 <template>
@@ -46,7 +46,7 @@ import {
       </div>
       <div class="aside-bottom">
         <div>
-          <Help size="20"/>
+          <Help size="20" />
           <p>Suporte</p>
         </div>
         <div>
@@ -58,9 +58,7 @@ import {
     <header>
       <SearchBar class="search-bar" />
       <div class="header-buttons">
-        <button>
-
-        </button>
+        <button></button>
         <button>
           <AccountOutline />
         </button>
@@ -89,47 +87,53 @@ import {
           </div>
           <p>05/10/2024</p>
         </div>
-        <div class="curricular-container">
-          <div class="curricular-guidance">
-            <h2>Componente curricular</h2>
-            <h2>Local</h2>
-            <h2>Horário</h2>
-          </div>
-          <div class="line">
-            <NotebookOutline />
-            <p class="discipline">Matemática</p>
-            <p>E-305</p>
-            <p>3M34 (15/02/2024 - 11/12/2024)</p>
-          </div>
-          <hr />
-          <div class="line">
-            <NotebookOutline />
-            <p class="discipline">Matemática</p>
-            <p>E-305</p>
-            <p>3M34 (15/02/2024 - 11/12/2024)</p>
-          </div>
-          <hr />
-          <div class="line">
-            <NotebookOutline />
-            <p class="discipline">Matemática</p>
-            <p>E-305</p>
-            <p>3M34 (15/02/2024 - 11/12/2024)</p>
-          </div>
-          <hr />
-          <div class="line">
-            <NotebookOutline />
-            <p class="discipline">Matemática</p>
-            <p>E-305</p>
-            <p>3M34 (15/02/2024 - 11/12/2024)</p>
-          </div>
-          <hr />
-          <div class="line">
-            <NotebookOutline />
-            <p class="discipline">Matemática</p>
-            <p>E-305</p>
-            <p>3M34 (15/02/2024 - 11/12/2024)</p>
-          </div>
-        </div>
+        <table>
+          <tr>
+            <th>Componente curricular</th>
+            <th>Local</th>
+            <th>Horário</th>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Desenvolvimento de dispositivos móveis</p>
+            </td>
+            <td>E-305</td>
+            <td>3M34 (15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>3M34 (15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Desenvolvimento de dispositivos móveis</p>
+            </td>
+            <td>E-305</td>
+            <td>3M34 (15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>3M34 (15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>3M34 (15/02/2024 - 11/12/2024)</td>
+          </tr>
+        </table>
       </div>
       <div class="profile-container">
         <img
@@ -143,14 +147,45 @@ import {
   </div>
 </template>
 <style scoped>
+/* table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr {
+  width: 100%;
+}
+
+th {
+  color: white;
+  padding: 1vw;
+  word-wrap: break-word;
+}
+
+td {
+  color: #99b898;
+  border-top: #43424246 1px solid;
+  padding: 1vw 0;
+}
+
+p {
+  color: white;
+}
+
+.discipline {
+  display: flex;
+  gap: 1vw;
+}
+
 #layout-large {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 0.5fr 6fr;
   grid-template-areas:
-    "aside header"
-    "aside main";
+    'aside header'
+    'aside main';
 }
 
 main {
@@ -183,18 +218,24 @@ img {
   & div {
     display: flex;
     gap: 1vw;
-    padding: 0.2vw 2vw;
+    padding: 0.5vw 2vw;
+    align-items: center;
   }
 
   & .router-link-active {
     display: flex;
+    align-items: center;
     gap: 1vw;
     text-decoration: none;
     color: white;
-    background-color: #83838323;
     width: 75%;
-    padding: 0.2vw 2vw;
+    padding: 0.5vw 2vw;
     border-right: white 3px solid;
+  }
+
+  & .router-link-active:hover,
+  div:hover {
+    background-color: #ffffff08;
   }
 }
 
@@ -214,10 +255,6 @@ img {
 }
 
 /* discipline-container */
-hr {
-  background-color: #43424246;
-  height: 1px;
-}
 
 .discipline-container {
   display: flex;
@@ -278,6 +315,9 @@ hr {
     font-size: 1.1em;
   }
 }
+.discipline {
+  color: white;
+}
 
 .icon {
   color: #ffffff3b;
@@ -307,10 +347,6 @@ hr {
 
 .line:hover {
   background-color: #ffffff08;
-}
-
-.discipline {
-  color: white;
 }
 
 /* profile */
