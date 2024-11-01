@@ -17,8 +17,8 @@ import {
 <template>
   <div id="layout-large">
     <aside>
-      <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="" />
       <div class="navigation">
+        <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="" />
         <router-link to="/">
           <HomeOutline size="20" />
           <p>Home</p>
@@ -29,7 +29,7 @@ import {
         </div>
         <div>
           <CalendarWeekOutline size="20" />
-          <p>Calêndario acâdemico</p>
+          <p>Calendário acâdemico</p>
         </div>
         <div>
           <AlertBoxOutline size="20" />
@@ -99,7 +99,7 @@ import {
               <p>Desenvolvimento de dispositivos móveis</p>
             </td>
             <td>E-305</td>
-            <td>3M34 (15/02/2024 - 11/12/2024)</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
           </tr>
           <tr>
             <td class="discipline">
@@ -107,7 +107,7 @@ import {
               <p>Matemática</p>
             </td>
             <td>E-305</td>
-            <td>3M34 (15/02/2024 - 11/12/2024)</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
           </tr>
           <tr>
             <td class="discipline">
@@ -115,7 +115,7 @@ import {
               <p>Desenvolvimento de dispositivos móveis</p>
             </td>
             <td>E-305</td>
-            <td>3M34 (15/02/2024 - 11/12/2024)</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
           </tr>
           <tr>
             <td class="discipline">
@@ -123,7 +123,7 @@ import {
               <p>Matemática</p>
             </td>
             <td>E-305</td>
-            <td>3M34 (15/02/2024 - 11/12/2024)</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
           </tr>
           <tr>
             <td class="discipline">
@@ -131,7 +131,7 @@ import {
               <p>Matemática</p>
             </td>
             <td>E-305</td>
-            <td>3M34 (15/02/2024 - 11/12/2024)</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
           </tr>
         </table>
       </div>
@@ -152,6 +152,9 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
+table tr:first-of-type {
+  pointer-events: none;
+}
 
 tr {
   width: 100%;
@@ -161,21 +164,28 @@ th {
   color: white;
   padding: 1vw;
   word-wrap: break-word;
+  font-size: 1.2em;
 }
 
 td {
   color: #99b898;
   border-top: #43424246 1px solid;
-  padding: 1vw 0;
+  padding: 1vw;
 }
 
-p {
-  color: white;
+tr:hover {
+  background-color: #ffffff08;
 }
 
 .discipline {
   display: flex;
+  align-items: center;
   gap: 1vw;
+  color: #99b898;
+
+  & p {
+    color: white;
+  }
 }
 
 #layout-large {
@@ -202,7 +212,12 @@ header {
 }
 
 aside {
+  max-height: 100vh;
   grid-area: aside;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #13131396;
 }
 
@@ -213,7 +228,6 @@ img {
 
 .navigation {
   color: white;
-  font-size: 0.9em;
 
   & div {
     display: flex;
@@ -228,7 +242,7 @@ img {
     gap: 1vw;
     text-decoration: none;
     color: white;
-    width: 75%;
+    width: 76%;
     padding: 0.5vw 2vw;
     border-right: white 3px solid;
   }
@@ -261,7 +275,7 @@ img {
   flex-direction: column;
   align-items: center;
   width: 40vw;
-  margin: 1.5vw 9vw;
+  margin: 1.5vw 12vw;
 }
 
 .search-bar {
@@ -302,7 +316,7 @@ img {
   justify-content: space-between;
   width: 95%;
 
-  p {
+  & p {
     color: #ffffff3b;
     font-size: 0.9em;
   }
@@ -312,11 +326,8 @@ img {
   }
   h2 {
     color: white;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
-}
-.discipline {
-  color: white;
 }
 
 .icon {
@@ -359,7 +370,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1vw;
 
   & h2 {
     font-size: 1.1em;
