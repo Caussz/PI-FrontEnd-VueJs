@@ -59,7 +59,7 @@ main {
   width: 35vw;
   background-color: #212121;
   color: white;
-  padding: 2rem 2rem 3rem 2rem;
+  padding: 2rem 2rem 4rem 2rem;
   border-radius: 2rem;
 }
 
@@ -68,11 +68,18 @@ main {
   align-self: self-end;
 }
 
+.close-btn:hover {
+  scale: 1.1;
+  transition: 0.3s ease-in-out all;
+}
+
 h1 {
   color: #99b898;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
   margin-bottom: 3rem;
 }
+
 table {
   width: 30vw;
   border-collapse: collapse;
@@ -98,7 +105,7 @@ table {
 
   & tbody > tr td:last-of-type:hover {
     border: 1px solid #99b898;
-    transition: .3s ease-in-out all;
+    transition: 0.3s ease-in-out all;
   }
 
   & tbody > tr td:last-of-type {
