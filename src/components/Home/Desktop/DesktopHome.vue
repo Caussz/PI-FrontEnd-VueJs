@@ -212,7 +212,7 @@ header {
 }
 
 aside {
-  max-height: 100vh;
+  height: 100vh;
   grid-area: aside;
   position: fixed;
   display: flex;
