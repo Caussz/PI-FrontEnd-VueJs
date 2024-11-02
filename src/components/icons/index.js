@@ -10,7 +10,7 @@ import ArrowRight from 'vue-material-design-icons/ArrowRight.vue';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
 import CalendarBlankOutline from 'vue-material-design-icons/CalendarBlankOutline.vue';
 import NotebookOutline from 'vue-material-design-icons/NotebookOutline.vue';
-import HomeOutline from 'vue-material-design-icons/HomeOutline.vue';
+import HomeOutline from 'vue-material-design-icons/].vue';
 import ListBoxOutline from 'vue-material-design-icons/ListBoxOutline.vue';
 import CalendarWeekOutline from 'vue-material-design-icons/CalendarWeekOutline.vue'
 import AlertBoxOutline from 'vue-material-design-icons/AlertBoxOutline.vue';
@@ -20,6 +20,7 @@ import AccountOutline from 'vue-material-design-icons/AccountOutline.vue';
 import Help from 'vue-material-design-icons/Help.vue';
 import Logout from 'vue-material-design-icons/Logout.vue'
 import Close from 'vue-material-design-icons/Close.vue'
+import Check from 'vue-material-design-icons/Check.vue';
 
 export {
     CheckCircle,
@@ -44,4 +45,5 @@ export {
     Help,
     Logout,
     Close,
+    Check,
 }

@@ -5,35 +5,36 @@ import { convertImage } from '@/helpers';
 
 export const useUserStore = defineStore('user', () => {
 
-  const user = useStorage('user', {
-    name: '',
-    status: '',
-    course: '',
-    photo: null
-  })
+	const user = useStorage('user', {
+		name: '',
+		status: '',
+		course: '',
+		photo: null,
+		loggedStatus: 0
+	})
 
-function getUserImage(image) {
-    const userImage = convertImage(image);
-    user.value.photo = userImage;
-};
+	function getUserImage(image) {
+		const userImage = convertImage(image);
+		user.value.photo = userImage;
+	};
 
-function getinfo(info) {
-    user.value = info;
-    user.value.loggedIn = true
-};
+	function getinfo(info) {
+		user.value = info;
+		user.value.loggedIn = true
+	};
 
-function getUserFormat(name) {
-    const [matricula, nome] = name.split(' - ');
+	function getUserFormat(name) {
+		const [matricula, nome] = name.split(' - ');
 
-    const nomeFormatado = nome
-        .toLowerCase()
-        .split(' ')
-        .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
-        .join(' ');
+		const nomeFormatado = nome
+			.toLowerCase()
+			.split(' ')
+			.map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+			.join(' ');
 
-    user.value.name = nomeFormatado;
-    user.value.matricula = matricula.trim();
-};
+		user.value.name = nomeFormatado;
+		user.value.matricula = matricula.trim();
+	};
 
-  return { user, getUserImage, getinfo, getUserFormat };
+	return { user, getUserImage, getinfo, getUserFormat };
 });
