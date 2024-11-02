@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <header>Desktop</header>
+  <header></header>
 </template>
 
 
