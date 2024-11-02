@@ -1,17 +1,13 @@
+
 <script setup>
-import { CurricularComponent, LastUpdates, SearchBar } from '@/components';
+import DefaultHome from '../components/Home/DefaultHome.vue'
 </script>
 
 <template>
   <main>
-    <SearchBar />
-    <LastUpdates />
-    <CurricularComponent />
+    <DefaultHome />
   </main>
 </template>
 
 <style scoped>
-main {
-  padding: 0 7%;
-}
 </style>
