@@ -21,27 +21,27 @@ import {
         <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="" />
         <router-link to="/">
           <HomeOutline size="20" />
-          <p>Home</p>
+          <a href="@views/HomeView.vue">Home</a>
         </router-link>
         <div>
           <ListBoxOutline size="20" />
-          <p>Atividades</p>
+          <a href="@views/ActivitiesView.vue">Atividades</a>
         </div>
         <div>
           <CalendarWeekOutline size="20" />
-          <p>Calendário acâdemico</p>
+          <a href="@views/AcademicCalendarView.vue">Calendário acâdemico</a>
         </div>
         <div>
           <AlertBoxOutline size="20" />
-          <p>Comunicados importantes</p>
+          <a href="@views/CommuniqueView.vue">Comunicados</a>
         </div>
         <div>
           <SchoolOutline size="20" />
-          <p>Notas</p>
+          <a href="@views/GradesView.vue">Notas</a>
         </div>
         <div>
           <AccountGroup size="20" />
-          <p>Turma</p>
+          <a href="@views/ClassView.vue">Turma</a>
         </div>
       </div>
       <div class="aside-bottom">
@@ -234,6 +234,10 @@ img {
     gap: 1vw;
     padding: 0.5vw 2vw;
     align-items: center;
+  }
+
+  & a {
+    color: white;
   }
 
   & .router-link-active {
