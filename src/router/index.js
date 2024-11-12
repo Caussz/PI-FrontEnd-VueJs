@@ -29,9 +29,9 @@ const router = createRouter({
           component: () => import('../views/ProfileView.vue')
         }
       ],
-      meta: {
-        requiresAuth: true
-      }
+      // meta: {
+      //   requiresAuth: true
+      // }
     },
     {
       path: '/login',
@@ -44,6 +44,11 @@ const router = createRouter({
           component: () => import('../views/LoginView.vue')
         }
       ]
+    },
+    {
+      path: '/progress',
+      name: 'progress',
+      component: () => import('../views/ProgressView.vue')
     }
   ]
 })

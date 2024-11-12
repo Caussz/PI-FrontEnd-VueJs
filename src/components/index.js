@@ -1,14 +1,17 @@
 import DefaultLoginForm from '@/components/Form/Login/DefaultLoginForm.vue';
 import DefaultHeader from '@/components/Header/DefaultHeader.vue';
 import Defaultplace from '@/components/Place/DefaultPlace.vue';
+import DefaultProgress from './Progress/DefaultProgress.vue';
 
 import MobileLoginForm from '@/components/Form/Login/Mobile/MobileLogin.vue';
 import MobileHeader from '@/components/Header/Mobile/MobileHeader.vue';
 import MobilePlace from '@/components/Place/Mobile/MobilePlace.vue';
+import MobileProgress from './Progress/Mobile/MobileProgress.vue';
 
 import DesktopLoginForm from '@/components/Form/Login/Desktop/DesktopLogin.vue';
 import DesktopHeader from '@/components/Header/Desktop/DesktopHeader.vue';
 import DeskTopPlace from '@/components/Place/Desktop/DesktopPlace.vue';
+import DesktopProgress from './Progress/Desktop/DesktopProgress.vue';
 
 import CurricularComponent from '@/components/Curricular/CurricularComponent.vue';
 import SearchBar from '@/components/Search/SearchBar.vue';
@@ -39,5 +42,9 @@ export {
     DesktopLoginForm,
     DesktopHeader,
     DeskTopPlace,
-    DefaultProfile
+    MobilePlace,
+    Defaultplace,
+    DefaultProgress,
+    DesktopProgress,
+    MobileProgress
 }
