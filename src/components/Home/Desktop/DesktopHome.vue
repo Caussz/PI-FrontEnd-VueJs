@@ -1,6 +1,6 @@
 <script setup>
 import { SelectYear } from '@/components'
-import { ref, defineEmits } from 'vue'
+import { ref } from 'vue'
 import {
   ChevronRight,
   NotebookOutline,
