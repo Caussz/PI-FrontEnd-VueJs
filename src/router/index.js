@@ -28,7 +28,7 @@ const router = createRouter({
           name: 'profile',
           component: () => import('../views/ProfileView.vue')
         }
-      ],
+      ]
       // meta: {
       //   requiresAuth: true
       // }
@@ -49,6 +49,31 @@ const router = createRouter({
       path: '/progress',
       name: 'progress',
       component: () => import('../views/ProgressView.vue')
+    },
+    {
+      path: '/activities',
+      name: 'activities',
+      component: () => import('../views/ActivitiesView.vue')
+    },
+    {
+      path: '/academic-calendar',
+      name: 'academic-calendar',
+      component: () => import('../views/AcademicCalendarView.vue')
+    },
+    {
+      path: '/communique',
+      name: 'communique',
+      component: () => import('../views/CommuniqueView.vue')
+    },
+    {
+      path: '/grades',
+      name: 'grades',
+      component: () => import('../views/GradesView.vue')
+    },
+    {
+      path: '/class',
+      name: 'class',
+      component: () => import('../views/ClassView.vue')
     }
   ]
 })

@@ -21,27 +21,27 @@ import {
         <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="" />
         <router-link to="/">
           <HomeOutline size="20" />
-          <a href="@views/HomeView.vue">Home</a>
+          <a href="/">Home</a>
         </router-link>
         <div>
           <ListBoxOutline size="20" />
-          <a href="@views/ActivitiesView.vue">Atividades</a>
+          <a href="/activities">Atividades</a>
         </div>
         <div>
           <CalendarWeekOutline size="20" />
-          <a href="@views/AcademicCalendarView.vue">Calendário acâdemico</a>
+          <a href="/academic-calendar">Calendário acâdemico</a>
         </div>
         <div>
           <AlertBoxOutline size="20" />
-          <a href="@views/CommuniqueView.vue">Comunicados</a>
+          <a href="/communique">Comunicados</a>
         </div>
         <div>
           <SchoolOutline size="20" />
-          <a href="@views/GradesView.vue">Notas</a>
+          <a href="/grades">Notas</a>
         </div>
         <div>
           <AccountGroup size="20" />
-          <a href="@views/ClassView.vue">Turma</a>
+          <a href="/class">Turma</a>
         </div>
       </div>
       <div class="aside-bottom">
