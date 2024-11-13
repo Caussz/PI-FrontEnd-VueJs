@@ -23,6 +23,7 @@ import UpdateCard from './Update/UpdateCard.vue';
 import TextCard from './Text/TextCard.vue';
 import SubjectCard from './Subject/SubjectCard.vue';
 import DefaultProfile from './profile/DefaultProfile.vue';
+import SelectYear from '@/components/Home/Desktop/SelectYear.vue';
 
 export {
     LoadingComponent,
@@ -46,5 +47,6 @@ export {
     Defaultplace,
     DefaultProgress,
     DesktopProgress,
-    MobileProgress
+    MobileProgress,
+    SelectYear
 }

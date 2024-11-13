@@ -1,5 +1,6 @@
 <script setup>
-import SearchBar from '../../Search/SearchBar.vue'
+import { SelectYear } from '@/components'
+import { ref, defineEmits } from 'vue'
 import {
   ChevronRight,
   NotebookOutline,
@@ -13,10 +14,18 @@ import {
   Help,
   Logout
 } from '@/components/icons'
+
+const modalYear = ref(false)
+
+function showModal() {
+  modalYear.value = !modalYear.value
+}
+
 </script>
 <template>
+  <SelectYear v-if="modalYear"/>
   <div id="layout-large">
-    <aside>
+    <aside>const
       <div class="navigation">
         <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="" />
         <router-link to="/">
@@ -37,7 +46,7 @@ import {
         </div>
         <div>
           <SchoolOutline size="20" />
-          <a href="/grades">Notas</a>
+          <a @click="showModal">Notas</a>
         </div>
         <div>
           <AccountGroup size="20" />
@@ -56,7 +65,6 @@ import {
       </div>
     </aside>
     <header>
-      <SearchBar class="search-bar" />
       <div class="header-buttons">
         <button></button>
         <button>

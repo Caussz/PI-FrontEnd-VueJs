@@ -66,11 +66,6 @@ const router = createRouter({
       component: () => import('../views/CommuniqueView.vue')
     },
     {
-      path: '/grades',
-      name: 'grades',
-      component: () => import('../views/GradesView.vue')
-    },
-    {
       path: '/class',
       name: 'class',
       component: () => import('../views/ClassView.vue')
