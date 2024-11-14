@@ -23,9 +23,9 @@ function showModal() {
 
 </script>
 <template>
-  <SelectYear v-if="modalYear"/>
+  <SelectYear v-if="modalYear" @close="modalYear = !modalYear" />
   <div id="layout-large">
-    <aside>const
+    <aside>
       <div class="navigation">
         <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="" />
         <router-link to="/">
