@@ -26,11 +26,15 @@ const emit = defineEmits(['close'])
           </tr>
           <tr>
             <td>2023</td>
-            <td>Aprovado <ChevronRight /></td>
+            <td>
+              <router-link to="/bulletin">Aprovado <ChevronRight /> </router-link>
+            </td>
           </tr>
           <tr>
             <td>2024</td>
-            <td>Matriculado<ChevronRight /></td>
+            <td>
+              <router-link to="/bulletin"> Aprovado <ChevronRight /> </router-link>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -128,7 +132,12 @@ table {
       display: flex;
       align-items: center;
       color: #ffffff;
+      top: 25%;
     }
+  }
+
+  & a {
+    color: #99b898;
   }
 }
 </style>
