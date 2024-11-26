@@ -13,15 +13,13 @@ import DeskTopPlace from '@/components/Place/Desktop/DesktopPlace.vue';
 import CurricularComponent from '@/components/Curricular/CurricularComponent.vue';
 import SearchBar from '@/components/Search/SearchBar.vue';
 
-import LoadingComponent from "./LoadingComponent.vue";
-import TitleComponent from './mobile/TitleComponent.vue'
-import LastUpdates from './mobile/home/LastUpdates.vue'
-import UpdateCard from './mobile/home/UpdateCard.vue'
-import TextCard from './mobile/TextCard.vue';
-import Header from "./mobile/home/Header.vue";
-import PlaceMobile from './mobile/subjectPlace/PlaceMobile.vue';
-import SubjectCard from "./mobile/home/SubjectCard.vue";
-import ProfileComponent from "./mobile/profile/ProfileComponent.vue";
+import LoadingComponent from "./Lazy/LoadingComponent.vue";
+import TitleComponent from './Text/TitleComponent.vue'
+import LastUpdates from './Update/LastUpdates.vue';
+import UpdateCard from './Update/UpdateCard.vue';
+import TextCard from './Text/TextCard.vue';
+import SubjectCard from './Subject/SubjectCard.vue';
+import ProfileComponent from './profile/ProfileComponent.vue';
 
 export {
     LoadingComponent,
@@ -32,8 +30,6 @@ export {
     SubjectCard,
     SearchBar,
     TextCard,
-    PlaceMobile,
-    Header,
     ProfileComponent,
     DefaultLoginForm,
     DefaultHeader,

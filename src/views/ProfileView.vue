@@ -4,5 +4,4 @@ import { ProfileComponent } from '../components'
 
 <template>
     <ProfileComponent />
-
 </template>
