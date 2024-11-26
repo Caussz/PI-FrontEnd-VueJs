@@ -1,10 +1,8 @@
-<script setup>
-import { DefaultHeader } from '@/components';
+<script setup>  
 </script>
 
 <template>
     <main>
-        <DefaultHeader />
         <RouterView />
     </main>
 </template>

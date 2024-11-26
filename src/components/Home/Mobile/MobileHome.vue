@@ -1,9 +1,9 @@
 <script setup>
-import { CurricularComponent, LastUpdates, SearchBar } from '@/components';
+import { CurricularComponent, LastUpdates, DefaultHeader } from '@/components';
 </script>
 <template>
   <main>
-    <SearchBar />
+    <DefaultHeader/>
     <LastUpdates />
     <CurricularComponent />
   </main>
