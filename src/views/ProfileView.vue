@@ -1,7 +1,7 @@
 <script setup>
-import { ProfileComponent } from '../components'
+import { DefaultProfile } from '../components'
 </script>
 
 <template>
-    <ProfileComponent />
+    <DefaultProfile />
 </template>

@@ -4,7 +4,6 @@ import MobileHome from "../Home/Mobile/MobileHome.vue";
 import { useScreen } from "@/composables";
 
 const { isMobile } = useScreen();
-console.log(isMobile);
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup>
-import { CameraOutline } from "../icons";
+import { CameraOutline } from '@/components/icons';
 import { useUserStore } from "@/stores";
 
 const { user } = useUserStore();
