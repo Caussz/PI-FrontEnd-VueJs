@@ -19,7 +19,7 @@ import LastUpdates from './Update/LastUpdates.vue';
 import UpdateCard from './Update/UpdateCard.vue';
 import TextCard from './Text/TextCard.vue';
 import SubjectCard from './Subject/SubjectCard.vue';
-import ProfileComponent from './profile/ProfileComponent.vue';
+import DefaultProfile from './profile/DefaultProfile.vue';
 
 export {
     LoadingComponent,
@@ -30,7 +30,6 @@ export {
     SubjectCard,
     SearchBar,
     TextCard,
-    ProfileComponent,
     DefaultLoginForm,
     DefaultHeader,
     Defaultplace,
@@ -39,5 +38,6 @@ export {
     MobilePlace,
     DesktopLoginForm,
     DesktopHeader,
-    DeskTopPlace
+    DeskTopPlace,
+    DefaultProfile
 }
