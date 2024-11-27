@@ -14,6 +14,19 @@ body {
   min-height: 100vh;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #494949;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #99b898;
+  border-radius: 20px;
+}
+
 @media (max-width: 768px) {
   body {
     background-color: #1E1E1E !important;

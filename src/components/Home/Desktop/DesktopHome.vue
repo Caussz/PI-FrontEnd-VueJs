@@ -65,6 +65,7 @@ onMounted(() => console.log(userStore.user))
             <ChevronRight class="icon" size="20" />
           </div>
         </div>
+        <!-- <div class="cards-container"> -->
         <div class="card">
           <div>
             <h2>Matemática</h2>
@@ -79,52 +80,55 @@ onMounted(() => console.log(userStore.user))
           </div>
           <p>05/10/2024</p>
         </div>
+        <!-- </div> -->
         <table>
           <tr>
             <th>Componente curricular</th>
             <th>Local</th>
             <th>Horário</th>
           </tr>
-          <tr>
-            <td class="discipline">
-              <NotebookOutline />
-              <p>Desenvolvimento de dispositivos móveis</p>
-            </td>
-            <td>E-305</td>
-            <td>(15/02/2024 - 11/12/2024)</td>
-          </tr>
-          <tr>
-            <td class="discipline">
-              <NotebookOutline />
-              <p>Matemática</p>
-            </td>
-            <td>E-305</td>
-            <td>(15/02/2024 - 11/12/2024)</td>
-          </tr>
-          <tr>
-            <td class="discipline">
-              <NotebookOutline />
-              <p>Desenvolvimento de dispositivos móveis</p>
-            </td>
-            <td>E-305</td>
-            <td>(15/02/2024 - 11/12/2024)</td>
-          </tr>
-          <tr>
-            <td class="discipline">
-              <NotebookOutline />
-              <p>Matemática</p>
-            </td>
-            <td>E-305</td>
-            <td>(15/02/2024 - 11/12/2024)</td>
-          </tr>
-          <tr>
-            <td class="discipline">
-              <NotebookOutline />
-              <p>Matemática</p>
-            </td>
-            <td>E-305</td>
-            <td>(15/02/2024 - 11/12/2024)</td>
-          </tr>
+          <div class="table-scroll">
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Desenvolvimento de dispositivos móveis</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Desenvolvimento de dispositivos móveis</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+          </div>
         </table>
       </div>
       <div class="profile-container">
@@ -139,11 +143,40 @@ onMounted(() => console.log(userStore.user))
   </div>
 </template>
 <style scoped>
-/* table */
+#layout-large {
+  min-height: 100vh;
+  display: grid;
+  position: fixed;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 0.5fr 6fr;
+  grid-template-areas:
+    'aside header'
+    'aside main';
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
+  max-height: 4vh;
+  overflow: auto;
 }
+
+.table-scroll {
+  border-collapse: collapse;
+  width: 145%;
+  max-height: 30vh;
+  overflow: auto;
+}
+
+.table-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background-color: #99b898;
+  border-radius: 20px;
+}
+
 table tr:first-of-type {
   pointer-events: none;
 }
@@ -180,16 +213,6 @@ tr:hover {
   }
 }
 
-#layout-large {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 0.5fr 6fr;
-  grid-template-areas:
-    'aside header'
-    'aside main';
-}
-
 main {
   display: flex;
   grid-area: main;
@@ -204,9 +227,9 @@ header {
 }
 
 aside {
-  height: 100vh;
+  max-height: 100vh;
+  width: 20vw;
   grid-area: aside;
-  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -238,7 +261,7 @@ a,
     gap: 1vw;
     text-decoration: none;
     color: white;
-    width: 76%;
+    width: 79.5%;
     padding: 0.5vw 2vw;
     border-right: white 3px solid;
   }
@@ -270,7 +293,7 @@ a,
   flex-direction: column;
   align-items: center;
   width: 40vw;
-  margin: 1.5vw 12vw;
+  margin: 1.5vw 10vw;
 }
 
 .search-bar {
@@ -324,6 +347,10 @@ a,
     font-size: 1.2em;
   }
 }
+
+/* .cards-container {
+  width: 100%;
+} */
 
 .icon {
   color: #ffffff3b;
