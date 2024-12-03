@@ -83,10 +83,14 @@ define(['./workbox-b5f7729d'], (function (workbox) { 'use strict';
   }, {
     "url": "index.html",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "revision": "0.453o75pietg"
 =======
     "revision": "0.u988kp7h9q8"
 >>>>>>> a92ab89 (FEAT: criação de scroll da table da home)
+=======
+    "revision": "0.2j01986v9qo"
+>>>>>>> 3fb5456 (CHORE: continuação do scroll nos elementos da home e remoção da nav)
   }], {});
   workbox.cleanupOutdatedCaches();
   workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("index.html"), {

@@ -13,6 +13,18 @@ function showModal() {
 }
 
 onMounted(() => console.log(userStore.user))
+import {
+  ChevronRight,
+  NotebookOutline,
+  HomeOutline,
+  ListBoxOutline,
+  CalendarWeekOutline,
+  AlertBoxOutline,
+  SchoolOutline,
+  AccountGroup,
+  Help,
+  Logout
+} from '@/components/icons'
 </script>
 <template>
   <SelectYear v-if="modalYear" @close="modalYear = !modalYear" />
@@ -48,14 +60,6 @@ onMounted(() => console.log(userStore.user))
         </RouterLink>
       </div>
     </aside>
-    <header>
-      <div class="header-buttons">
-        <button></button>
-        <button>
-          <AccountOutline />
-        </button>
-      </div>
-    </header>
     <main>
       <div class="discipline-container">
         <div class="cards-guidance">
@@ -66,27 +70,27 @@ onMounted(() => console.log(userStore.user))
           </div>
         </div>
         <div class="card-scroll">
-        <div class="card">
-          <div>
-            <h2>Matemática</h2>
-            <p>Tarefa alterda</p>
+          <div class="card">
+            <div>
+              <h2>Matemática</h2>
+              <p>Tarefa alterda</p>
+            </div>
+            <p>05/10/2024</p>
           </div>
-          <p>05/10/2024</p>
-        </div>
-        <div class="card">
-          <div>
-            <h2>Matemática</h2>
-            <p>Tarefa alterda</p>
+          <div class="card">
+            <div>
+              <h2>Matemática</h2>
+              <p>Tarefa alterda</p>
+            </div>
+            <p>05/10/2024</p>
           </div>
-          <p>05/10/2024</p>
-        </div>
-        <div class="card">
-          <div>
-            <h2>Matemática</h2>
-            <p>Tarefa alterda</p>
+          <div class="card">
+            <div>
+              <h2>Matemática</h2>
+              <p>Tarefa alterda</p>
+            </div>
+            <p>05/10/2024</p>
           </div>
-          <p>05/10/2024</p>
-        </div>
         </div>
         <table>
           <tr>
@@ -152,26 +156,13 @@ onMounted(() => console.log(userStore.user))
 <style scoped>
 #layout-large {
   min-height: 100vh;
-  display: grid;
-  position: fixed;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 0.5fr 6fr;
-  grid-template-areas:
-    'aside header'
-    'aside main';
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  max-height: 4vh;
-  overflow: auto;
+  display: flex;
 }
 
 .card-scroll {
   width: 100%;
   padding: 0 2vw;
-  max-height: 33vh;
+  max-height: 35vh;
   overflow: auto;
   overflow-x: hidden;
 }
@@ -190,7 +181,14 @@ table {
   width: 143.56%;
   max-height: 30vh;
   overflow: auto;
-  margin-right: 3vw;
+  margin-right: 1.5vw;
+  padding-right: 1vw;
+}
+
+table {
+  border-collapse: collapse;
+  max-height: 4vh;
+  overflow: auto;
 }
 
 .table-scroll::-webkit-scrollbar {
@@ -240,11 +238,10 @@ tr:hover {
 
 main {
   display: flex;
-  grid-area: main;
+  margin-top: 10vh;
 }
 
 header {
-  grid-area: header;
   display: flex;
   padding: 1vw;
   justify-content: flex-end;
@@ -254,7 +251,6 @@ header {
 aside {
   max-height: 100vh;
   width: 20vw;
-  grid-area: aside;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -318,7 +314,7 @@ a,
   flex-direction: column;
   align-items: center;
   width: 40vw;
-  margin: 1.5vw 10vw;
+  margin: 1.5vh 10vw;
 }
 
 .card {
@@ -422,11 +418,6 @@ a,
     border-radius: 50%;
     margin: 3vw 0 2vw 0;
   }
-}
-
-.header-buttons {
-  display: flex;
-  gap: 1vw;
 }
 
 button {
