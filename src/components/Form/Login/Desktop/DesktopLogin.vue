@@ -1,8 +1,9 @@
 <script setup>
-import FormLogin from '@/components/Login/FormLogin.vue'
+import FormLogin from '@/components/Form/Login/FormLogin.vue'
 </script>
 
 <template>
+  <main>
   <div class="aside-form">
     <img
       src="https://i.postimg.cc/76YHLbYX/Captura-de-tela-de-2024-03-27-14-44-03-removebg-preview.png"
@@ -14,13 +15,18 @@ import FormLogin from '@/components/Login/FormLogin.vue'
   <div class="form-container">
     <FormLogin />
   </div>
+  </main>
 </template>
 
 <style scoped>
+main{
+display: flex;
+}
+
 .aside-form {
   overflow: hidden;
-  height: 100%;
-  width: 50%;
+  height: 100vh;
+  width: 60vw;
   position: relative;
 }
 
@@ -48,6 +54,10 @@ img:nth-child(2) {
 
 .form-container {
   width: 30%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
 }
 
 @media (max-width: 956px) {

@@ -1,9 +1,30 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, reactive } from "vue";
+import { useRouter } from "vue-router";
+import { CheckCircle, EyeOffOutline, EyeOutline } from "@/components/icons";
+import { useUserStore } from "@/stores";
+import { AuthService } from "@/services";
+import PopUpLoginComponent from "@/components/PopUp/PopUpLoginComponent.vue";
+import PopUpFinishComponent from "@/components/PopUp/PopUpFinishComponent.vue";
 
-import { CheckCircle, EyeOffOutline, EyeOutline } from '@/components/icons'
+const userStore = useUserStore();
 
-const showPass = ref(false)
+const user = reactive({
+  name: "",
+  pass: "",
+  image: null,
+});
+
+const router = useRouter();
+const showPass = ref(false);
+
+const entrar = async () => {
+  const { studentInfo } = await AuthService.getUserInfo(user.name, user.pass);
+  getinfo(studentInfo);
+  getUserImage(studentInfo?.photo);
+  getUserFormat(studentInfo?.name);
+  router.push({ name: "home" });
+};
 </script>
 
 <template>
@@ -24,7 +45,12 @@ const showPass = ref(false)
         <EyeOffOutline v-if="showPass" @click="showPass = !showPass" />
       </div>
     </label>
-    <button>Entrar</button>
+    <button @click.prevent="entrar">Entrar</button>
+    <p class="terms-text">
+      Li e concordo com os termos da <a>politica de privacidade</a>
+    </p>
+    <PopUpLoginComponent v-if="userStore.user.loggedStatus == 1" />
+    <PopUpFinishComponent v-if="userStore.user.loggedStatus == 2" />
   </form>
 </template>
 
@@ -54,7 +80,7 @@ label {
 
 input {
   background-color: transparent;
-  color: red;
+  color: #99b89873;
 }
 
 input:focus-visible {
@@ -72,15 +98,6 @@ button {
   font-size: 1.1rem;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 85%;
-  gap: 2vh;
-}
-
 p {
   font-weight: 300;
   font-size: 0.9rem;
@@ -89,6 +106,7 @@ p {
 h1 {
   margin-bottom: 10%;
   font-weight: 500;
+  text-align: center;
 }
 
 h1,
@@ -100,11 +118,31 @@ p {
   .input-container {
     width: 130%;
   }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    gap: 2vh;
+  }
 }
 
 @media (max-width: 756px) {
-    p, input {
-        font-size: 1.1em;
-    }
+  p,
+  input {
+    font-size: 1.1em;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: 15vh auto;
+    gap: 2vh;
+  }
 }
 </style>
