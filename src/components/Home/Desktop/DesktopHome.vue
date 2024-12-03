@@ -65,7 +65,7 @@ onMounted(() => console.log(userStore.user))
             <ChevronRight class="icon" size="20" />
           </div>
         </div>
-        <!-- <div class="cards-container"> -->
+        <div class="card-scroll">
         <div class="card">
           <div>
             <h2>Matemática</h2>
@@ -80,7 +80,14 @@ onMounted(() => console.log(userStore.user))
           </div>
           <p>05/10/2024</p>
         </div>
-        <!-- </div> -->
+        <div class="card">
+          <div>
+            <h2>Matemática</h2>
+            <p>Tarefa alterda</p>
+          </div>
+          <p>05/10/2024</p>
+        </div>
+        </div>
         <table>
           <tr>
             <th>Componente curricular</th>
@@ -161,11 +168,29 @@ table {
   overflow: auto;
 }
 
+.card-scroll {
+  width: 100%;
+  padding: 0 2vw;
+  max-height: 33vh;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.card-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card-scroll::-webkit-scrollbar-thumb {
+  background-color: #99b898;
+  border-radius: 20px;
+}
+
 .table-scroll {
   border-collapse: collapse;
-  width: 145%;
+  width: 143.56%;
   max-height: 30vh;
   overflow: auto;
+  margin-right: 3vw;
 }
 
 .table-scroll::-webkit-scrollbar {
@@ -296,16 +321,10 @@ a,
   margin: 1.5vw 10vw;
 }
 
-.search-bar {
-  width: 17vw;
-  margin-left: 16vw;
-}
-
 .card {
   background-color: #242424;
   border: #505050 solid 1px;
   border-radius: 20px;
-  width: 100%;
   margin: 0.7vw;
   height: 7.5vw;
   color: white;
@@ -347,10 +366,6 @@ a,
     font-size: 1.2em;
   }
 }
-
-/* .cards-container {
-  width: 100%;
-} */
 
 .icon {
   color: #ffffff3b;
@@ -421,9 +436,5 @@ button {
   width: 3vw;
   height: 3vw;
   border-radius: 50%;
-}
-
-.search-bar {
-  margin: 0;
 }
 </style>
