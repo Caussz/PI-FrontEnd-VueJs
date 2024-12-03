@@ -43,10 +43,9 @@ export {
     DesktopLoginForm,
     DesktopHeader,
     DeskTopPlace,
-    MobilePlace,
-    Defaultplace,
     DefaultProgress,
     DesktopProgress,
     MobileProgress,
-    SelectYear
+    SelectYear,
+    DefaultProfile
 }
