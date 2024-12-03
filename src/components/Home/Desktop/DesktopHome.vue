@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import { SelectYear } from '@/components'
 import { ref } from 'vue'
 import {
@@ -6,12 +7,10 @@ import {
   NotebookOutline,
   HomeOutline,
   ListBoxOutline,
-  CalendarWeekOutline,
   AlertBoxOutline,
   SchoolOutline,
   AccountGroup,
   AccountOutline,
-  Help,
   Logout
 } from '@/components/icons'
 
@@ -20,7 +19,6 @@ const modalYear = ref(false)
 function showModal() {
   modalYear.value = !modalYear.value
 }
-
 </script>
 <template>
   <SelectYear v-if="modalYear" @close="modalYear = !modalYear" />
@@ -28,40 +26,32 @@ function showModal() {
     <aside>
       <div class="navigation">
         <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="" />
-        <router-link to="/">
+        <RouterLink to="/">
           <HomeOutline size="20" />
-          <a href="/">Home</a>
-        </router-link>
-        <div>
+          Home
+        </RouterLink>
+        <RouterLink to="/activities">
           <ListBoxOutline size="20" />
-          <a href="/activities">Atividades</a>
-        </div>
-        <div>
-          <CalendarWeekOutline size="20" />
-          <a href="/academic-calendar">Calendário acâdemico</a>
-        </div>
-        <div>
+          Atividades
+        </RouterLink>
+        <RouterLink to="/communique">
           <AlertBoxOutline size="20" />
-          <a href="/communique">Comunicados</a>
-        </div>
-        <div>
+          Comunicados
+        </RouterLink>
+        <a @click="showModal">
           <SchoolOutline size="20" />
-          <a @click="showModal">Notas</a>
-        </div>
-        <div>
+          Notas
+        </a>
+        <RouterLink to="/class">
           <AccountGroup size="20" />
-          <a href="/class">Turma</a>
-        </div>
+          Turma
+        </RouterLink>
       </div>
       <div class="aside-bottom">
-        <div>
-          <Help size="20" />
-          <p>Suporte</p>
-        </div>
-        <div>
+        <RouterLink to="/login">
           <Logout size="20" />
           <p>Sair</p>
-        </div>
+        </RouterLink>
       </div>
     </aside>
     <header>
@@ -234,19 +224,19 @@ img {
   margin: 3vw auto;
 }
 
+a,
+.navigation div {
+  color: white;
+  display: flex;
+  gap: 1vw;
+  padding: 0.5vw 2vw;
+  align-items: center;
+}
+
 .navigation {
   color: white;
-
-  & div {
-    display: flex;
-    gap: 1vw;
-    padding: 0.5vw 2vw;
-    align-items: center;
-  }
-
-  & a {
-    color: white;
-  }
+  display: flex;
+  flex-direction: column;
 
   & .router-link-active {
     display: flex;
@@ -260,7 +250,7 @@ img {
   }
 
   & .router-link-active:hover,
-  div:hover {
+  a:hover {
     background-color: #ffffff08;
   }
 }
@@ -271,7 +261,6 @@ img {
   flex-direction: column;
   justify-content: flex-end;
   height: 27vw;
-  padding: 0.2vw 2vw;
 
   & div {
     display: flex;
