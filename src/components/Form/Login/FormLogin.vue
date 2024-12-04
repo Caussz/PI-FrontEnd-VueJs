@@ -81,6 +81,7 @@ label {
 input {
   background-color: transparent;
   color: #99b89873;
+  width: 85%;
 }
 
 input:focus-visible {
@@ -114,11 +115,7 @@ p {
   color: var(--text-login-color);
 }
 
-@media (max-width: 1200px) and (min-width: 768px) {
-  .input-container {
-    width: 130%;
-  }
-
+@media (min-width: 768px) {
   form {
     display: flex;
     flex-direction: column;
@@ -129,10 +126,10 @@ p {
   }
 }
 
-@media (max-width: 756px) {
+@media (max-width: 768px) {
   p,
   input {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   form {
@@ -141,7 +138,8 @@ p {
     align-items: center;
     justify-content: center;
     width: 85%;
-    margin: 15vh auto;
+    margin: auto;
+    padding-top: 15vh;
     gap: 2vh;
   }
 }
