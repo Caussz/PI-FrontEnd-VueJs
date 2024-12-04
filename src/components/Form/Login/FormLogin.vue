@@ -1,0 +1,148 @@
+<script setup>
+import { ref, reactive } from "vue";
+import { useRouter } from "vue-router";
+import { CheckCircle, EyeOffOutline, EyeOutline } from "@/components/icons";
+import { useUserStore } from "@/stores";
+import { AuthService } from "@/services";
+import PopUpLoginComponent from "@/components/PopUp/PopUpLoginComponent.vue";
+import PopUpFinishComponent from "@/components/PopUp/PopUpFinishComponent.vue";
+
+const userStore = useUserStore();
+
+const user = reactive({
+  name: "",
+  pass: "",
+  image: null,
+});
+
+const router = useRouter();
+const showPass = ref(false);
+
+const entrar = async () => {
+  const { studentInfo } = await AuthService.getUserInfo(user.name, user.pass);
+  getinfo(studentInfo);
+  getUserImage(studentInfo?.photo);
+  getUserFormat(studentInfo?.name);
+  router.push({ name: "home" });
+};
+</script>
+
+<template>
+  <form>
+    <h1>Entrar</h1>
+    <label>
+      <p>Usuário</p>
+      <div class="input-container">
+        <input type="text" placeholder="Digite seu usuário" />
+        <CheckCircle />
+      </div>
+    </label>
+    <label>
+      <p>Senha</p>
+      <div class="input-container">
+        <input type="password" placeholder="⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁" />
+        <EyeOutline v-if="!showPass" @click="showPass = !showPass" />
+        <EyeOffOutline v-if="showPass" @click="showPass = !showPass" />
+      </div>
+    </label>
+    <button @click.prevent="entrar">Entrar</button>
+    <p class="terms-text">
+      Li e concordo com os termos da <a>politica de privacidade</a>
+    </p>
+    <PopUpLoginComponent v-if="userStore.user.loggedStatus == 1" />
+    <PopUpFinishComponent v-if="userStore.user.loggedStatus == 2" />
+  </form>
+</template>
+
+<style scoped>
+label {
+  width: 100%;
+}
+
+.input-container {
+  width: 100% !important;
+  background-color: var(--input-back-color);
+  border: 1px solid var(--border-button-login-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--icon-login-color);
+  padding: 5% 0;
+  border-radius: 9px;
+  margin-top: 1%;
+}
+.input-container:focus-within {
+  border: solid 1px #99b89873;
+}
+.input-container span {
+  height: 20px;
+}
+
+input {
+  background-color: transparent;
+  color: #99b89873;
+}
+
+input:focus-visible {
+  outline: 0;
+}
+
+button {
+  margin-top: 15%;
+  background-color: var(--button-login-color);
+  color: var(--text-butto-color);
+  font-weight: 500;
+  width: 100%;
+  padding-block: 1rem;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+}
+
+p {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+h1 {
+  margin-bottom: 10%;
+  font-weight: 500;
+  text-align: center;
+}
+
+h1,
+p {
+  color: var(--text-login-color);
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .input-container {
+    width: 130%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    gap: 2vh;
+  }
+}
+
+@media (max-width: 756px) {
+  p,
+  input {
+    font-size: 1.1em;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: 15vh auto;
+    gap: 2vh;
+  }
+}
+</style>
