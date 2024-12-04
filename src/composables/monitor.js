@@ -17,7 +17,7 @@ export function useMonitor() {
         if (width < 768) {
             breakpoint.value = 'sm';
             login.value = defineAsyncComponent(() =>
-                import('../components/Login/FormLogin.vue'),
+                import('../components/Form/Login/FormLogin.vue'),
             );
         }
         else {
