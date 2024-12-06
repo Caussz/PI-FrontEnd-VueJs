@@ -21,6 +21,8 @@ import TextCard from './Text/TextCard.vue';
 import SubjectCard from './Subject/SubjectCard.vue';
 import DefaultProfile from './profile/DefaultProfile.vue';
 
+import DefaultQuestionnaires from './Questionnaires/DefaultQuestionnaires.vue';
+
 export {
     LoadingComponent,
     TitleComponent,
@@ -39,5 +41,6 @@ export {
     DesktopLoginForm,
     DesktopHeader,
     DeskTopPlace,
-    DefaultProfile
+    DefaultProfile,
+    DefaultQuestionnaires
 }
