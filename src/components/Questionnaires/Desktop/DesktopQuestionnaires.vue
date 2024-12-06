@@ -59,8 +59,11 @@ table {
   }
 
   & tbody {
-    border: 1px solid #353535;
+    & tr:hover td {
+      background-color: #353535;
+    }
   }
+
   & td {
     border: 1px solid #353535;
     padding: 1rem;
