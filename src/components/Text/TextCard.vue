@@ -93,8 +93,4 @@ const props = defineProps({
 .gray {
     color: var(--lightest-grey);
 }
-
-.var(--white) {
-    color: var(--var(--white));
-}
 </style>
