@@ -35,7 +35,7 @@ const props = defineProps({
 
 <style scoped>
 .icon-bg {
-    background: linear-gradient(90deg, #445244, #99B898);
+    background: linear-gradient(90deg, var(--dark-green), var(--light-green));
     min-width: 40px !important;
     height: 40px;
     border-radius: 50%;
@@ -61,7 +61,7 @@ const props = defineProps({
 }
 
 .container {
-    color: #99B898;
+    color: var(--light-green);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -73,28 +73,28 @@ const props = defineProps({
 
 .bg-card {
     margin: 4% auto;
-    border: #505050 solid 1px;
+    border: var(--lightest-grey) solid 1px;
     background-color: #242424;
     border-radius: .5rem;
 }
 
 .container p:nth-child(1) {
-    color: #FFFFFF;
+    color: var(--var(--white));
     font-size: 1rem;
     font-weight: 500;
 }
 
 .gradient {
-    background: -webkit-linear-gradient(0deg, #99B898, #445244);
+    background: -webkit-linear-gradient(0deg, var(--light-green), var(--dark-green));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .gray {
-    color: #505050;
+    color: var(--lightest-grey);
 }
 
-.white {
-    color: #ffffff;
+.var(--white) {
+    color: var(--var(--white));
 }
 </style>

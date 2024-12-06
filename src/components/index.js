@@ -1,14 +1,11 @@
 import DefaultLoginForm from '@/components/Form/Login/DefaultLoginForm.vue';
 import DefaultHeader from '@/components/Header/DefaultHeader.vue';
-import Defaultplace from '@/components/Place/DefaultPlace.vue';
 
 import MobileLoginForm from '@/components/Form/Login/Mobile/MobileLogin.vue';
 import MobileHeader from '@/components/Header/Mobile/MobileHeader.vue';
-import MobilePlace from '@/components/Place/Mobile/MobilePlace.vue';
 
 import DesktopLoginForm from '@/components/Form/Login/Desktop/DesktopLogin.vue';
 import DesktopHeader from '@/components/Header/Desktop/DesktopHeader.vue';
-import DeskTopPlace from '@/components/Place/Desktop/DesktopPlace.vue';
 
 import CurricularComponent from '@/components/Curricular/CurricularComponent.vue';
 import SearchBar from '@/components/Search/SearchBar.vue';
@@ -32,12 +29,9 @@ export {
     TextCard,
     DefaultLoginForm,
     DefaultHeader,
-    Defaultplace,
     MobileLoginForm,
     MobileHeader,
-    MobilePlace,
     DesktopLoginForm,
     DesktopHeader,
-    DeskTopPlace,
     DefaultProfile
 }

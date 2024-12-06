@@ -94,11 +94,11 @@ const props = defineProps({
 }
 
 .container {
-    color: #99B898;
+    color: var(--light-green);
     width: 35%;
     height: 6rem;
     margin: 2% 0 5% 0;
-    border: #505050 solid 1px;
+    border: var(--lightest-grey) solid 1px;
     background-color: #242424;
     padding: 5%;
     border-radius: .5rem;
@@ -108,7 +108,7 @@ const props = defineProps({
 }
 
 .container p {
-    color: #FFFFFF;
+    color: var(--var(--white));
 }
 
 .container p:nth-child(1) {
@@ -135,7 +135,7 @@ const props = defineProps({
 }
 
 button {
-    background: linear-gradient(#99B898, #445244);
+    background: linear-gradient(var(--light-green), var(--dark-green));
     color: #242424;
     width: 1.5rem;
     height: 1.5rem;

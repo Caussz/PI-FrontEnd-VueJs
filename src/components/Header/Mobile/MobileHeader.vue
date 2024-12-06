@@ -42,7 +42,7 @@ const { user } = useUserStore()
 header {
   display: flex;
   padding: 9% 5% 5% 5%;
-  color: #ffffff;
+  color: var(--var(--white));
 }
 
 img {

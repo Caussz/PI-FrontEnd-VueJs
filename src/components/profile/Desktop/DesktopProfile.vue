@@ -73,12 +73,12 @@ main {
 }
 
 .info div {
-  background-color: #282828;
+  background-color: var(--dark-grey);
   border-radius: 7px;
   width: 22vw;
-  color: white;
+  color: var(--white);
   padding: 0.7vw 1.2vw;
-  border: 1px #505050 solid;
+  border: 1px var(--lightest-grey) solid;
   font-weight: 400;
   margin: 0.2vw;
 }
@@ -89,13 +89,13 @@ input:focus {
 
 .info {
   margin: 1vw;
-  color: white;
+  color: var(--white);
   font-size: 0.8em;
   font-weight: 600;
 }
 
 .user-image {
-  color: white;
+  color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,8 +127,8 @@ input:focus {
   height: 2vw;
   margin-left: 2vw;
   border-radius: 10vw;
-  border: #505050 solid 1px;
-  color: white;
+  border: var(--lightest-grey) solid 1px;
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,7 +145,7 @@ input:focus {
 .camera {
   background-color: #181818;
   border-radius: 2vw;
-  border: #505050 solid 1px;
+  border: var(--lightest-grey) solid 1px;
   width: 1.3vw;
   height: 1.3vw;
   position: relative;

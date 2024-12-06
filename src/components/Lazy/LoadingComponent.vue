@@ -28,7 +28,7 @@ main {
 }
 
 span {
-    color: #99B898;
+    color: var(--light-green);
     rotate:270deg;
     font-family: "Kodchasan", sans-serif;
     font-size: 6rem;

@@ -161,14 +161,14 @@ tr {
 }
 
 th {
-  color: white;
+  color: var(--white);
   padding: 1vw;
   word-wrap: break-word;
   font-size: 1.2em;
 }
 
 td {
-  color: #99b898;
+  color: var(--light-green);
   border-top: #43424246 1px solid;
   padding: 1vw;
 }
@@ -181,10 +181,10 @@ tr:hover {
   display: flex;
   align-items: center;
   gap: 1vw;
-  color: #99b898;
+  color: var(--light-green);
 
   & p {
-    color: white;
+    color: var(--white);
   }
 }
 
@@ -218,7 +218,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #13131396;
+  background-color: var(--darkest-grey);
 }
 
 img {
@@ -227,7 +227,7 @@ img {
 }
 
 .navigation {
-  color: white;
+  color: var(--white);
 
   & div {
     display: flex;
@@ -241,10 +241,10 @@ img {
     align-items: center;
     gap: 1vw;
     text-decoration: none;
-    color: white;
+    color: var(--white);
     width: 76%;
     padding: 0.5vw 2vw;
-    border-right: white 3px solid;
+    border-right: var(--white) 3px solid;
   }
 
   & .router-link-active:hover,
@@ -254,7 +254,7 @@ img {
 }
 
 .aside-bottom {
-  color: white;
+  color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -285,12 +285,12 @@ img {
 
 .card {
   background-color: #242424;
-  border: #505050 solid 1px;
+  border: var(--lightest-grey) solid 1px;
   border-radius: 20px;
   width: 100%;
   margin: 0.7vw;
   height: 7.5vw;
-  color: white;
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -303,8 +303,8 @@ img {
 }
 
 .card:hover {
-  background-image: linear-gradient(#99b898, #445244);
-  color: black;
+  background-image: linear-gradient(var(--light-green), var(--dark-green));
+  color: var(--black);
 
   & div > p {
     color: #212121c4;
@@ -325,7 +325,7 @@ img {
     display: flex;
   }
   h2 {
-    color: white;
+    color: var(--white);
     font-size: 1.2em;
   }
 }
@@ -336,7 +336,7 @@ img {
 
 .curricular-guidance {
   display: flex;
-  color: white;
+  color: var(--white);
   justify-content: space-around;
   padding: 1vw;
 
@@ -352,7 +352,7 @@ img {
 .line {
   display: flex;
   justify-content: space-around;
-  color: #99b898;
+  color: var(--light-green);
   padding: 1vw;
 }
 
@@ -362,11 +362,11 @@ img {
 
 /* profile */
 .profile-container {
-  border: #505050 solid 1px;
+  border: var(--lightest-grey) solid 1px;
   border-radius: 20px;
   width: 18vw;
   height: 18vw;
-  color: white;
+  color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -394,8 +394,8 @@ img {
 
 button {
   background-color: #242424;
-  border: #505050 solid 1px;
-  color: white;
+  border: var(--lightest-grey) solid 1px;
+  color: var(--white);
   width: 3vw;
   height: 3vw;
   border-radius: 50%;

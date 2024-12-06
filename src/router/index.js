@@ -14,11 +14,6 @@ const router = createRouter({
           component: () => import('../views/HomeView.vue')
         },
         {
-          path: '/place',
-          name: 'place',
-          component: () => import('../views/SubjectPlaceView.vue')
-        },
-        {
           path: '/bulletin',
           name: 'bulletin',
           component: () => import('../views/BulletinView.vue')
@@ -29,9 +24,9 @@ const router = createRouter({
           component: () => import('../views/ProfileView.vue')
         }
       ],
-      meta: {
-        requiresAuth: true
-      }
+      // meta: {
+      //   requiresAuth: true
+      // }
     },
     {
       path: '/login',
