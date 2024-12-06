@@ -75,8 +75,8 @@ main {
   justify-content: space-between;
   width: 35vw;
   background-color: #212121;
-  color: white;
-  padding: 5rem 2rem 2rem 2rem 2rem 4rem 2rem;
+  color: var(--white);
+  padding: 2rem 2rem 4rem 2rem;
   border-radius: 2rem;
 }
 
@@ -91,7 +91,7 @@ main {
 }
 
 h1 {
-  color: #99b898;
+  color: var(--light-green);
   font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 3rem;
@@ -121,12 +121,12 @@ table {
   }
 
   & tbody > tr td:last-of-type:hover {
-    border: 1px solid #99b898;
+    border: 1px solid var(--light-green);
     transition: 0.3s ease-in-out all;
   }
 
   & tbody > tr td:last-of-type {
-    color: #99b898;
+    color: var(--light-green);
     position: relative;
     display: flex;
     flex-direction: row;
@@ -139,8 +139,8 @@ table {
       right: 1rem;
       display: flex;
       align-items: center;
-      color: #ffffff;
       top: 25%;
+      color: var(--var(--white));
     }
   }
 

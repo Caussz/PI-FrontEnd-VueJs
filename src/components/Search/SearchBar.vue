@@ -12,7 +12,7 @@ import { Magnify } from '@/components/icons';
 <style scoped>
 .search-component {
     background-color: #242424;
-    border: #505050 solid 1px;
+    border: var(--lightest-grey) solid 1px;
     border-radius: 2rem;
     max-width: 100%;
     color: #fff;

@@ -75,7 +75,7 @@ const informations = {
 }
 
 .field-information {
-  background-color: #282828;
+  background-color: var(--dark-grey);
   border: 1px solid #716f6f;
   padding: 0.8rem;
   border-radius: 0.4rem;

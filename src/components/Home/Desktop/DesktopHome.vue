@@ -225,14 +225,14 @@ tr:hover {
 }
 
 th {
-  color: white;
+  color: var(--white);
   padding: 1vw;
   word-wrap: break-word;
   font-size: 1.2em;
 }
 
 td {
-  color: #99b898;
+  color: var(--light-green);
   border-top: #43424246 1px solid;
   padding: 1vw;
 }
@@ -241,10 +241,10 @@ td {
   display: flex;
   align-items: center;
   gap: 1vw;
-  color: #99b898;
+  color: var(--light-green);
 
   & p {
-    color: white;
+    color: var(--white);
   }
 }
 
@@ -264,11 +264,11 @@ td {
 
 /* profile */
 .profile-container {
-  border: #505050 solid 1px;
+  border: var(--lightest-grey) solid 1px;
   border-radius: 20px;
   width: 18vw;
   height: 18vw;
-  color: white;
+  color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -291,8 +291,8 @@ td {
 
 button {
   background-color: #242424;
-  border: #505050 solid 1px;
-  color: white;
+  border: var(--lightest-grey) solid 1px;
+  color: var(--white);
   width: 3vw;
   height: 3vw;
   border-radius: 50%;

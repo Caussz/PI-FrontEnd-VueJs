@@ -54,7 +54,7 @@ function ShowModal() {
 </template>
 
 <style scoped>
-.title-container{
+.title-container {
   display: flex;
   justify-content: space-between;
   width: 86vw;
@@ -98,11 +98,11 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 3% ;
-  color: #ffffff;
+  padding: 3%;
   position: fixed;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   z-index: 10;
+  color: var(--var(--white));
 }
 
 img {
