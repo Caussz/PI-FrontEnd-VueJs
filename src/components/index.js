@@ -26,6 +26,7 @@ import DefaultProfile from './profile/DefaultProfile.vue';
 import SelectYear from '@/components/Home/Desktop/SelectYear.vue';
 
 import DefaultQuestionnaires from './Questionnaires/DefaultQuestionnaires.vue';
+import DefaultTasks from './Tasks/DefaultTasks.vue';
 
 export {
     LoadingComponent,
@@ -50,5 +51,6 @@ export {
     MobileProgress,
     SelectYear,
     DefaultProfile,
-    DefaultQuestionnaires
+    DefaultQuestionnaires,
+    DefaultTasks
 }

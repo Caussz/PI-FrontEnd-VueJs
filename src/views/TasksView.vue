@@ -1,5 +1,5 @@
 <script setup>
-import DefaultTasks from '@/components/Tasks/DefaultTasks.vue'
+import {DefaultTasks} from '@/components'
 </script>
 
 <template>
