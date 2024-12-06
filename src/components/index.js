@@ -25,6 +25,8 @@ import SubjectCard from './Subject/SubjectCard.vue';
 import DefaultProfile from './profile/DefaultProfile.vue';
 import SelectYear from '@/components/Home/Desktop/SelectYear.vue';
 
+import DefaultQuestionnaires from './Questionnaires/DefaultQuestionnaires.vue';
+
 export {
     LoadingComponent,
     TitleComponent,
@@ -47,5 +49,6 @@ export {
     DesktopProgress,
     MobileProgress,
     SelectYear,
-    DefaultProfile
+    DefaultProfile,
+    DefaultQuestionnaires
 }
