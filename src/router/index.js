@@ -24,14 +24,19 @@ const router = createRouter({
           component: () => import('../views/BulletinView.vue')
         },
         {
+          path: '/questionnaires',
+          name: 'questionnaires',
+          component: () => import('../views/QuestionnairesView.vue')
+        },
+        {
           path: '/profile',
           name: 'profile',
           component: () => import('../views/ProfileView.vue')
         }
       ],
-      meta: {
-        requiresAuth: true
-      }
+      // meta: {
+      //   requiresAuth: true
+      // }
     },
     {
       path: '/login',
