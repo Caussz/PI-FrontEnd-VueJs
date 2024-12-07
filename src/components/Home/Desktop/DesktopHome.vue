@@ -1,24 +1,18 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { SelectYear } from '@/components'
-import { ref } from 'vue'
-import {
-  ChevronRight,
-  NotebookOutline,
-  HomeOutline,
-  ListBoxOutline,
-  AlertBoxOutline,
-  SchoolOutline,
-  AccountGroup,
-  AccountOutline,
-  Logout
-} from '@/components/icons'
+import { onMounted, ref } from 'vue'
+
+import { useUserStore } from '@/stores'
 
 const modalYear = ref(false)
+const userStore = useUserStore()
 
 function showModal() {
   modalYear.value = !modalYear.value
 }
+
+onMounted(() => console.log(userStore.user))
 </script>
 <template>
   <SelectYear v-if="modalYear" @close="modalYear = !modalYear" />
@@ -135,11 +129,11 @@ function showModal() {
       </div>
       <div class="profile-container">
         <img
-          src="https://wallpapers.com/images/hd/solid-light-blue-background-q4ei4i2ruw3b5gp9.jpg"
-          alt=""
+          :src="userStore.user.photo"
+          :alt="userStore.user.name"
         />
-        <h2>Oliver Calenbard</h2>
-        <p>2022305854</p>
+        <h2>{{userStore.user.name}}</h2>
+        <p>{{userStore.user.matricula}}</p>
       </div>
     </main>
   </div>

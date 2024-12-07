@@ -1,9 +1,7 @@
 <script setup>
 import { ref, reactive } from "vue";
 import { useRouter } from "vue-router";
-import { CheckCircle, EyeOffOutline, EyeOutline } from "@/components/icons";
 import { useUserStore } from "@/stores";
-import { AuthService } from "@/services";
 import PopUpLoginComponent from "@/components/PopUp/PopUpLoginComponent.vue";
 import PopUpFinishComponent from "@/components/PopUp/PopUpFinishComponent.vue";
 
@@ -19,10 +17,8 @@ const router = useRouter();
 const showPass = ref(false);
 
 const entrar = async () => {
-  const { studentInfo } = await AuthService.getUserInfo(user.name, user.pass);
-  getinfo(studentInfo);
-  getUserImage(studentInfo?.photo);
-  getUserFormat(studentInfo?.name);
+  console.log(user.name, user.pass);
+  await userStore.login(user.name, user.pass)
   router.push({ name: "home" });
 };
 </script>
@@ -33,14 +29,14 @@ const entrar = async () => {
     <label>
       <p>Usuário</p>
       <div class="input-container">
-        <input type="text" placeholder="Digite seu usuário" />
+        <input type="text" placeholder="Digite seu usuário" v-model="user.name"/>
         <CheckCircle />
       </div>
     </label>
     <label>
       <p>Senha</p>
       <div class="input-container">
-        <input type="password" placeholder="⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁" />
+        <input type="password" placeholder="⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁" v-model="user.pass"/>
         <EyeOutline v-if="!showPass" @click="showPass = !showPass" />
         <EyeOffOutline v-if="showPass" @click="showPass = !showPass" />
       </div>
