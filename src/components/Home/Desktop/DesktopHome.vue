@@ -1,5 +1,6 @@
 <script setup>
 import SearchBar from '../../Search/SearchBar.vue'
+import ColorTeme from '../../ColorTeme/ColorTemeComponent.vue'
 import {
   ChevronRight,
   NotebookOutline,
@@ -44,6 +45,7 @@ import {
           <p>Turma</p>
         </div>
       </div>
+      <ColorTeme />
       <div class="aside-bottom">
         <div>
           <Help size="20" />
