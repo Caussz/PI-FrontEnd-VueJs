@@ -4,7 +4,6 @@ import { useStorage } from '@vueuse/core';
 import { AuthService } from '@/services';
 
 import { convertImage } from '@/helpers';
-import { computed } from 'vue';
 
 export const useUserStore = defineStore('user', () => {
 
@@ -14,15 +13,9 @@ export const useUserStore = defineStore('user', () => {
 		status: '',
 		course: '',
 		photo: null,
-		loggedStatus: 0
+		loggedStatus: 0,
+		loading: false
 	})
-
-	const userGrades = useStorage('grades', {
-		grades: null,
-		photo: ''
-	});
-
-	const gradesComputed = computed(() => userGrades.value.grades);
 
 	function getUserImage(image) {
 		const userImage = convertImage(image);
@@ -34,24 +27,21 @@ export const useUserStore = defineStore('user', () => {
 		user.value.loggedIn = true
 	};
 
-	const getGrades = async (name, pass, index) => {
-		const {grades, studentInfo} = await AuthService.getGradesInfo(name, pass, index)
-		userGrades.value.grades = grades
-		userGrades.value.photo = studentInfo?.photo
-	}
-
 	const login = async (name, pass) => {
 		try {
+			user.value.loading = true
 			const { studentInfo } = await AuthService.getUserInfo(name, pass);
 			getinfo(studentInfo);
 			getUserImage(studentInfo?.photo);
 			getUserFormat(studentInfo?.name);
+			user.value.loading = false
 			return true
 		} catch (error) {
 			console.log(error);
+			user.value.loading = false
 			return false
 		}
-	  };
+	};
 
 	function getUserFormat(name) {
 		const [matricula, nome] = name.split(' - ');
@@ -66,5 +56,5 @@ export const useUserStore = defineStore('user', () => {
 		user.value.matricula = matricula.trim();
 	};
 
-	return { user, getUserImage, getinfo, getUserFormat, login, getGrades, userGrades, gradesComputed };
+	return { user, getUserImage, getinfo, getUserFormat, login };
 });

@@ -1,10 +1,10 @@
 <script setup>
-import { useUserStore } from "@/stores";
+import { useUserStore, useGradesStore } from "@/stores";
 
 const userStore = useUserStore();
+const gradesStore = useGradesStore();
 
-// Transformar os dados de gradesComputed no formato do bulletinInfo
-const bulletinInfo = userStore.gradesComputed.map((grade) => ({
+const bulletinInfo = gradesStore.gradesComputed.map((grade) => ({
   class: grade.fullName,
   firstTri: parseFloat(grade.notas.Tri1 || 0),
   firstTriReav: parseFloat(grade.notas.Tri1Reava || 0),

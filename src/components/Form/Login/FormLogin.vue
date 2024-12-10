@@ -1,11 +1,12 @@
 <script setup>
 import { ref, reactive } from "vue";
 import { useRouter } from "vue-router";
-import { useUserStore } from "@/stores";
+import { useUserStore, useStudentStore } from "@/stores";
 import PopUpLoginComponent from "@/components/PopUp/PopUpLoginComponent.vue";
 import PopUpFinishComponent from "@/components/PopUp/PopUpFinishComponent.vue";
 
 const userStore = useUserStore();
+const studentStore = useStudentStore();
 
 const user = reactive({
   name: "",
@@ -17,7 +18,7 @@ const router = useRouter();
 const showPass = ref(false);
 
 const entrar = async () => {
-  console.log(user.name, user.pass);
+  studentStore.setStudent(user.name, user.pass)
   await userStore.login(user.name, user.pass)
   router.push({ name: "home" });
 };

@@ -1,3 +1,5 @@
 import { useUserStore } from "./user/user";
+import { useGradesStore } from "./grades/grades";
+import { useStudentStore } from "./user/student";
 
-export { useUserStore };
+export { useUserStore, useGradesStore, useStudentStore };
