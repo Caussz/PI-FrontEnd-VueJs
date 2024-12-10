@@ -4,6 +4,8 @@ import { useRouter } from "vue-router";
 import { useUserStore, useStudentStore } from "@/stores";
 import PopUpLoginComponent from "@/components/PopUp/PopUpLoginComponent.vue";
 import PopUpFinishComponent from "@/components/PopUp/PopUpFinishComponent.vue";
+import EyeOffOutline from "vue-material-design-icons/EyeOffOutline.vue";
+import EyeOutline from "vue-material-design-icons/EyeOutline.vue";
 
 const userStore = useUserStore();
 const studentStore = useStudentStore();
@@ -37,7 +39,7 @@ const entrar = async () => {
     <label>
       <p>Senha</p>
       <div class="input-container">
-        <input type="password" placeholder="⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁" v-model="user.pass"/>
+        <input :type="showPass? 'text': 'password'" placeholder="⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁ ⦁" v-model="user.pass"/>
         <EyeOutline v-if="!showPass" @click="showPass = !showPass" />
         <EyeOffOutline v-if="showPass" @click="showPass = !showPass" />
       </div>

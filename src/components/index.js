@@ -16,7 +16,7 @@ import DesktopProgress from './Progress/Desktop/DesktopProgress.vue';
 import CurricularComponent from '@/components/Curricular/CurricularComponent.vue';
 import SearchBar from '@/components/Search/SearchBar.vue';
 
-import LoadingComponent from "./Lazy/LoadingComponent.vue";
+import ZyraLoadingComponent from "./Lazy/ZyraLoadingComponent.vue";
 import TitleComponent from './Text/TitleComponent.vue'
 import LastUpdates from './Update/LastUpdates.vue';
 import UpdateCard from './Update/UpdateCard.vue';
@@ -24,9 +24,12 @@ import TextCard from './Text/TextCard.vue';
 import SubjectCard from './Subject/SubjectCard.vue';
 import DefaultProfile from './profile/DefaultProfile.vue';
 import SelectYear from '@/components/Home/Desktop/SelectYear.vue';
+import LoadingComponent from './Lazy/LoadingComponent.vue';
+import FormLogin from './Form/Login/FormLogin.vue';
+import ZyraImagesComponent from './Lazy/ZyraImagesComponent.vue';
 
 export {
-    LoadingComponent,
+    ZyraLoadingComponent,
     TitleComponent,
     LastUpdates,
     UpdateCard,
@@ -47,5 +50,8 @@ export {
     DesktopProgress,
     MobileProgress,
     SelectYear,
-    DefaultProfile
+    DefaultProfile,
+    LoadingComponent,
+    FormLogin,
+    ZyraImagesComponent
 }

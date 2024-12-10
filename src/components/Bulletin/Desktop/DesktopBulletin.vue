@@ -1,6 +1,8 @@
 <script setup>
 import { useUserStore, useGradesStore } from "@/stores";
 
+import BackButton from "@/components/icons/back/BackButton.vue";
+
 const userStore = useUserStore();
 const gradesStore = useGradesStore();
 
@@ -20,6 +22,7 @@ const bulletinInfo = gradesStore.gradesComputed.map((grade) => ({
 </script>
 
 <template>
+  <BackButton/>
   <main>
     <h1>Boletim Escolar - 2022</h1>
     <div class="info">

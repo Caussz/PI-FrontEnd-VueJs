@@ -1,12 +1,9 @@
 <script setup>
-import { Tools, ChevronLeft } from '@/components/icons'
-import { RouterLink } from 'vue-router'
+import { Tools, BackButton } from '@/components/icons'
 </script>
 <template>
   <main>
-    <RouterLink to="/">
-      <ChevronLeft />
-    </RouterLink>
+    <BackButton/>
     <div>
       <Tools size="50" />
       <h1>Sistema em manutenção</h1>
