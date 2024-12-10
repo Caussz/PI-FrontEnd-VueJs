@@ -1,30 +1,32 @@
 <script setup>
-const questionnairesList = [
+const tasksList = [
   {
-    title: "Avaliação 1 sobre PWAs e VueJS",
-    start: "05/08/2024 08:00",
-    end: "05/08/2024 08:00",
+    title: "Projeto frontend PWA da garagem",
+    start: "03/07/2024 00h00 - 17/07/2024 13h00",
+    note: true,
+    shipments: 10,
   },
 ];
 </script>
 
 <template>
   <main>
-    <h1>Questionários</h1>
-
+    <h1>Atividades</h1>
     <table>
       <thead>
         <tr>
           <td>Título</td>
-          <td>Inicio</td>
-          <td>Fim</td>
+          <td>Período de entrega</td>
+          <td>Possui nota</td>
+          <td>Envios</td>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="questionnaire in questionnairesList" :key="questionnaire">
-          <td>{{ questionnaire.title }}</td>
-          <td>{{ questionnaire.start }}</td>
-          <td>{{ questionnaire.end }}</td>
+        <tr v-for="task in tasksList" :key="task">
+          <td>{{ task.title }}</td>
+          <td>{{ task.start }}</td>
+          <td>{{ task.note ? "sim" : "não" }}</td>
+          <td>{{ task.shipments }}</td>
         </tr>
       </tbody>
     </table>
@@ -59,16 +61,11 @@ table {
   }
 
   & tbody {
-<<<<<<< HEAD
-    border: 1px solid #353535;
-  }
-=======
     & tr:hover td {
       background-color: #353535;
     }
   }
 
->>>>>>> e87cd9416ccb6638508bcc598f17499b8f521133
   & td {
     border: 1px solid #353535;
     padding: 1rem;

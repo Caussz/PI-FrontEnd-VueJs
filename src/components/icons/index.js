@@ -22,6 +22,7 @@ import Logout from 'vue-material-design-icons/Logout.vue'
 import Close from 'vue-material-design-icons/Close.vue'
 import Check from 'vue-material-design-icons/Check.vue';
 import CameraOutline from 'vue-material-design-icons/CameraOutline.vue';
+import Tools from 'vue-material-design-icons/Tools.vue';
 
 
 export {
@@ -48,5 +49,6 @@ export {
     Logout,
     Close,
     Check,
-    CameraOutline
+    CameraOutline,
+    Tools,
 }

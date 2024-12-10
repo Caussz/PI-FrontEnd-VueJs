@@ -1,11 +1,14 @@
 <script setup>
-import { ChevronRight, Close } from "@/components/icons";
+import { defineEmits } from 'vue'
+import { ChevronRight, Close } from '@/components/icons'
+
+const emit = defineEmits(['close'])
 </script>
 
 <template>
   <main>
     <div class="content-container">
-      <Close class="close-btn" size="30" />
+      <Close class="close-btn" size="30" @click="$emit('close')" />
       <h1>Selecione o ano escolar</h1>
       <table>
         <thead>
@@ -17,15 +20,21 @@ import { ChevronRight, Close } from "@/components/icons";
         <tbody>
           <tr>
             <td>2022</td>
-            <td>Aprovado <ChevronRight /></td>
+            <td>
+              <router-link to="/bulletin"> Aprovado <ChevronRight /> </router-link>
+            </td>
           </tr>
           <tr>
             <td>2023</td>
-            <td>Aprovado <ChevronRight /></td>
+            <td>
+              <router-link to="/bulletin">Aprovado <ChevronRight /> </router-link>
+            </td>
           </tr>
           <tr>
             <td>2024</td>
-            <td>Matriculado<ChevronRight /></td>
+            <td>
+              <router-link to="/bulletin"> Aprovado <ChevronRight /> </router-link>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -123,7 +132,12 @@ table {
       display: flex;
       align-items: center;
       color: #ffffff;
+      top: 25%;
     }
+  }
+
+  & a {
+    color: #99b898;
   }
 }
 </style>
