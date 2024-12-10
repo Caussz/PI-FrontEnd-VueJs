@@ -11,26 +11,6 @@ const router = createRouter({
         {
           path: '/',
           name: 'home',
-          component: () => import('../views/HomeView.vue'),
-        },
-        {
-          path: '/place',
-          name: 'place',
-          component: () => import('../views/SubjectPlaceView.vue'),
-        }
-      ],
-      // meta: {
-      //   requiresAuth: true
-      // }
-    },
-    {
-      path: '/',
-      name: 'home',
-      component: () => import('../layouts/DefaultLayout.vue'),
-      children: [
-        {
-          path: '/',
-          name: 'home',
           component: () => import('../views/HomeView.vue')
         },
         {
@@ -49,9 +29,9 @@ const router = createRouter({
           component: () => import('../views/ProfileView.vue')
         }
       ],
-      meta: {
-        requiresAuth: true
-      }
+      // meta: {
+      //   requiresAuth: true
+      // }
     },
     {
       path: '/login',

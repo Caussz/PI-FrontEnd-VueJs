@@ -14,7 +14,6 @@ function showModal() {
 
 onMounted(() => console.log(userStore.user))
 import {
-  ChevronRight,
   NotebookOutline,
   HomeOutline,
   ListBoxOutline,
@@ -22,7 +21,6 @@ import {
   AlertBoxOutline,
   SchoolOutline,
   AccountGroup,
-  Help,
   Logout,
   AccountOutline,
   Certificate,
