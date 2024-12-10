@@ -59,19 +59,15 @@ table {
   }
 
   & tbody {
-<<<<<<< HEAD
     border: 1px solid #353535;
   }
-=======
-    & tr:hover td {
-      background-color: #353535;
-    }
+  & tr:hover td {
+    background-color: #353535;
   }
+}
 
->>>>>>> e87cd9416ccb6638508bcc598f17499b8f521133
-  & td {
-    border: 1px solid #353535;
-    padding: 1rem;
-  }
+& td {
+  border: 1px solid #353535;
+  padding: 1rem;
 }
 </style>
