@@ -56,9 +56,8 @@ main {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: -10vh;
+  left: 0;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   background: #9b9b9b15;

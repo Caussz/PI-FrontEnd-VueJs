@@ -1,18 +1,18 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-import { SelectYear } from '@/components'
-import { onMounted, ref } from 'vue'
+import { RouterLink } from "vue-router";
+import { SelectYear } from "@/components";
+import { onMounted, ref } from "vue";
 
-import { useUserStore } from '@/stores'
+import { useUserStore } from "@/stores";
 
-const modalYear = ref(false)
-const userStore = useUserStore()
+const modalYear = ref(false);
+const userStore = useUserStore();
 
 function showModal() {
-  modalYear.value = !modalYear.value
+  modalYear.value = !modalYear.value;
 }
 
-onMounted(() => console.log(userStore.user))
+onMounted(() => console.log(userStore.user));
 import {
   NotebookOutline,
   HomeOutline,
@@ -24,7 +24,7 @@ import {
   Logout,
   AccountOutline,
   Certificate,
-} from '@/components/icons'
+} from "@/components/icons";
 </script>
 <template>
   <SelectYear v-if="modalYear" @close="modalYear = !modalYear" />
@@ -56,10 +56,10 @@ import {
           <SchoolOutline size="20" />
           <p>Notas</p>
         </RouterLink>
-        <RouterLink to="/bulletin">
-          <Certificate size="20" />
-          <p>Boletim</p>
-        </RouterLink>
+          <div @click="showModal">
+            <Certificate size="20" />
+            <p>Boletim</p>
+          </div>
         <RouterLink to="/class">
           <AccountGroup size="20" />
           <p>Turma</p>
@@ -245,12 +245,9 @@ import {
         </table>
       </div>
       <div class="profile-container">
-        <img
-          :src="userStore.user.photo"
-          :alt="userStore.user.name"
-        />
-        <h2>{{userStore.user.name}}</h2>
-        <p>{{userStore.user.matricula}}</p>
+        <img :src="userStore.user.photo" :alt="userStore.user.name" />
+        <h2>{{ userStore.user.name }}</h2>
+        <p>{{ userStore.user.matricula }}</p>
       </div>
     </main>
   </div>
@@ -324,13 +321,6 @@ main {
   margin-top: 10vh;
 }
 
-/* header {
-  display: flex;
-  padding: 1vw;
-  justify-content: flex-end;
-  gap: 26vw;
-} */
-
 aside {
   max-height: 100vh;
   width: 20vw;
@@ -366,7 +356,7 @@ a,
   }
 
   & .router-link-active {
-    width: 79.5%;
+    width: 100%;
     border-right: white 3px solid;
   }
 
