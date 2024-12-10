@@ -19,15 +19,21 @@ const bulletinInfo = gradesStore.gradesComputed.map((grade) => ({
   situation: grade.notas.Situacao || "Não definido",
 }));
 
+const items = [{
+  title:"WhatsApp"
+},
+{
+  title: "PDF"
+}]
 </script>
 
 <template>
-  <BackButton/>
+  <BackButton />
   <main>
     <h1>Boletim Escolar - 2022</h1>
     <div class="info">
       <p>Aluno(a): {{ userStore.user.name }}</p>
-      <p>Matricula: {{userStore.user.matricula}}</p>
+      <p>Matricula: {{ userStore.user.matricula }}</p>
       <p>
         {{ userStore.user.course }}
       </p>
@@ -67,7 +73,18 @@ const bulletinInfo = gradesStore.gradesComputed.map((grade) => ({
             <td colspan="3">Total de Faltas: 8</td>
           </tr>
           <tr class="absence-info">
-            <td colspan="7"></td>
+            <td colspan="7">
+              <v-menu >
+                <template v-slot:activator="{ props }">
+                  <v-btn color="#99b898" variant="outlined" hover v-bind="props"> Exportar </v-btn>
+                </template>
+                <v-list class="bg-primary">
+                  <v-list-item v-for="(item, index) in items" :key="index" :value="index">
+                    <v-list-item-title >{{ item.title }}</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
+            </td>
             <td colspan="3">
               Total de Faltas: 8 Percentual de Faltas referente ao Período Letivo: 3%
             </td>
@@ -79,6 +96,10 @@ const bulletinInfo = gradesStore.gradesComputed.map((grade) => ({
 </template>
 
 <style scoped>
+button{
+  translate: 0 -4vh;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -144,7 +165,7 @@ table {
 
   & .absence-info td:last-of-type {
     background-color: #2b2b2b;
-    padding: .6rem;
+    padding: 0.6rem;
     color: white;
     text-align: start;
   }

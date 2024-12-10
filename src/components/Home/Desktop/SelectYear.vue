@@ -1,8 +1,25 @@
 <script setup>
-import { defineEmits } from 'vue'
-import { ChevronRight, Close } from '@/components/icons'
+import { useRouter } from "vue-router";
+import { defineEmits } from "vue";
+import { ChevronRight, Close } from "@/components/icons";
 
-const emit = defineEmits(['close'])
+const router = useRouter()
+
+const emit = defineEmits(["close"]);
+
+const items = [{
+  year: 2022,
+  situation: "APROVADO"
+},
+{
+  year: 2023,
+  situation: "APROVADO"
+},
+{
+  year: 2024,
+  situation: "MATRICULADO"
+},
+]
 </script>
 
 <template>
@@ -18,22 +35,10 @@ const emit = defineEmits(['close'])
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>2022</td>
+          <tr v-for="(item, index) in items" :key="index" @click="router.push('/bulletin')">
+            <td>{{ item.year }}</td>
             <td>
-              <router-link to="/bulletin"> Aprovado <ChevronRight /> </router-link>
-            </td>
-          </tr>
-          <tr>
-            <td>2023</td>
-            <td>
-              <router-link to="/bulletin">Aprovado <ChevronRight /> </router-link>
-            </td>
-          </tr>
-          <tr>
-            <td>2024</td>
-            <td>
-              <router-link to="/bulletin"> Aprovado <ChevronRight /> </router-link>
+              <div> {{item.situation}} <ChevronRight /> </div>
             </td>
           </tr>
         </tbody>
