@@ -1,18 +1,30 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-import { SelectYear } from '@/components'
-import { onMounted, ref } from 'vue'
+import { RouterLink } from "vue-router";
+import { SelectYear } from "@/components";
+import { onMounted, ref } from "vue";
 
-import { useUserStore } from '@/stores'
+import { useUserStore } from "@/stores";
 
-const modalYear = ref(false)
-const userStore = useUserStore()
+const modalYear = ref(false);
+const userStore = useUserStore();
 
 function showModal() {
-  modalYear.value = !modalYear.value
+  modalYear.value = !modalYear.value;
 }
 
-onMounted(() => console.log(userStore.user))
+onMounted(() => console.log(userStore.user));
+import {
+  NotebookOutline,
+  HomeOutline,
+  ListBoxOutline,
+  CalendarWeekOutline,
+  AlertBoxOutline,
+  SchoolOutline,
+  AccountGroup,
+  Logout,
+  AccountOutline,
+  Certificate,
+} from "@/components/icons";
 </script>
 <template>
   <SelectYear v-if="modalYear" @close="modalYear = !modalYear" />
@@ -22,23 +34,35 @@ onMounted(() => console.log(userStore.user))
         <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="" />
         <RouterLink to="/">
           <HomeOutline size="20" />
-          Home
+          <p>Home</p>
         </RouterLink>
-        <RouterLink to="/activities">
+        <RouterLink to="/profile">
+          <AccountOutline size="20" />
+          <p>Profile</p>
+        </RouterLink>
+        <RouterLink to="/activitis">
           <ListBoxOutline size="20" />
-          Atividades
+          <p>Atividades</p>
+        </RouterLink>
+        <RouterLink to="/calendar">
+          <CalendarWeekOutline size="20" />
+          <p>Calendário acâdemico</p>
         </RouterLink>
         <RouterLink to="/communique">
           <AlertBoxOutline size="20" />
-          Comunicados
+          <p>Comunicados</p>
         </RouterLink>
-        <a @click="showModal">
+        <RouterLink to="/grades">
           <SchoolOutline size="20" />
-          Notas
-        </a>
+          <p>Notas</p>
+        </RouterLink>
+          <div @click="showModal">
+            <Certificate size="20" />
+            <p>Boletim</p>
+          </div>
         <RouterLink to="/class">
           <AccountGroup size="20" />
-          Turma
+          <p>Turma</p>
         </RouterLink>
       </div>
       <div class="aside-bottom">
@@ -48,108 +72,224 @@ onMounted(() => console.log(userStore.user))
         </RouterLink>
       </div>
     </aside>
-    <header>
-      <div class="header-buttons">
-        <button></button>
-        <button>
-          <AccountOutline />
-        </button>
-      </div>
-    </header>
     <main>
       <div class="discipline-container">
-        <div class="cards-guidance">
-          <h2>Últimas atualizações</h2>
-          <div>
-            <p>Ver mais</p>
-            <ChevronRight class="icon" size="20" />
-          </div>
-        </div>
-        <div class="card">
-          <div>
-            <h2>Matemática</h2>
-            <p>Tarefa alterda</p>
-          </div>
-          <p>05/10/2024</p>
-        </div>
-        <div class="card">
-          <div>
-            <h2>Matemática</h2>
-            <p>Tarefa alterda</p>
-          </div>
-          <p>05/10/2024</p>
-        </div>
         <table>
           <tr>
             <th>Componente curricular</th>
             <th>Local</th>
             <th>Horário</th>
           </tr>
-          <tr>
-            <td class="discipline">
-              <NotebookOutline />
-              <p>Desenvolvimento de dispositivos móveis</p>
-            </td>
-            <td>E-305</td>
-            <td>(15/02/2024 - 11/12/2024)</td>
-          </tr>
-          <tr>
-            <td class="discipline">
-              <NotebookOutline />
-              <p>Matemática</p>
-            </td>
-            <td>E-305</td>
-            <td>(15/02/2024 - 11/12/2024)</td>
-          </tr>
-          <tr>
-            <td class="discipline">
-              <NotebookOutline />
-              <p>Desenvolvimento de dispositivos móveis</p>
-            </td>
-            <td>E-305</td>
-            <td>(15/02/2024 - 11/12/2024)</td>
-          </tr>
-          <tr>
-            <td class="discipline">
-              <NotebookOutline />
-              <p>Matemática</p>
-            </td>
-            <td>E-305</td>
-            <td>(15/02/2024 - 11/12/2024)</td>
-          </tr>
-          <tr>
-            <td class="discipline">
-              <NotebookOutline />
-              <p>Matemática</p>
-            </td>
-            <td>E-305</td>
-            <td>(15/02/2024 - 11/12/2024)</td>
-          </tr>
+          <div class="table-scroll">
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Desenvolvimento de dispositivos móveis</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Desenvolvimento de dispositivos móveis</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Desenvolvimento de dispositivos móveis</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Desenvolvimento de dispositivos móveis</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Desenvolvimento de dispositivos móveis</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Desenvolvimento de dispositivos móveis</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Desenvolvimento de dispositivos móveis</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Desenvolvimento de dispositivos móveis</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+            <tr>
+              <td class="discipline">
+                <NotebookOutline />
+                <p>Matemática</p>
+              </td>
+              <td>E-305</td>
+              <td>(15/02/2024 - 11/12/2024)</td>
+            </tr>
+          </div>
         </table>
       </div>
       <div class="profile-container">
-        <img
-          :src="userStore.user.photo"
-          :alt="userStore.user.name"
-        />
-        <h2>{{userStore.user.name}}</h2>
-        <p>{{userStore.user.matricula}}</p>
+        <img :src="userStore.user.photo" :alt="userStore.user.name" />
+        <h2>{{ userStore.user.name }}</h2>
+        <p>{{ userStore.user.matricula }}</p>
       </div>
     </main>
   </div>
 </template>
 <style scoped>
-/* table */
+#layout-large {
+  min-height: 100vh;
+  display: flex;
+}
+
 table {
   border-collapse: collapse;
-  width: 100%;
+  overflow: auto;
+  width: 45vw;
 }
+
+.table-scroll {
+  border-collapse: collapse;
+  width: 143.56%;
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.table-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background-color: #99b898;
+  border-radius: 20px;
+}
+
 table tr:first-of-type {
   pointer-events: none;
 }
 
 tr {
   width: 100%;
+}
+
+tr:hover {
+  background-color: #ffffff08;
 }
 
 th {
@@ -165,10 +305,6 @@ td {
   padding: 1vw;
 }
 
-tr:hover {
-  background-color: #ffffff08;
-}
-
 .discipline {
   display: flex;
   align-items: center;
@@ -180,33 +316,14 @@ tr:hover {
   }
 }
 
-#layout-large {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 0.5fr 6fr;
-  grid-template-areas:
-    'aside header'
-    'aside main';
-}
-
 main {
   display: flex;
-  grid-area: main;
-}
-
-header {
-  grid-area: header;
-  display: flex;
-  padding: 1vw;
-  justify-content: flex-end;
-  gap: 26vw;
+  margin-top: 10vh;
 }
 
 aside {
-  height: 100vh;
-  grid-area: aside;
-  position: fixed;
+  max-height: 100vh;
+  width: 20vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -229,22 +346,22 @@ a,
 
 .navigation {
   color: white;
-  display: flex;
-  flex-direction: column;
+
+  & a {
+    display: flex;
+    gap: 1vw;
+    padding: 0.5vw 2vw;
+    align-items: center;
+    color: white;
+  }
 
   & .router-link-active {
-    display: flex;
-    align-items: center;
-    gap: 1vw;
-    text-decoration: none;
-    color: white;
-    width: 76%;
-    padding: 0.5vw 2vw;
+    width: 100%;
     border-right: white 3px solid;
   }
 
-  & .router-link-active:hover,
-  a:hover {
+  & a:hover,
+  div:hover {
     background-color: #ffffff08;
   }
 }
@@ -270,89 +387,7 @@ a,
   flex-direction: column;
   align-items: center;
   width: 40vw;
-  margin: 1.5vw 12vw;
-}
-
-.search-bar {
-  width: 17vw;
-  margin-left: 16vw;
-}
-
-.card {
-  background-color: #242424;
-  border: #505050 solid 1px;
-  border-radius: 20px;
-  width: 100%;
-  margin: 0.7vw;
-  height: 7.5vw;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9em;
-  gap: 16vw;
-
-  & div > p {
-    color: #ffffff61;
-  }
-}
-
-.card:hover {
-  background-image: linear-gradient(#99b898, #445244);
-  color: black;
-
-  & div > p {
-    color: #212121c4;
-  }
-}
-
-.cards-guidance {
-  display: flex;
-  justify-content: space-between;
-  width: 95%;
-
-  & p {
-    color: #ffffff3b;
-    font-size: 0.9em;
-  }
-
-  div {
-    display: flex;
-  }
-  h2 {
-    color: white;
-    font-size: 1.2em;
-  }
-}
-
-.icon {
-  color: #ffffff3b;
-}
-
-.curricular-guidance {
-  display: flex;
-  color: white;
-  justify-content: space-around;
-  padding: 1vw;
-
-  & h2 {
-    font-size: 1em;
-  }
-}
-
-.curricular-container {
-  width: 100%;
-}
-
-.line {
-  display: flex;
-  justify-content: space-around;
-  color: #99b898;
-  padding: 1vw;
-}
-
-.line:hover {
-  background-color: #ffffff08;
+  margin: 1.5vh 10vw;
 }
 
 /* profile */
@@ -382,11 +417,6 @@ a,
   }
 }
 
-.header-buttons {
-  display: flex;
-  gap: 1vw;
-}
-
 button {
   background-color: #242424;
   border: #505050 solid 1px;
@@ -394,9 +424,5 @@ button {
   width: 3vw;
   height: 3vw;
   border-radius: 50%;
-}
-
-.search-bar {
-  margin: 0;
 }
 </style>

@@ -25,6 +25,7 @@ import CameraOutline from 'vue-material-design-icons/CameraOutline.vue';
 import Tools from 'vue-material-design-icons/Tools.vue';
 
 import BackButton from './back/BackButton.vue';
+import Certificate from 'vue-material-design-icons/Certificate.vue'
 
 export {
     CheckCircle,
@@ -53,4 +54,5 @@ export {
     CameraOutline,
     Tools,
     BackButton,
+    Certificate,
 }
