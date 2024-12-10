@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import { useStorage } from '@vueuse/core';
+import { computed } from 'vue';
 
 import { AuthService } from '@/services';
 
@@ -16,6 +17,8 @@ export const useUserStore = defineStore('user', () => {
 		loggedStatus: 0,
 		loading: false
 	})
+
+	const loading = computed(() => user.value.loading)
 
 	function getUserImage(image) {
 		const userImage = convertImage(image);
@@ -56,5 +59,5 @@ export const useUserStore = defineStore('user', () => {
 		user.value.matricula = matricula.trim();
 	};
 
-	return { user, getUserImage, getinfo, getUserFormat, login };
+	return { user, getUserImage, getinfo, getUserFormat, login, loading };
 });

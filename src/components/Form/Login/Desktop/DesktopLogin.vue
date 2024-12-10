@@ -1,20 +1,23 @@
 <script setup>
 import FormLogin from "@/components/Form/Login/FormLogin.vue";
+import { useUserStore } from "@/stores";
+
+const userStore = useUserStore();
+
+
 </script>
 
 <template>
-  <div class="loading">
-    <div class="text-center">
-      <v-progress-circular
-        :model-value="value"
-        :rotate="360"
-        :size="100"
-        :width="15"
-        color="teal"
-      >
-        <template v-slot:default> {{ value }} % </template>
-      </v-progress-circular>
-    </div>
+  <div class="loading" v-if="userStore.loading">
+    <v-progress-circular
+      :model-value="value"
+      :rotate="360"
+      :size="100"
+      :width="15"
+      color="#99B898"
+    >
+      <template v-slot:default> {{ value }} % </template>
+    </v-progress-circular>
   </div>
   <main>
     <div class="aside-form">
@@ -33,6 +36,9 @@ import FormLogin from "@/components/Form/Login/FormLogin.vue";
 
 <style scoped>
 .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   width: 100vw;
   height: 100vh;

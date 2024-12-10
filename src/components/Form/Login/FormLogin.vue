@@ -52,6 +52,7 @@ const entrar = async () => {
 </template>
 
 <style scoped>
+
 label {
   width: 100%;
 }
