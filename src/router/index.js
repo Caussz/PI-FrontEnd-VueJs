@@ -11,6 +11,26 @@ const router = createRouter({
         {
           path: '/',
           name: 'home',
+          component: () => import('../views/HomeView.vue'),
+        },
+        {
+          path: '/place',
+          name: 'place',
+          component: () => import('../views/SubjectPlaceView.vue'),
+        }
+      ],
+      // meta: {
+      //   requiresAuth: true
+      // }
+    },
+    {
+      path: '/',
+      name: 'home',
+      component: () => import('../layouts/DefaultLayout.vue'),
+      children: [
+        {
+          path: '/',
+          name: 'home',
           component: () => import('../views/HomeView.vue')
         },
         {
