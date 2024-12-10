@@ -1,26 +1,49 @@
 <script setup>
-import FormLogin from '@/components/Form/Login/FormLogin.vue'
+import FormLogin from "@/components/Form/Login/FormLogin.vue";
 </script>
 
 <template>
+  <div class="loading">
+    <div class="text-center">
+      <v-progress-circular
+        :model-value="value"
+        :rotate="360"
+        :size="100"
+        :width="15"
+        color="teal"
+      >
+        <template v-slot:default> {{ value }} % </template>
+      </v-progress-circular>
+    </div>
+  </div>
   <main>
-  <div class="aside-form">
-    <img
-      src="https://i.postimg.cc/76YHLbYX/Captura-de-tela-de-2024-03-27-14-44-03-removebg-preview.png"
-    />
-    <img
-      src="https://i.postimg.cc/76YHLbYX/Captura-de-tela-de-2024-03-27-14-44-03-removebg-preview.png"
-    />
-  </div>
-  <div class="form-container">
-    <FormLogin />
-  </div>
+    <div class="aside-form">
+      <img
+        src="https://i.postimg.cc/76YHLbYX/Captura-de-tela-de-2024-03-27-14-44-03-removebg-preview.png"
+      />
+      <img
+        src="https://i.postimg.cc/76YHLbYX/Captura-de-tela-de-2024-03-27-14-44-03-removebg-preview.png"
+      />
+    </div>
+    <div class="form-container">
+      <FormLogin />
+    </div>
   </main>
 </template>
 
 <style scoped>
-main{
-display: flex;
+.loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 11;
+}
+
+main {
+  display: flex;
 }
 
 .aside-form {
