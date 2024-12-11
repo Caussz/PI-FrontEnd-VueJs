@@ -1,7 +1,6 @@
 <script setup></script>
 <template>
   <main>
-    <h1>Turma</h1>
     <div class="container">
       <div class="card">
         <img src="https://cdn-icons-png.flaticon.com/512/6326/6326055.png" alt="" />
@@ -97,10 +96,7 @@ main {
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 0.5vw;
-}
-
-h1 {
-    margin: 2vw;
+  margin: 3vw;
 }
 
 .card {
@@ -110,6 +106,7 @@ h1 {
   align-items: center;
   padding: 2vw;
   border-radius: 20px;
+  background-color: #282828;
 }
 
 img {
