@@ -27,6 +27,11 @@ const router = createRouter({
           path: '/profile',
           name: 'profile',
           component: () => import('../views/ProfileView.vue')
+        },
+        {
+          path: '/class',
+          name: 'class',
+          component: () => import('../views/ClassView.vue')
         }
       ],
       // meta: {
