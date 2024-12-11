@@ -28,6 +28,8 @@ import LoadingComponent from './Lazy/LoadingComponent.vue';
 import FormLogin from './Form/Login/FormLogin.vue';
 import ZyraImagesComponent from './Lazy/ZyraImagesComponent.vue';
 
+import DesktopAside from './Aside/Desktop/DesktopAside.vue';
+
 export {
     ZyraLoadingComponent,
     TitleComponent,
@@ -53,5 +55,6 @@ export {
     DefaultProfile,
     LoadingComponent,
     FormLogin,
-    ZyraImagesComponent
+    ZyraImagesComponent,
+    DesktopAside
 }

@@ -3,23 +3,24 @@ import { useRouter } from "vue-router";
 import { defineEmits } from "vue";
 import { ChevronRight, Close } from "@/components/icons";
 
-const router = useRouter()
+const router = useRouter();
 
 const emit = defineEmits(["close"]);
 
-const items = [{
-  year: 2022,
-  situation: "APROVADO"
-},
-{
-  year: 2023,
-  situation: "APROVADO"
-},
-{
-  year: 2024,
-  situation: "MATRICULADO"
-},
-]
+const items = [
+  {
+    year: 2022,
+    situation: "APROVADO",
+  },
+  {
+    year: 2023,
+    situation: "APROVADO",
+  },
+  {
+    year: 2024,
+    situation: "MATRICULADO",
+  },
+];
 </script>
 
 <template>
@@ -35,10 +36,14 @@ const items = [{
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(item, index) in items" :key="index" @click="router.push('/bulletin')">
+          <tr
+            v-for="(item, index) in items"
+            :key="index"
+            @click="router.push('/bulletin')"
+          >
             <td>{{ item.year }}</td>
             <td>
-              <div> {{item.situation}} <ChevronRight /> </div>
+              <div>{{ item.situation }} <ChevronRight /></div>
             </td>
           </tr>
         </tbody>
@@ -56,7 +61,6 @@ main {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  top: -10vh;
   left: 0;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
