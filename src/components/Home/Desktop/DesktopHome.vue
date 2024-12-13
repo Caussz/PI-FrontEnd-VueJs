@@ -12,7 +12,6 @@ import { NotebookOutline } from "@/components/icons";
 </script>
 <template>
   <SelectYear v-if="modalYear" @close="modalYear = !modalYear" />
-  <div id="layout-large">
     <main>
       <div class="discipline-container">
         <table>
@@ -191,13 +190,8 @@ import { NotebookOutline } from "@/components/icons";
         <p>{{ userStore.user.matricula }}</p>
       </div>
     </main>
-  </div>
 </template>
 <style scoped>
-#layout-large {
-  min-height: 100vh;
-  display: flex;
-}
 
 table {
   border-collapse: collapse;

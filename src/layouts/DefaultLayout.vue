@@ -1,26 +1,12 @@
 <script setup>
-import DefaultAside from '../components/Aside/Desktop/DesktopAside.vue'
+import DesktopLayout from "./Desktop/DesktopLayout.vue";
+import MobileLayout from "./Mobile/MobileLayout.vue";
+import { useScreen } from "@/composables";
+
+const { isMobile } = useScreen();
 </script>
 
 <template>
-  <div id="layout-large">
-    <aside>
-      <DefaultAside />
-    </aside>
-    <main>
-      <RouterView />
-    </main>
-  </div>
+        <MobileLayout v-if="isMobile" />
+        <DesktopLayout v-else />
 </template>
-<style scoped>
-#layout-large {
-    display: grid;
-    grid-template-areas: 
-    "aside main"
-    ;
-}
-
-aside {
-    grid-area: aside;
-}
-</style>

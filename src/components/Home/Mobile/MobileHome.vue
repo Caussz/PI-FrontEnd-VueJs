@@ -1,10 +1,8 @@
 <script setup>
-import { CurricularComponent, LastUpdates, DefaultHeader } from '@/components';
+import { CurricularComponent} from '@/components';
 </script>
 <template>
   <main>
-    <DefaultHeader/>
-    <LastUpdates />
     <CurricularComponent />
   </main>
 </template>

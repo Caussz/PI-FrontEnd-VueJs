@@ -12,3 +12,5 @@ console.log(isMobile);
   <MobileAside v-if="isMobile" />
   <DesktopAside v-else />
 </template>
+
+<style></style>

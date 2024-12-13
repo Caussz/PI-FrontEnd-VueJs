@@ -2,14 +2,16 @@
 import { useUserStore } from "@/stores";
 import { Menu } from "@/components/icons";
 import { DefaultAside } from "@/components";
-import { reactive, ref } from "vue";
+import { ref } from "vue";
 
 const { user } = useUserStore();
 
 const showAside = ref(false);
+const transition = ref();
 
 function Show() {
-  showAside.value ? (showAside.value = false) : (showAside.value = true);
+  showAside.value = !showAside.value;
+  transition.value = !transition.value;
 }
 </script>
 
@@ -23,16 +25,16 @@ function Show() {
     <div class="menu-icon" @click="Show()">
       <Menu size="35" />
     </div>
+    <DefaultAside v-if="showAside" :Show="Show" :showAside="showAside" :transition="transition"  />
   </header>
-  <DefaultAside v-if="showAside" :Show="Show" />
 </template>
 
 <style scoped>
 .menu-icon {
-  margin-left: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
 }
 
 .user-info {

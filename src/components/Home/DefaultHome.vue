@@ -20,8 +20,6 @@ onMounted(async() => {
 </script>
 
 <template>
-    <nav>
         <MobileHome v-if="isMobile" />
         <DesktopHome v-else />
-    </nav>
 </template>

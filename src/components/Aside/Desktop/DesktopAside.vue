@@ -76,7 +76,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #13131396;
+  background-color: #242424;
   position: fixed;
 }
 

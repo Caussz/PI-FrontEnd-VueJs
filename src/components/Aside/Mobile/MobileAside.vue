@@ -3,7 +3,7 @@ import { RouterLink } from "vue-router";
 import { SelectYear } from "@/components";
 import { ref } from "vue";
 
-defineProps(["Show"]);
+defineProps(["Show", "showAside", "transition"]);
 
 const modalYear = ref(false);
 
@@ -27,64 +27,64 @@ import {
 <template>
   <SelectYear v-if="modalYear" />
   <div class="aside-back" @click="Show"></div>
-    <div class="aside-container">
-      <div class="navigation">
-        <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="" />
-        <RouterLink to="/">
-          <HomeOutline size="20" />
-          <p>Home</p>
-        </RouterLink>
-        <RouterLink to="/profile">
-          <AccountOutline size="20" />
-          <p>Profile</p>
-        </RouterLink>
-        <RouterLink to="/activitis">
-          <ListBoxOutline size="20" />
-          <p>Atividades</p>
-        </RouterLink>
-        <RouterLink to="/calendar">
-          <CalendarWeekOutline size="20" />
-          <p>Calendário acâdemico</p>
-        </RouterLink>
-        <RouterLink to="/communique">
-          <AlertBoxOutline size="20" />
-          <p>Comunicados</p>
-        </RouterLink>
-        <RouterLink to="/grades">
-          <SchoolOutline size="20" />
-          <p>Notas</p>
-        </RouterLink>
-        <div @click="showModal">
-          <Certificate size="20" />
-          <p>Boletim</p>
-        </div>
-        <RouterLink to="/class">
-          <AccountGroup size="20" />
-          <p>Turma</p>
-        </RouterLink>
+  <div :class="transition ? 'active aside-container' : 'deactive aside-container'">
+    <div class="navigation">
+      <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="" />
+      <RouterLink to="/">
+        <HomeOutline size="20" />
+        <p>Home</p>
+      </RouterLink>
+      <RouterLink to="/profile">
+        <AccountOutline size="20" />
+        <p>Profile</p>
+      </RouterLink>
+      <RouterLink to="/activitis">
+        <ListBoxOutline size="20" />
+        <p>Atividades</p>
+      </RouterLink>
+      <RouterLink to="/calendar">
+        <CalendarWeekOutline size="20" />
+        <p>Calendário acâdemico</p>
+      </RouterLink>
+      <RouterLink to="/communique">
+        <AlertBoxOutline size="20" />
+        <p>Comunicados</p>
+      </RouterLink>
+      <RouterLink to="/grades">
+        <SchoolOutline size="20" />
+        <p>Notas</p>
+      </RouterLink>
+      <div @click="showModal">
+        <Certificate size="20" />
+        <p>Boletim</p>
       </div>
-      <div class="aside-bottom">
-        <RouterLink to="/login">
-          <Logout size="20" />
-          <p>Sair</p>
-        </RouterLink>
-      </div>
+      <RouterLink to="/class">
+        <AccountGroup size="20" />
+        <p>Turma</p>
+      </RouterLink>
     </div>
+    <div class="aside-bottom">
+      <RouterLink to="/login">
+        <Logout size="20" />
+        <p>Sair</p>
+      </RouterLink>
+    </div>
+  </div>
 </template>
 
 <style scoped>
-.slide-fade-enter-active {
-  transition: all 0.3s ease-out;
+.active {
+  animation: appears 0.4s;
+  animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
 }
 
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
+@keyframes appears {
+  0% {
+    translate: 100% 0;
+  }
+  100% {
+    translate: 0 0;
+  }
 }
 
 .aside-back {

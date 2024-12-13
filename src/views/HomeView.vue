@@ -1,13 +1,9 @@
-
 <script setup>
-import DefaultHome from '../components/Home/DefaultHome.vue'
+import DefaultHome from "../components/Home/DefaultHome.vue";
 </script>
 
 <template>
-  <main>
-    <DefaultHome />
-  </main>
+  <DefaultHome />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
