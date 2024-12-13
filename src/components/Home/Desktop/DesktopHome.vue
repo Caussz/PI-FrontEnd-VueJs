@@ -1,5 +1,5 @@
 <script setup>
-import { SelectYear, DesktopAside } from "@/components";
+import { SelectYear } from "@/components";
 import { onMounted, ref } from "vue";
 
 import { useUserStore } from "@/stores";
@@ -15,7 +15,6 @@ import {
 <template>
   <SelectYear v-if="modalYear" @close="modalYear = !modalYear" />
   <div id="layout-large">
-    <DesktopAside />
     <main>
       <div class="discipline-container">
         <table>

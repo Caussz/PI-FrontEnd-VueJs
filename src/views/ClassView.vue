@@ -1,10 +1,10 @@
 <script setup>
-import DefaultProgress from '../components/Progress/DefaultProgress.vue'
+import DefaultClass from '../components/Class/DefaultClass.vue'
 </script>
 
 <template>
   <main>
-    <DefaultProgress />
+    <DefaultClass />
   </main>
 </template>
 
