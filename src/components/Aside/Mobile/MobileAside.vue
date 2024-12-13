@@ -26,8 +26,8 @@ import {
 
 <template>
   <SelectYear v-if="modalYear" />
-  <div class="aside-back" @click="Show"></div>
-  <div :class="transition ? 'active aside-container' : 'deactive aside-container'">
+  <div :class="transition ? 'fade-anim aside-back': 'aside-back'" @click="Show"></div>
+  <div :class="transition ? 'slide-anim aside-container' : 'aside-container'">
     <div class="navigation">
       <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="" />
       <RouterLink to="/">
@@ -73,12 +73,26 @@ import {
 </template>
 
 <style scoped>
-.active {
-  animation: appears 0.4s;
+.slide-anim {
+  animation: slide 0.4s;
   animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
 }
 
-@keyframes appears {
+.fade-anim {
+  animation: fade .5s;
+  animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
   0% {
     translate: 100% 0;
   }
@@ -90,7 +104,7 @@ import {
 .aside-back {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 9;
@@ -101,7 +115,7 @@ import {
 .aside-container {
   height: 100vh;
   min-width: 65vw;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
