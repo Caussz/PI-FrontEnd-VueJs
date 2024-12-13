@@ -5,6 +5,7 @@ import Menu from 'vue-material-design-icons/Menu.vue';
 import NotebookMultiple from 'vue-material-design-icons/NotebookMultiple.vue';
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
 import ChevronRight from 'vue-material-design-icons/ChevronRight.vue';
+import ChevronDown from 'vue-material-design-icons/ChevronDown.vue'
 import DotsVertical from 'vue-material-design-icons/DotsVertical.vue';
 import ArrowRight from 'vue-material-design-icons/ArrowRight.vue';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
@@ -55,4 +56,5 @@ export {
     Tools,
     BackButton,
     Certificate,
+    ChevronDown,
 }

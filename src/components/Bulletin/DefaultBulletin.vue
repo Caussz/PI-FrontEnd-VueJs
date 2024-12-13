@@ -4,7 +4,7 @@ import MobileBulletin from './Mobile/MobileBulletin.vue'
 import { useScreen } from '@/composables'
 
 const { isMobile } = useScreen()
-console.log(isMobile)
+(isMobile)
 </script>
 
 <template>

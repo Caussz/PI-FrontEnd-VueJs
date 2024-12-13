@@ -18,7 +18,7 @@ export const useGradesStore = defineStore('grades', () => {
     const getGrades = async (name, pass, index) => {
         allGrades.value.loading = true
         const { grades, studentInfo } = await GradeService.getGradesInfo(name, pass, index)
-        console.log(grades)
+        (grades)
         allGrades.value.grades = grades
         allGrades.value.photo = studentInfo?.photo
         allGrades.value.loading = false

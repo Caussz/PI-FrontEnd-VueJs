@@ -7,7 +7,7 @@ import { useScreen } from '@/composables/screen';
 const { login } = useMonitor()
 
 const {isMobile} = useScreen()
-console.log(isMobile)
+(isMobile)
 </script>
 
 <template>

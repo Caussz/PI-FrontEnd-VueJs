@@ -40,7 +40,7 @@ export const useUserStore = defineStore('user', () => {
 			user.value.loading = false
 			return true
 		} catch (error) {
-			console.log(error);
+			(error);
 			user.value.loading = false
 			return false
 		}

@@ -7,7 +7,7 @@ import { useUserStore } from "@/stores";
 const modalYear = ref(false);
 const userStore = useUserStore();
 
-onMounted(() => console.log(userStore.user));
+onMounted(() => (userStore.user));
 import { NotebookOutline } from "@/components/icons";
 </script>
 <template>
