@@ -12,6 +12,7 @@ import DesktopLoginForm from '@/components/Form/Login/Desktop/DesktopLogin.vue';
 import DesktopHeader from '@/components/Header/Desktop/DesktopHeader.vue';
 import DeskTopPlace from '@/components/Place/Desktop/DesktopPlace.vue';
 import DesktopProgress from './Progress/Desktop/DesktopProgress.vue';
+import DefaultAside from './Aside/DefaultAside.vue';
 
 import CurricularComponent from '@/components/Curricular/CurricularComponent.vue';
 import SearchBar from '@/components/Search/SearchBar.vue';
@@ -28,7 +29,6 @@ import LoadingComponent from './Lazy/LoadingComponent.vue';
 import FormLogin from './Form/Login/FormLogin.vue';
 import ZyraImagesComponent from './Lazy/ZyraImagesComponent.vue';
 
-import DesktopAside from './Aside/Desktop/DesktopAside.vue';
 
 export {
     ZyraLoadingComponent,
@@ -56,5 +56,5 @@ export {
     LoadingComponent,
     FormLogin,
     ZyraImagesComponent,
-    DesktopAside
+    DefaultAside
 }

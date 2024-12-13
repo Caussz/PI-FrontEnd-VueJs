@@ -1,5 +1,5 @@
 <script setup>
-import { SelectYear, DesktopAside } from "@/components";
+import { SelectYear } from "@/components";
 import { onMounted, ref } from "vue";
 
 import { useUserStore } from "@/stores";
@@ -8,14 +8,11 @@ const modalYear = ref(false);
 const userStore = useUserStore();
 
 onMounted(() => console.log(userStore.user));
-import {
-  NotebookOutline,
-} from "@/components/icons";
+import { NotebookOutline } from "@/components/icons";
 </script>
 <template>
   <SelectYear v-if="modalYear" @close="modalYear = !modalYear" />
   <div id="layout-large">
-    <DesktopAside />
     <main>
       <div class="discipline-container">
         <table>
@@ -205,7 +202,6 @@ import {
 table {
   border-collapse: collapse;
   overflow: auto;
-  width: 45vw;
 }
 
 .table-scroll {
