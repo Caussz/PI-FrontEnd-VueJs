@@ -18,9 +18,6 @@ const informations = {
 <template>
   <div class="profile-img">
     <img :src="user.photo" :alt="user.name" />
-    <div class="icon-container">
-      <CameraOutline size="20" />
-    </div>
   </div>
   <span class="info-container">
     <p>Nome</p>
@@ -90,21 +87,9 @@ const informations = {
   display: flex;
   justify-content: center;
 }
-
-.icon-container {
-  position: absolute;
-  right: 36%;
-  bottom: 25%;
-  background-color: #1e1e1e;
-  border: 1px solid #716f6f;
-  color: #fff;
-  max-height: 1.5rem;
-  padding: 0.2rem 0.2rem 0 0.2rem;
-  border-radius: 50%;
-}
-
 img {
-  width: 25%;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   border: 2px solid #716f6f;
 }
