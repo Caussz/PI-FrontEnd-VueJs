@@ -5,7 +5,7 @@ import { useUserStore } from "@/stores";
 
 const userStore = useUserStore();
 
-onMounted(() => console.log(userStore.user));
+onMounted(() => (userStore.user));
 
 </script>
 <template>

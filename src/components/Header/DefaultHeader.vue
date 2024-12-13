@@ -3,7 +3,7 @@ import { MobileHeader, DesktopHeader } from "@/components";
 import { useScreen } from "@/composables";
 
 const { isMobile } = useScreen();
-console.log(isMobile);
+(isMobile);
 </script>
 
 <template>

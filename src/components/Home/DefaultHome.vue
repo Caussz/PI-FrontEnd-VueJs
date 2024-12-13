@@ -13,8 +13,8 @@ const studentStore = useStudentStore()
 
 onMounted(async() => {
     await gradesStore.getGrades(studentStore.studentName, studentStore.studentPass , "1")
-    console.log('ok');
-    console.log(gradesStore.grades.grades);
+    ('ok');
+    (gradesStore.grades.grades);
 
 })
 </script>

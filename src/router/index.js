@@ -32,6 +32,11 @@ const router = createRouter({
           path: '/class',
           name: 'class',
           component: () => import('../views/ClassView.vue')
+        },
+        {
+          path: '/grades',
+          name: 'grades',
+          component: () => import('../views/GradesView.vue')
         }
       ],
       // meta: {
