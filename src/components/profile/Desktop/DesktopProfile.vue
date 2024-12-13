@@ -1,5 +1,4 @@
 <script setup>
-import { BackButton } from "@/components/icons";
 import { onMounted } from "vue";
 
 import { useUserStore } from "@/stores";
@@ -11,7 +10,6 @@ onMounted(() => console.log(userStore.user));
 </script>
 <template>
   <main>
-    <BackButton />
     <div class="user-image">
       <div class="image">
         <img
