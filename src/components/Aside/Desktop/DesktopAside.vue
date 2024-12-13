@@ -35,14 +35,14 @@ import {
         <AccountOutline size="20" />
         <p>Profile</p>
       </RouterLink>
-      <RouterLink to="/activitis">
+      <RouterLink to="/activities"> 
         <ListBoxOutline size="20" />
         <p>Atividades</p>
       </RouterLink>
-      <RouterLink to="/calendar">
+      <a href="https://public.tableau.com/app/profile/ifc.proen/viz/CalendrioAcadmico2024/Calendrio?publish=yes" target="_blank">
         <CalendarWeekOutline size="20" />
         <p>Calendário acâdemico</p>
-      </RouterLink>
+      </a>
       <RouterLink to="/communique">
         <AlertBoxOutline size="20" />
         <p>Comunicados</p>
@@ -77,6 +77,7 @@ aside {
   flex-direction: column;
   justify-content: space-between;
   background-color: #13131396;
+  position: fixed;
 }
 
 img {
@@ -104,7 +105,7 @@ a,
     color: white;
   }
 
-  & .router-link-active {
+  & .router-link-exact-active {
     width: 100%;
     border-right: white 3px solid;
   }
