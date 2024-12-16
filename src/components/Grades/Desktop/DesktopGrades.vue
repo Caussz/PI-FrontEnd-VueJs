@@ -76,7 +76,6 @@ const show = ref(false)
 
 .card {
   background-color: var(--light-grey);
-  /* height: 4vw; */
   display: grid;
   grid-template-columns: 55% 43%;
   align-items: center;
@@ -91,12 +90,12 @@ const show = ref(false)
 }
 
 th {
-  border: solid 2px #2c2c2c;
+  border: solid 2px var(--light-grey);
   padding: 0.7vw 1.3vw;
 }
 
 .recuperation {
-  color: #728971;
+  color: var(--light-green);
   font-weight: 400;
 }
 
@@ -111,7 +110,7 @@ table {
 }
 
 .inside-table {
-  border: solid 2px #2c2c2c;
+  border: solid 2px var(--light-grey);
   border-top: 0;
   border-collapse: collapse;
   color: #728971;
