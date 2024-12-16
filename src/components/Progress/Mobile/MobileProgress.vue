@@ -1,9 +1,8 @@
 <script setup>
-import { Tools, BackButton } from '@/components/icons'
+import { Tools } from "@/components/icons";
 </script>
 <template>
   <main>
-    <BackButton/>
     <div>
       <Tools size="50" />
       <h1>Sistema em manutenção</h1>

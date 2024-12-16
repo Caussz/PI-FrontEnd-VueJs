@@ -3,17 +3,6 @@ import FormLogin from "../FormLogin.vue";
 </script>
 
 <template>
-  <div class="loading">
-    <v-progress-circular
-      :model-value="value"
-      :rotate="360"
-      :size="100"
-      :width="15"
-      color="#99B898"
-    >
-      <template v-slot:default> {{ value }} % </template>
-    </v-progress-circular>
-  </div>
   <FormLogin />
 </template>
 

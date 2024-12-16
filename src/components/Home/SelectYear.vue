@@ -35,7 +35,7 @@ const items = [
             <th>Situação</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody @click="$emit('close')">
           <tr
             v-for="(item, index) in items"
             :key="index"
@@ -146,6 +146,20 @@ table {
 
   & a {
     color: #99b898;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    width: 90vw;
+    height: auto;
+  }
+  table {
+    width: 80vw;
+  }
+  h1 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
   }
 }
 </style>

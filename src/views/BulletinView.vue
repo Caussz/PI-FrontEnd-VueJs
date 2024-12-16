@@ -1,5 +1,5 @@
 <script setup>
-import DefaultBulletin from '@/components/Bulletin/DefaultBulletin.vue'
+import DefaultBulletin from '@/components/Bulletin/Bulletin.vue'
 </script>
 
 <template>

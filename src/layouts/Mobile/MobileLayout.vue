@@ -4,6 +4,12 @@ import { DefaultHeader } from "@/components";
 
 <template>
   <DefaultHeader />
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
 </template>
-<style scoped></style>
+<style scoped>
+main {
+  padding-top: 17vh;
+}
+</style>

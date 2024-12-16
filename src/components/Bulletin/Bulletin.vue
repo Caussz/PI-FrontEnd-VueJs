@@ -1,7 +1,5 @@
 <script setup>
-import { useUserStore, useGradesStore } from "@/stores";
-
-import BackButton from "@/components/icons/back/BackButton.vue";
+import { useUserStore, useGradesStore } from "@/stores"; 
 
 const userStore = useUserStore();
 const gradesStore = useGradesStore();
@@ -19,16 +17,17 @@ const bulletinInfo = gradesStore.gradesComputed.map((grade) => ({
   situation: grade.notas.Situacao || "Não definido",
 }));
 
-const items = [{
-  title:"WhatsApp"
-},
-{
-  title: "PDF"
-}]
+const items = [
+  {
+    title: "WhatsApp",
+  },
+  {
+    title: "PDF",
+  },
+];
 </script>
 
 <template>
-  <BackButton />
   <main>
     <h1>Boletim Escolar - 2022</h1>
     <div class="info">
@@ -74,13 +73,15 @@ const items = [{
           </tr>
           <tr class="absence-info">
             <td colspan="7">
-              <v-menu >
+              <v-menu>
                 <template v-slot:activator="{ props }">
-                  <v-btn color="#99b898" variant="outlined" hover v-bind="props"> Exportar </v-btn>
+                  <v-btn color="#99b898" variant="outlined" hover v-bind="props">
+                    Exportar
+                  </v-btn>
                 </template>
                 <v-list class="bg-primary">
                   <v-list-item v-for="(item, index) in items" :key="index" :value="index">
-                    <v-list-item-title >{{ item.title }}</v-list-item-title>
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
                   </v-list-item>
                 </v-list>
               </v-menu>
@@ -96,7 +97,7 @@ const items = [{
 </template>
 
 <style scoped>
-button{
+button {
   translate: 0 -4vh;
 }
 

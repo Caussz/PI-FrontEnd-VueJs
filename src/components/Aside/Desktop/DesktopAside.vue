@@ -3,6 +3,7 @@ import { RouterLink } from "vue-router";
 import { SelectYear } from "@/components";
 import { ref } from "vue";
 
+
 const modalYear = ref(false);
 
 function showModal() {
@@ -35,11 +36,14 @@ import {
         <AccountOutline size="20" />
         <p>Profile</p>
       </RouterLink>
-      <RouterLink to="/activities"> 
+      <RouterLink to="/activities">
         <ListBoxOutline size="20" />
         <p>Atividades</p>
       </RouterLink>
-      <a href="https://public.tableau.com/app/profile/ifc.proen/viz/CalendrioAcadmico2024/Calendrio?publish=yes" target="_blank">
+      <a
+        href="https://public.tableau.com/app/profile/ifc.proen/viz/CalendrioAcadmico2024/Calendrio?publish=yes"
+        target="_blank"
+      >
         <CalendarWeekOutline size="20" />
         <p>Calendário acâdemico</p>
       </a>

@@ -1,16 +1,8 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { SelectYear } from "@/components";
 import { ref } from "vue";
 
-defineProps(["Show", "showAside", "transition"]);
-
-const modalYear = ref(false);
-
-function showModal() {
-  modalYear.value = !modalYear.value;
-}
-
+defineProps(["Show", "showAside", "transition", "ShowModal"]);
 import {
   HomeOutline,
   ListBoxOutline,
@@ -25,46 +17,48 @@ import {
 </script>
 
 <template>
-  <SelectYear v-if="modalYear" />
-  <div :class="transition ? 'fade-anim aside-back': 'aside-back'" @click="Show"></div>
+  <div :class="transition ? 'fade-anim aside-back' : 'aside-back'" @click="Show"></div>
   <div :class="transition ? 'slide-anim aside-container' : 'aside-container'">
     <div class="navigation">
       <img src="https://i.ibb.co/WFNcSTx/Vector.png" alt="" />
-      <RouterLink to="/">
+      <RouterLink @click="Show" to="/">
         <HomeOutline size="20" />
         <p>Home</p>
       </RouterLink>
-      <RouterLink to="/profile">
+      <RouterLink @click="Show" to="/profile">
         <AccountOutline size="20" />
         <p>Profile</p>
       </RouterLink>
-      <RouterLink to="/activitis">
+      <RouterLink @click="Show" to="/activities">
         <ListBoxOutline size="20" />
         <p>Atividades</p>
       </RouterLink>
-      <RouterLink to="/calendar">
+      <a
+        href="https://public.tableau.com/app/profile/ifc.proen/viz/CalendrioAcadmico2024/Calendrio?publish=yes"
+        target="_blank"
+      >
         <CalendarWeekOutline size="20" />
         <p>Calendário acâdemico</p>
-      </RouterLink>
-      <RouterLink to="/communique">
+      </a>
+      <RouterLink @click="Show" to="/communique">
         <AlertBoxOutline size="20" />
         <p>Comunicados</p>
       </RouterLink>
-      <RouterLink to="/grades">
+      <RouterLink @click="Show" to="/grades">
         <SchoolOutline size="20" />
         <p>Notas</p>
       </RouterLink>
-      <div @click="showModal">
+      <div @click="ShowModal">
         <Certificate size="20" />
         <p>Boletim</p>
       </div>
-      <RouterLink to="/class">
+      <RouterLink @click="Show" to="/class">
         <AccountGroup size="20" />
         <p>Turma</p>
       </RouterLink>
     </div>
     <div class="aside-bottom">
-      <RouterLink to="/login">
+      <RouterLink @click="Show" to="/login">
         <Logout size="20" />
         <p>Sair</p>
       </RouterLink>
@@ -79,7 +73,7 @@ import {
 }
 
 .fade-anim {
-  animation: fade .5s;
+  animation: fade 0.5s;
   animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
 }
 
@@ -107,7 +101,7 @@ import {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 9;
+  z-index: 0;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 }
@@ -143,7 +137,7 @@ a,
 .navigation {
   color: white;
 
-  & .router-link-active {
+  & .router-link-exact-active {
     width: 100%;
     border-right: white 3px solid;
   }

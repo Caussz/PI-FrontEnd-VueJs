@@ -1,5 +1,4 @@
 <script setup>
-import { SelectYear } from "@/components";
 import { onMounted, ref } from "vue";
 
 import { useUserStore } from "@/stores";
@@ -11,7 +10,6 @@ onMounted(() => (userStore.user));
 import { NotebookOutline } from "@/components/icons";
 </script>
 <template>
-  <SelectYear v-if="modalYear" @close="modalYear = !modalYear" />
     <main>
       <div class="discipline-container">
         <table>

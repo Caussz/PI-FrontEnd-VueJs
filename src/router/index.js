@@ -20,23 +20,33 @@ const router = createRouter({
         },
         {
           path: '/bulletin',
-          name: 'bulletin',
+          name: 'Boletin',
           component: () => import('../views/BulletinView.vue')
         },
         {
           path: '/profile',
-          name: 'profile',
+          name: 'Perfil',
           component: () => import('../views/ProfileView.vue')
         },
         {
           path: '/class',
-          name: 'class',
+          name: 'Turma',
           component: () => import('../views/ClassView.vue')
         },
         {
           path: '/grades',
-          name: 'grades',
+          name: 'Notas',
           component: () => import('../views/GradesView.vue')
+        },
+        {
+          path: '/activities',
+          name: 'Atividades',
+          component: () => import('../views/ActivitiesView.vue')
+        },
+        {
+          path: '/communique',
+          name: 'Comunicados',
+          component: () => import('../views/CommuniqueView.vue')
         }
       ],
       // meta: {
@@ -64,16 +74,6 @@ const router = createRouter({
           component: () => import('../views/ProgressView.vue')
         },
       ]
-    },
-    {
-      path: '/activities',
-      name: 'activities',
-      component: () => import('../views/ActivitiesView.vue')
-    },
-    {
-      path: '/communique',
-      name: 'communique',
-      component: () => import('../views/CommuniqueView.vue')
     }
   ]
 })

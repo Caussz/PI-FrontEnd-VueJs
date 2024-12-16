@@ -7,7 +7,6 @@ const { isMobile } = useScreen()
 
 <template>
     <main>
-        <LoadingComponent v-if="isMobile"/>
         <DefaultLoginForm />
     </main>
 </template>
