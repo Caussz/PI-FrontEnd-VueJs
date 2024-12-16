@@ -10,7 +10,7 @@ onMounted(() => (userStore.user));
 import { NotebookOutline } from "@/components/icons";
 </script>
 <template>
-    <main>
+    <div class="content-container">
       <div class="discipline-container">
         <table>
           <tr>
@@ -187,7 +187,7 @@ import { NotebookOutline } from "@/components/icons";
         <h2>{{ userStore.user.name }}</h2>
         <p>{{ userStore.user.matricula }}</p>
       </div>
-    </main>
+    </div>
 </template>
 <style scoped>
 
@@ -248,9 +248,9 @@ td {
   }
 }
 
-main {
+.content-container {
   display: flex;
-  margin-top: 10vh;
+  padding-top: 10vh;
 }
 /* discipline-container */
 
@@ -259,7 +259,7 @@ main {
   flex-direction: column;
   align-items: center;
   width: 40vw;
-  margin: 1.5vh 10vw;
+  margin: 1.5vh 10vw 0 0;
 }
 
 /* profile */
