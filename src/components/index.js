@@ -24,7 +24,7 @@ import UpdateCard from './Update/UpdateCard.vue';
 import TextCard from './Text/TextCard.vue';
 import SubjectCard from './Subject/SubjectCard.vue';
 import DefaultProfile from './profile/DefaultProfile.vue';
-import SelectYear from '@/components/Home/Desktop/SelectYear.vue';
+import SelectYear from '@/components/Home/SelectYear.vue';
 import LoadingComponent from './Lazy/LoadingComponent.vue';
 import FormLogin from './Form/Login/FormLogin.vue';
 import ZyraImagesComponent from './Lazy/ZyraImagesComponent.vue';
