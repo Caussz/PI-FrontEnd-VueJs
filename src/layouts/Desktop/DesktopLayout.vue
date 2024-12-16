@@ -4,15 +4,15 @@ import { DefaultAside } from "@/components";
 
 <template>
   <DefaultAside />
-  <main>
+  <main id="router-container">
     <RouterView />
   </main>
 </template>
 <style scoped>
-main {
+#router-container {
   display: flex;
   max-width: 100vw;
-  height: 100vh;
+  height: auto;
   padding-left: 25vw;
 }
 </style>

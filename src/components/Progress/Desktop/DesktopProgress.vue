@@ -2,26 +2,19 @@
 import { Tools } from "@/components/icons";
 </script>
 <template>
-  <main>
-    <div>
-      <Tools size="50" />
-      <h1>Sistema em manutenção</h1>
-    </div>
-  </main>
+  <div>
+    <Tools size="50" />
+    <h1>Sistema em manutenção</h1>
+  </div>
 </template>
 <style scoped>
-main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
 div {
-  margin: 10vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 20vw;
+  height: auto;
 
   span {
     color: #99b898;
