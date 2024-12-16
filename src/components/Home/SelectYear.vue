@@ -76,7 +76,7 @@ main {
   width: 35vw;
   background-color: #212121;
   color: white;
-  padding: 2rem 2rem 4rem 2rem;
+  padding: 5rem 2rem 2rem 2rem 2rem 4rem 2rem;
   border-radius: 2rem;
 }
 
@@ -153,13 +153,25 @@ table {
   .content-container {
     width: 90vw;
     height: auto;
+    padding: 5rem 2rem 2rem 2rem;
+    position: relative;
   }
+
   table {
     width: 80vw;
   }
+
   h1 {
-    font-size: 1.4rem;
-    margin: 1rem 0;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 1.5rem;
+    top: 1.9rem;
+  }
+
+  .close-btn {
+    position: absolute;
+    right: 1.1rem;
+    top: 1.9rem;
   }
 }
 </style>

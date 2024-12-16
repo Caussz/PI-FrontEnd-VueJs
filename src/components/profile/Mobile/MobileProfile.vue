@@ -83,7 +83,7 @@ const informations = {
 
 .profile-img {
   position: relative;
-  padding: 2rem 0;
+  padding: 0 0 2rem 0;
   display: flex;
   justify-content: center;
 }

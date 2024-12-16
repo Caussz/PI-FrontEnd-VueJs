@@ -10,18 +10,12 @@ import { Tools } from "@/components/icons";
   </main>
 </template>
 <style scoped>
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-}
 
 div {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin: 24vh 0;
 
   span {
     color: #99b898;

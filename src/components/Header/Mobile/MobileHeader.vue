@@ -36,12 +36,12 @@ function ShowModal() {
     </div>
     <div class="title-container" v-else>
       <RouterLink to="/">
-        <HomeOutline size="35" class="menu-icon" />
+        <HomeOutline size="28" class="menu-icon" />
       </RouterLink>
       <p class="page-name">{{ route.name }}</p>
     </div>
     <div class="menu-icon" @click="Show()">
-      <Menu size="35" />
+      <Menu size="28" />
     </div>
     <DefaultAside
       v-if="showAside"
@@ -57,7 +57,7 @@ function ShowModal() {
 .title-container{
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  width: 86vw;
 }
 
 .user-container {
@@ -98,10 +98,11 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 5% ;
+  padding: 3% ;
   color: #ffffff;
   position: fixed;
   background-color: #1E1E1E;
+  z-index: 10;
 }
 
 img {

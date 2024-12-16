@@ -4,12 +4,12 @@ import { DefaultHeader } from "@/components";
 
 <template>
   <DefaultHeader />
-  <main>
+  <main id="router-container">
     <RouterView />
   </main>
 </template>
 <style scoped>
-main {
-  padding-top: 10vh;
+#router-container {
+  padding-top: 15vh;
 }
 </style>
