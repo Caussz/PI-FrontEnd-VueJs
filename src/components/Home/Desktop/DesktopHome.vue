@@ -250,7 +250,6 @@ td {
 
 main {
   display: flex;
-  margin-top: 10vh;
 }
 /* discipline-container */
 

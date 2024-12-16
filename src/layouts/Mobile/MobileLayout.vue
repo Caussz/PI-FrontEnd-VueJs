@@ -10,6 +10,6 @@ import { DefaultHeader } from "@/components";
 </template>
 <style scoped>
 main {
-  padding-top: 17vh;
+  padding-top: 10vh;
 }
 </style>

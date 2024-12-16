@@ -12,8 +12,7 @@ const gradesStore = useGradesStore()
 const studentStore = useStudentStore()
 
 onMounted(async() => {
-    await gradesStore.getGrades(studentStore.studentName, studentStore.studentPass , "1")
-    ('ok');
+    await gradesStore.getGrades(studentStore.studentName, studentStore.studentPass , "1");
     (gradesStore.grades.grades);
 
 })
