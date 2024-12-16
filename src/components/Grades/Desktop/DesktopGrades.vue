@@ -1,35 +1,33 @@
-<script setup>
-import { ChevronDown } from "@/components/icons";
-</script>
+<script setup></script>
 <template>
-  <main>
-    <h1>Notas</h1>
-    <div>
-      <div class="card">
+
+    <div class="card">
         <h2>Matemática</h2>
-        <ChevronDown />
-      </div>
     </div>
 
-    <table>
-        <tr>
-            <th>trimestre 1</th>
-            <th>reavaliação</th>
-            <th>trimestre 2</th>
-            <th>reavaliação</th>
-            <th>trimestre 3</th>
-            <th>reavaliação</th>
-        </tr>
-        <tr>
-            
-        </tr>
-    </table>
-  </main>
+<table>
+    <tr>
+        <th>Trimestre 1</th>
+        <th>Recuperação</th>
+        <th>Trimestre 2</th>
+        <th>Recuperação</th>
+        <th>Trimestre 3</th>
+        <th>Recuperação</th>
+    </tr>
+    <tr>
+        <p>AP1</p>
+        <p>AP2</p>
+        <p>AP3</p>
+        <p>8</p>
+        <p>8</p>
+        <p>8</p>
+    </tr>
+</table>
 </template>
 <style scoped>
-main {
+.card {
+    background-color: #2D2D2D;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: var(--white);
@@ -43,14 +41,21 @@ main {
   align-items: center;
   justify-content: center;
   width: 70vw;
+    border-radius: 10px 10px 0 0;
+    margin: 2vw;
+
+    & h2 {
+        font-size: 1.2em;
+        padding: 1vw;
+    }
 }
 
-h1 {
-    font-size: 1.3em;
+th {
+    border: solid 2px #2C2C2C;
+    padding: 0.7vw 1.3vw;
 }
 
-h2 {
-    font-size: 1em;
-    font-weight: 600;
+table {
+    border-collapse: collapse;
 }
 </style>

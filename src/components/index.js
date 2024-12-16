@@ -1,15 +1,18 @@
 import DefaultLoginForm from '@/components/Form/Login/DefaultLoginForm.vue';
 import DefaultHeader from '@/components/Header/DefaultHeader.vue';
 import DefaultProgress from './Progress/DefaultProgress.vue';
+import DefaultAside from './Aside/DefaultAside.vue';
+import DefaultGrades from './Grades/DefaultGrades.vue';
 
 import MobileLoginForm from '@/components/Form/Login/Mobile/MobileLogin.vue';
 import MobileHeader from '@/components/Header/Mobile/MobileHeader.vue';
 import MobileProgress from './Progress/Mobile/MobileProgress.vue';
+import MobileGrades from './Grades/Mobile/MobileGrades.vue';
 
 import DesktopLoginForm from '@/components/Form/Login/Desktop/DesktopLogin.vue';
 import DesktopHeader from '@/components/Header/Desktop/DesktopHeader.vue';
 import DesktopProgress from './Progress/Desktop/DesktopProgress.vue';
-import DefaultAside from './Aside/DefaultAside.vue';
+import DesktopGrades from './Grades/Desktop/DesktopGrades.vue';
 
 import CurricularComponent from '@/components/Curricular/CurricularComponent.vue';
 import SearchBar from '@/components/Search/SearchBar.vue';
@@ -52,5 +55,7 @@ export {
     FormLogin,
     ZyraImagesComponent,
     DefaultAside,
-    ColorThemeComponent
+    DefaultGrades,
+    DesktopGrades,
+    MobileGrades,
 }

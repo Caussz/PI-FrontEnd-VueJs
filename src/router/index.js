@@ -15,7 +15,7 @@ const router = createRouter({
         },
         {
           path: '/bulletin',
-          name: 'Boletin',
+          name: 'Boletim',
           component: () => import('../views/BulletinView.vue')
         },
         {
@@ -30,7 +30,7 @@ const router = createRouter({
         },
         {
           path: '/grades',
-          name: 'Notas',
+          name: 'grades',
           component: () => import('../views/GradesView.vue')
         },
         {
