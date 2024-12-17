@@ -1,14 +1,13 @@
 <script setup>
-import DesktopGrades from './Desktop/DesktopGrades.vue'
-import MobileGrades from './Mobile/MobileGrades.vue'
-import { useScreen } from '@/composables'
+import { MobileProgress, DesktopGrades } from "@/components";
+import { useScreen } from "@/composables";
 
-const { isMobile } = useScreen()
+const { isMobile } = useScreen();
 </script>
 
 <template>
-  <nav>
-    <MobileGrades v-if="isMobile" />
+  <section>
+    <MobileProgress v-if="isMobile" />
     <DesktopGrades v-else />
-  </nav>
+  </section>
 </template>
