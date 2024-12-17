@@ -1,5 +1,5 @@
 <script setup>
-import { CameraOutline } from '@/components/icons';
+import { CameraOutline } from "@/components/icons";
 import { useUserStore } from "@/stores";
 
 const { user } = useUserStore();
@@ -13,6 +13,8 @@ const informations = {
   Status: "Ativo",
   Entrada: 2023,
 };
+
+console.log(user);
 </script>
 
 <template>
@@ -34,31 +36,19 @@ const informations = {
   <span class="info-container">
     <p>Matrícula</p>
     <div class="field-information">
-      <p>{{ informations.Matrícula }}</p>
+      <p>{{ user.enrollment }}</p>
     </div>
   </span>
   <span class="info-container">
     <p>Curso</p>
     <div class="field-information">
-      <p>{{ informations.Curso }}</p>
-    </div>
-  </span>
-  <span class="info-container">
-    <p>Nível</p>
-    <div class="field-information">
-      <p>{{ informations.Nível }}</p>
+      <p>{{ user.course }}</p>
     </div>
   </span>
   <span class="info-container">
     <p>Status</p>
     <div class="field-information">
       <p>{{ informations.Status }}</p>
-    </div>
-  </span>
-  <span class="info-container">
-    <p>Entrada</p>
-    <div class="field-information">
-      <p>{{ informations.Entrada }}</p>
     </div>
   </span>
 </template>

@@ -9,6 +9,8 @@ const route = useRoute();
 
 const { user } = useUserStore();
 
+console.log(user)
+
 const showAside = ref(false);
 const transition = ref();
 const modalYear = ref(false);
@@ -87,6 +89,7 @@ a {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  color: var(--white);
 }
 
 .user-info p:nth-child(1) {

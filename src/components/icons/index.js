@@ -24,6 +24,7 @@ import Close from 'vue-material-design-icons/Close.vue'
 import Check from 'vue-material-design-icons/Check.vue';
 import CameraOutline from 'vue-material-design-icons/CameraOutline.vue';
 import Tools from 'vue-material-design-icons/Tools.vue';
+import Reload from 'vue-material-design-icons/Reload.vue';
 
 import BackButton from './back/BackButton.vue';
 import Certificate from 'vue-material-design-icons/Certificate.vue'
@@ -57,4 +58,5 @@ export {
     BackButton,
     Certificate,
     ChevronDown,
+    Reload
 }

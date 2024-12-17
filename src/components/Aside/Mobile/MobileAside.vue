@@ -13,7 +13,12 @@ import {
   Logout,
   AccountOutline,
   Certificate,
+  Reload,
 } from "@/components/icons";
+
+function RefreshPage(){
+  window.location.reload()
+}
 </script>
 
 <template>
@@ -59,6 +64,10 @@ import {
     </div>
     <div class="aside-bottom">
       <ColorThemeComponent />
+      <div @click="RefreshPage">
+        <Reload />
+        <p>Atualizar</p>
+      </div>
       <RouterLink @click="Show" to="/login">
         <Logout size="20" />
         <p>Sair</p>
@@ -127,7 +136,8 @@ img {
 }
 
 a,
-.navigation div {
+.navigation div,
+.aside-bottom div {
   color: var(--white);
   display: flex;
   gap: 1vw;

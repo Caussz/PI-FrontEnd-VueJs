@@ -96,7 +96,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 3vw;
-  margin: 5vw 0;
 }
 
 .card {
