@@ -56,9 +56,9 @@ import {
         <AccountGroup size="20" />
         <p>Turma</p>
       </RouterLink>
-      <ColorThemeComponent/>
     </div>
     <div class="aside-bottom">
+      <ColorThemeComponent />
       <RouterLink @click="Show" to="/login">
         <Logout size="20" />
         <p>Sair</p>
@@ -145,7 +145,7 @@ a,
 
   & a:hover,
   div:hover {
-    background-color: var(--white)08;
+    background-color: var(--white) 08;
   }
 }
 
