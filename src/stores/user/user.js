@@ -33,7 +33,7 @@ export const useUserStore = defineStore('user', () => {
 	const login = async (name, pass) => {
 		try {
 			user.value.loading = true
-			const { studentInfo } = await AuthService.getUserInfo(name, pass);
+			const studentInfo = await AuthService.getUserInfo(name, pass);
 			getinfo(studentInfo);
 			getUserImage(studentInfo?.photo);
 			getUserFormat(studentInfo?.name);
