@@ -80,7 +80,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #242424;
+  background-color: var(--darker-grey);
   position: fixed;
 }
 
@@ -116,7 +116,7 @@ a,
 
   & a:hover,
   div:hover {
-    background-color: #ffffff08;
+    background-color: var(--white)08;
   }
 }
 

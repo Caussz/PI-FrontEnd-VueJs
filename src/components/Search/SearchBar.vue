@@ -11,11 +11,11 @@ import { Magnify } from '@/components/icons';
 
 <style scoped>
 .search-component {
-    background-color: #242424;
+    background-color: var(--darker-grey);
     border: var(--lightest-grey) solid 1px;
     border-radius: 2rem;
     max-width: 100%;
-    color: #fff;
+    color: var(--white);
     display: flex;
     padding: .5rem 1rem;
     margin: .5rem 0 1rem 0;
@@ -28,7 +28,7 @@ import { Magnify } from '@/components/icons';
 
 input {
     background: none;
-    color: #fff;
+    color: var(--white);
     outline: none;
 }
 </style>

@@ -18,11 +18,11 @@ div {
   margin: 24vh 0;
 
   span {
-    color: #99b898;
+    color: var(--light-green);
   }
 }
 
 h1 {
-  color: #99b898;
+  color: var(--light-green);
 }
 </style>

@@ -9,7 +9,7 @@ import { RouterLink } from "vue-router";
 </template>
 <style scoped>
 a {
-  border: 1px #505050 solid;
+  border: 1px var(--lightest-grey) solid;
   width: 2rem;
   height: 2rem;
   border-radius: 20px;

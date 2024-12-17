@@ -113,7 +113,7 @@ import {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #242424;
+  background-color: var(--darker-grey);
   padding: 0 0 0 5vw;
   z-index: 10;
   top: 0;
@@ -144,7 +144,7 @@ a,
 
   & a:hover,
   div:hover {
-    background-color: #ffffff08;
+    background-color: var(--white)08;
   }
 }
 

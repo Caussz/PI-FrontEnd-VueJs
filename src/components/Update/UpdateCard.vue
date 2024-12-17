@@ -99,7 +99,7 @@ const props = defineProps({
     height: 6rem;
     margin: 2% 0 5% 0;
     border: var(--lightest-grey) solid 1px;
-    background-color: #242424;
+    background-color: var(--darker-grey);
     padding: 5%;
     border-radius: .5rem;
     display: flex;
@@ -136,7 +136,7 @@ const props = defineProps({
 
 button {
     background: linear-gradient(var(--light-green), var(--dark-green));
-    color: #242424;
+    color: var(--darker-grey);
     width: 1.5rem;
     height: 1.5rem;
     display: flex;

@@ -47,10 +47,8 @@ onMounted(() => (userStore.user));
 
 <style scoped>
 main {
-  background-image: url(https://i.ibb.co/dMvLSTz/Splash-screen-design-2.png);
   background-repeat: round;
   background-size: cover;
-  background-color: #1e1e1e;
   width: 100vw;
   max-width: 100vw;
   height: 100vh;

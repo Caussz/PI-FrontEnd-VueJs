@@ -67,7 +67,7 @@ function ShowModal() {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--white);
 }
 
 .page-name {
@@ -100,7 +100,7 @@ header {
   width: 100vw;
   padding: 3%;
   position: fixed;
-  background-color: #1e1e1e;
+  background-color: var(--darker-grey);
   z-index: 10;
   color: var(--var(--white));
 }
@@ -109,6 +109,6 @@ img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  border: #ffffff 1px solid;
+  border: var(--white) 1px solid;
 }
 </style>

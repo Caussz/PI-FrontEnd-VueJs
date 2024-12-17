@@ -64,7 +64,7 @@ input {
 	width: 60vw;
 	padding: 2vh 2.3vw;
 	border-radius: 5px;
-	color: #716f6f;
+	color: var(--lightest-grey);
 }
 
 button {

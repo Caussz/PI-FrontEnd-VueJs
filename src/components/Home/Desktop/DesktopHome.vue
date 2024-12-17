@@ -1,196 +1,198 @@
 <script setup>
 import { onMounted, ref } from "vue";
-
+import { NotebookOutline } from "@/components/icons";
+import { ColorThemeComponent } from "@/components";
 import { useUserStore } from "@/stores";
 
 const modalYear = ref(false);
 const userStore = useUserStore();
 
-onMounted(() => (userStore.user));
-import { NotebookOutline } from "@/components/icons";
+onMounted(() => userStore.user);
 </script>
 <template>
-    <div class="content-container">
-      <div class="discipline-container">
-        <table>
+  <div class="content-container">
+    <div class="discipline-container">
+      <table>
+        <tr>
+          <th>Componente curricular</th>
+          <th>Local</th>
+          <th>Horário</th>
+        </tr>
+        <div class="table-scroll">
           <tr>
-            <th>Componente curricular</th>
-            <th>Local</th>
-            <th>Horário</th>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Desenvolvimento de dispositivos móveis</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
           </tr>
-          <div class="table-scroll">
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Desenvolvimento de dispositivos móveis</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Matemática</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Desenvolvimento de dispositivos móveis</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Matemática</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Matemática</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Desenvolvimento de dispositivos móveis</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Matemática</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Desenvolvimento de dispositivos móveis</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Matemática</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Matemática</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Desenvolvimento de dispositivos móveis</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Matemática</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Desenvolvimento de dispositivos móveis</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Matemática</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Matemática</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Desenvolvimento de dispositivos móveis</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Matemática</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Desenvolvimento de dispositivos móveis</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Matemática</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-            <tr>
-              <td class="discipline">
-                <NotebookOutline />
-                <p>Matemática</p>
-              </td>
-              <td>E-305</td>
-              <td>(15/02/2024 - 11/12/2024)</td>
-            </tr>
-          </div>
-        </table>
-      </div>
-      <div class="profile-container">
-        <img :src="userStore.user.photo" :alt="userStore.user.name" />
-        <h2>{{ userStore.user.name }}</h2>
-        <p>{{ userStore.user.matricula }}</p>
-      </div>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Desenvolvimento de dispositivos móveis</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Desenvolvimento de dispositivos móveis</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Desenvolvimento de dispositivos móveis</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Desenvolvimento de dispositivos móveis</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Desenvolvimento de dispositivos móveis</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Desenvolvimento de dispositivos móveis</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Desenvolvimento de dispositivos móveis</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+          <tr>
+            <td class="discipline">
+              <NotebookOutline />
+              <p>Matemática</p>
+            </td>
+            <td>E-305</td>
+            <td>(15/02/2024 - 11/12/2024)</td>
+          </tr>
+        </div>
+      </table>
     </div>
+    <div>
+      <ColorThemeComponent />
+    <div class="profile-container">
+      <img :src="userStore.user.photo" :alt="userStore.user.name" />
+      <h2>{{ userStore.user.name }}</h2>
+      <p>{{ userStore.user.matricula }}</p>
+    </div>
+    </div>
+  </div>
 </template>
 <style scoped>
-
 table {
   border-collapse: collapse;
   overflow: auto;
@@ -208,7 +210,7 @@ table {
 }
 
 .table-scroll::-webkit-scrollbar-thumb {
-  background-color: #99b898;
+  background-color: var(--light-green);
   border-radius: 20px;
 }
 
@@ -221,7 +223,7 @@ tr {
 }
 
 tr:hover {
-  background-color: #ffffff08;
+  background-color: var(--white) 08;
 }
 
 th {
@@ -233,7 +235,7 @@ th {
 
 td {
   color: var(--light-green);
-  border-top: #43424246 1px solid;
+  border-top: var(--light-grey) 1px solid;
   padding: 1vw;
 }
 
@@ -290,7 +292,7 @@ td {
 }
 
 button {
-  background-color: #242424;
+  background-color: var(--darker-grey);
   border: var(--lightest-grey) solid 1px;
   color: var(--white);
   width: 3vw;

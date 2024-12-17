@@ -42,7 +42,7 @@ const props = defineProps({
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #1E1E1E;
+    color: var(--darker-grey);
     translate: 0 0 !important;
 }
 
@@ -74,7 +74,7 @@ const props = defineProps({
 .bg-card {
     margin: 4% auto;
     border: var(--lightest-grey) solid 1px;
-    background-color: #242424;
+    background-color: var(--darker-grey);
     border-radius: .5rem;
 }
 

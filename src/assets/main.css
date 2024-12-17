@@ -29,13 +29,13 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 768px) {
   body {
-    background-color: #1E1E1E !important;
+    background-color: var(--darker-grey) !important;
   }
 }
 
 @media (min-width: 768px) {
   body {
-    background: linear-gradient(45deg, #1E1E1E 20%, #292929 50%, #1E1E1E 80%);
+    background: linear-gradient(45deg, var(--darkest-grey) 20%, var(--dark-grey) 50%, var(--darkest-grey) 80%);
   }
 
 }

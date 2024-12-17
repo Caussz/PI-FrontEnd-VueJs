@@ -35,7 +35,7 @@ main {
 }
 
 .card {
-  background-color: #2c2c2c;
+  background-color: var(--light-grey);
   height: 4vw;
   border-radius: 10px 10px 0 0;
   display: flex;

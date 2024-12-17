@@ -75,7 +75,7 @@ const items = [
             <td colspan="7">
               <v-menu>
                 <template v-slot:activator="{ props }">
-                  <v-btn color="#99b898" variant="outlined" hover v-bind="props">
+                  <v-btn color="var(--light-green)" variant="outlined" hover v-bind="props">
                     Exportar
                   </v-btn>
                 </template>
@@ -132,8 +132,8 @@ table {
   margin-bottom: 3rem;
 
   & thead {
-    background-color: #2b2b2b;
-    border: #2b2b2b solid 2px;
+    background-color: var(--light-grey);
+    border: var(--light-grey) solid 2px;
 
     & tr > td {
       text-align: center;
@@ -147,7 +147,7 @@ table {
   & tbody > tr > td {
     padding: 0.2rem 0;
     text-align: center;
-    border: 2px solid #2b2b2b;
+    border: 2px solid var(--light-grey);
   }
 
   & tbody > tr > td:first-of-type {
@@ -157,7 +157,7 @@ table {
 
   & tbody > tr > td:first-of-type,
   tbody > tr > td:last-of-type {
-    color: #99b898;
+    color: var(--light-green);
   }
 
   & .absence-info td:first-of-type {
@@ -165,7 +165,7 @@ table {
   }
 
   & .absence-info td:last-of-type {
-    background-color: #2b2b2b;
+    background-color: var(--light-grey);
     padding: 0.6rem;
     color: white;
     text-align: start;
@@ -173,7 +173,7 @@ table {
 }
 
 h1 {
-  color: #99b898;
+  color: var(--light-green);
   margin: 3.5rem 0;
   font-weight: 500;
 }

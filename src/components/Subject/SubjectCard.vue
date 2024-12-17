@@ -41,7 +41,7 @@ const props = defineProps({
     width: 100%;
     margin: 2% 0;
     border: var(--lightest-grey) solid 1px;
-    background-color: #242424;
+    background-color: var(--darker-grey);
     padding: 1rem 0;
     border-radius: .5rem;
 }

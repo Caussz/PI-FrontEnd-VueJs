@@ -47,7 +47,7 @@ h1 {
     position: absolute;
     right: 0;
     display: flex;
-    color: #525252;
+    color: var(--light-grey);
     font-size: .8rem;
     align-items: center;
 }
@@ -60,6 +60,6 @@ h1 {
 }
 
 .arrow-container span {
-    color: #FFFFFF !important;
+    color: var(--white) !important;
 }
 </style>

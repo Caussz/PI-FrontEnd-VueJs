@@ -64,7 +64,6 @@ main {
   left: 0;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  background: #9b9b9b15;
   z-index: 1;
 }
 
@@ -74,7 +73,7 @@ main {
   align-items: center;
   justify-content: space-between;
   width: 35vw;
-  background-color: #212121;
+  background-color: var( --darker-grey);
   color: var(--white);
   padding: 2rem 2rem 4rem 2rem;
   border-radius: 2rem;
@@ -100,19 +99,19 @@ h1 {
 table {
   width: 30vw;
   border-collapse: collapse;
-  border: 1px solid #2d2d2d;
+  border: 1px solid var(--light-grey);
   text-align: center;
   padding: 4rem;
 
   & td,
   th {
-    border: 1px solid #2d2d2d;
+    border: 1px solid var(--light-grey);
     height: 2.5rem;
   }
 
   & thead {
-    border: 1px solid #2d2d2d;
-    background-color: #2d2d2d;
+    border: 1px solid var(--light-grey);
+    background-color: var(--light-grey);
     padding: 0;
 
     & th {
@@ -145,7 +144,7 @@ table {
   }
 
   & a {
-    color: #99b898;
+    color: var(--light-green);
   }
 }
 

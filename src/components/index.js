@@ -8,7 +8,6 @@ import MobileProgress from './Progress/Mobile/MobileProgress.vue';
 
 import DesktopLoginForm from '@/components/Form/Login/Desktop/DesktopLogin.vue';
 import DesktopHeader from '@/components/Header/Desktop/DesktopHeader.vue';
-import DeskTopPlace from '@/components/Place/Desktop/DesktopPlace.vue';
 import DesktopProgress from './Progress/Desktop/DesktopProgress.vue';
 import DefaultAside from './Aside/DefaultAside.vue';
 
@@ -26,6 +25,7 @@ import SelectYear from '@/components/Home/SelectYear.vue';
 import LoadingComponent from './Lazy/LoadingComponent.vue';
 import FormLogin from './Form/Login/FormLogin.vue';
 import ZyraImagesComponent from './Lazy/ZyraImagesComponent.vue';
+import ColorThemeComponent from './ColorTheme/ColorThemeComponent.vue';
 
 
 export {
@@ -43,7 +43,6 @@ export {
     MobileHeader,
     DesktopLoginForm,
     DesktopHeader,
-    DeskTopPlace,
     DefaultProgress,
     DesktopProgress,
     MobileProgress,
@@ -53,4 +52,5 @@ export {
     FormLogin,
     ZyraImagesComponent,
     DefaultAside,
+    ColorThemeComponent
 }
