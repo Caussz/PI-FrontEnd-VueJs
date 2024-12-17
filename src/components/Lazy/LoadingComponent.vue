@@ -16,16 +16,17 @@ const userStore = useUserStore();
 </template>
 
 <style scoped>
-main {
-    display: flex;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: #1E1E1E;
-    justify-content: center;
-    align-items: center;
-    animation: loadingAnim 1s backwards ease-in-out;
-    right: 100%;
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 11;
 }
 
 @keyframes loadingAnim{
