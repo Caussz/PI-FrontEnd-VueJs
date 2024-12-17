@@ -8,8 +8,7 @@
 </template>
 <style scoped>
 .modal {
-    background-color: #282828;
+    background-color: var(--dark-grey);
     position: absolute;
-    width: ;
 }
 </style>

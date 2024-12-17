@@ -54,7 +54,7 @@ function ShowModal() {
 </template>
 
 <style scoped>
-.title-container{
+.title-container {
   display: flex;
   justify-content: space-between;
   width: 86vw;
@@ -67,7 +67,7 @@ function ShowModal() {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--white);
 }
 
 .page-name {
@@ -98,17 +98,17 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 3% ;
-  color: #ffffff;
+  padding: 3%;
   position: fixed;
-  background-color: #1E1E1E;
+  background-color: var(--darker-grey);
   z-index: 10;
+  color: var(--white);
 }
 
 img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  border: #ffffff 1px solid;
+  border: var(--white) 1px solid;
 }
 </style>

@@ -34,24 +34,24 @@ const props = defineProps({
 }
 
 .container {
-    color: #99B898;
+    color: var(--light-green);
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100%;
     margin: 2% 0;
-    border: #505050 solid 1px;
-    background-color: #242424;
+    border: var(--lightest-grey) solid 1px;
+    background-color: var(--darker-grey);
     padding: 1rem 0;
     border-radius: .5rem;
 }
 
 .container p:nth-child(1) {
-    color: #FFFFFF;
+    color: var(--white);
 }
 
 .gradient-text {
-    background: -webkit-linear-gradient(0deg, #99B898, #445244);
+    background: -webkit-linear-gradient(0deg, var(--light-green), var(--dark-green));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

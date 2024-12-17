@@ -70,13 +70,13 @@ const informations = {
   margin: 1rem auto;
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: var(--white);
   font-weight: 500;
 }
 
 .field-information {
-  background-color: #282828;
-  border: 1px solid #716f6f;
+  background-color: var(--dark-grey);
+  border: 1px solid var(--lightest-grey);
   padding: 0.8rem;
   border-radius: 0.4rem;
 }
@@ -91,6 +91,6 @@ img {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  border: 2px solid #716f6f;
+  border: 2px solid var(--lightest-grey);
 }
 </style>

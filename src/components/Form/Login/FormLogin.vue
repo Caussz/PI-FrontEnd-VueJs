@@ -61,8 +61,8 @@ label {
 
 .input-container {
   width: 100% !important;
-  background-color: var(--input-back-color);
-  border: 1px solid var(--border-button-login-color);
+  background-color: var(--grey);
+  border: 1px solid var(--lightest-grey);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -70,17 +70,19 @@ label {
   padding: 5% 0;
   border-radius: 9px;
   margin-top: 1%;
+
+  & span {
+    height: 20px;
+    color: var(--lightest-grey);
+  }
 }
 .input-container:focus-within {
-  border: solid 1px #99b89873;
-}
-.input-container span {
-  height: 20px;
+  border: solid 1px var(--green);
 }
 
 input {
   background-color: transparent;
-  color: #99b89873;
+  color: var(--green);
   width: 85%;
 }
 
@@ -90,8 +92,8 @@ input:focus-visible {
 
 button {
   margin-top: 15%;
-  background-color: var(--button-login-color);
-  color: var(--text-butto-color);
+  background-color: var(--light-green);
+  color: var(--black);
   font-weight: 500;
   width: 100%;
   padding-block: 1rem;
@@ -112,7 +114,7 @@ h1 {
 
 h1,
 p {
-  color: var(--text-login-color);
+  color: var(--white);
 }
 
 @media (min-width: 768px) {

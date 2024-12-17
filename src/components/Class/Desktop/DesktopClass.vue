@@ -100,13 +100,13 @@ main {
 }
 
 .card {
-  border: #505050 1px solid;
+  border: var(--lightest-grey) 1px solid;
   width: 32vw;
   display: flex;
   align-items: center;
   padding: 2vw;
   border-radius: 20px;
-  background-color: #282828;
+  background-color: var(--dark-grey);
 }
 
 img {

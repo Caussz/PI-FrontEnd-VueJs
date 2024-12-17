@@ -9,7 +9,7 @@ const { user } = useUserStore();
 			<h2>Cadastro</h2>
 			<p>
 				Para concluir o cadastro, é necessário inserir seu número de telefone no campo
-				indicado e clicar em <span style="color: #99b898">"Enviar"</span>.
+				indicado e clicar em <span style="color: var(--light-green)">"Enviar"</span>.
 			</p>
 			<div class="input-container">
 				<p>Telefone</p>
@@ -34,7 +34,7 @@ const { user } = useUserStore();
 
 .modal {
 	position: absolute;
-	background-color: #282828;
+	background-color: var(--dark-grey);
 	width: 65vw;
 	padding: 10vw 8vw 7vw 8vw;
 	display: flex;
@@ -47,29 +47,29 @@ const { user } = useUserStore();
 }
 
 h2 {
-	color: #99b898;
+	color: var(--light-green);
 	font-weight: 500;
 }
 
 p {
-	color: white;
+	color: var(--white);
 	font-weight: 500;
 	font-size: 0.76rem;
 }
 
 input {
-	background-color: #3a3a3ab5;
-	border: #99b898 1px solid;
+	background-color: var(--grey);
+	border: var(--light-green) 1px solid;
 	outline: none;
 	width: 60vw;
 	padding: 2vh 2.3vw;
 	border-radius: 5px;
-	color: #716f6f;
+	color: var(--lightest-grey);
 }
 
 button {
-	background-color: #99b898;
-	color: #000000;
+	background-color: var(--light-green);
+	color: var(--black);
 	font-weight: 500;
 	width: 100%;
 	padding-block: 1rem;
