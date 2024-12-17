@@ -1,5 +1,7 @@
-<script setup></script>
+<script setup>
+import { MobileProgress } from '@/components';
+</script>
 <template>
-    mobile
+    <MobileProgress/>
 </template>
 <style scoped></style>

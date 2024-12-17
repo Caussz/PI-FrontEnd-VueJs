@@ -1,12 +1,11 @@
 <script setup>
-import { onMounted } from "vue";
+import { onMounted } from 'vue'
 
-import { useUserStore } from "@/stores";
+import { useUserStore } from '@/stores'
 
-const userStore = useUserStore();
+const userStore = useUserStore()
 
-onMounted(() => (userStore.user));
-
+onMounted(() => userStore.user)
 </script>
 <template>
   <main>
@@ -47,10 +46,8 @@ onMounted(() => (userStore.user));
 
 <style scoped>
 main {
-  background-image: url(https://i.ibb.co/dMvLSTz/Splash-screen-design-2.png);
   background-repeat: round;
   background-size: cover;
-  background-color: #1e1e1e;
   width: 100vw;
   max-width: 100vw;
   height: 100vh;
@@ -59,7 +56,7 @@ main {
   align-items: center;
   justify-content: center;
   padding-left: 10vw;
-  margin-left: -25vw;
+  margin-left: -22vw;
 }
 
 .container {
@@ -69,12 +66,12 @@ main {
 }
 
 .info div {
-  background-color: #282828;
+  display: flex;
+  background-color: var(--dark-grey);
   border-radius: 7px;
-  width: 22vw;
-  color: white;
+  color: var(--white);
   padding: 0.7vw 1.2vw;
-  border: 1px #505050 solid;
+  border: 1px var(--lightest-grey) solid;
   font-weight: 400;
   margin: 0.2vw;
 }
@@ -85,13 +82,13 @@ input:focus {
 
 .info {
   margin: 1vw;
-  color: white;
+  color: var(--white);
   font-size: 0.8em;
   font-weight: 600;
 }
 
 .user-image {
-  color: white;
+  color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,8 +100,15 @@ input:focus {
   }
 
   & .image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
     & img {
       width: 8vw;
+      height: 8vw;
+      border-radius: 100%;
     }
   }
 

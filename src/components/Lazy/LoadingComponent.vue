@@ -28,4 +28,32 @@ const userStore = useUserStore();
   -webkit-backdrop-filter: blur(5px);
   z-index: 11;
 }
+
+@keyframes loadingAnim{
+    0%,25%{
+        right: 0;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+span {
+    color: var(--light-green);
+    rotate:270deg;
+    font-family: "Kodchasan", sans-serif;
+    font-size: 6rem;
+    font-weight: 400;
+}
+
+span::before, span::after{
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+}
+
+span::before{
+    margin-top: -2rem;
+}
 </style>

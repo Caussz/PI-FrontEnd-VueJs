@@ -28,7 +28,7 @@ const { user } = useUserStore();
 
 .modal {
 	position: absolute;
-	background-color: #282828;
+	background-color: var(--dark-grey);
 	width: 65vw;
 	padding: 10vw 8vw 7vw 8vw;
 	display: flex;
@@ -41,13 +41,13 @@ const { user } = useUserStore();
 }
 
 .icon {
-	background: linear-gradient(180deg, #445244 0%, #99b898 100%);
+	background: linear-gradient(180deg, var(--dark-green) 0%, var(--light-green) 100%);
 	padding: 4vw 5vw;
 	border-radius: 50%;
 }
 
 p {
-	color: white;
+	color: var(--white);
 	font-weight: 500;
 	font-size: 0.9rem;
 	display: flex;
@@ -55,8 +55,8 @@ p {
 }
 
 button {
-	background-color: #99b898;
-	color: #000000;
+	background-color: var(--light-green);
+	color: var(--black);
 	font-weight: 500;
 	width: 100%;
 	padding-block: 1rem;

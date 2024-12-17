@@ -96,12 +96,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: 3vw;
-  margin: 5vw 0;
 }
 
 .card {
-  border: #505050 1px solid;
-  background-color: #282828;
+  border: var(--lightest-grey) 1px solid;
+  background-color: var(--dark-grey);
   width: 90vw;
   display: flex;
   align-items: center;

@@ -1,5 +1,5 @@
 <script setup>
-import { CameraOutline } from '@/components/icons';
+import { CameraOutline } from "@/components/icons";
 import { useUserStore } from "@/stores";
 
 const { user } = useUserStore();
@@ -13,6 +13,8 @@ const informations = {
   Status: "Ativo",
   Entrada: 2023,
 };
+
+console.log(user);
 </script>
 
 <template>
@@ -34,31 +36,19 @@ const informations = {
   <span class="info-container">
     <p>Matrícula</p>
     <div class="field-information">
-      <p>{{ informations.Matrícula }}</p>
+      <p>{{ user.enrollment }}</p>
     </div>
   </span>
   <span class="info-container">
     <p>Curso</p>
     <div class="field-information">
-      <p>{{ informations.Curso }}</p>
-    </div>
-  </span>
-  <span class="info-container">
-    <p>Nível</p>
-    <div class="field-information">
-      <p>{{ informations.Nível }}</p>
+      <p>{{ user.course }}</p>
     </div>
   </span>
   <span class="info-container">
     <p>Status</p>
     <div class="field-information">
       <p>{{ informations.Status }}</p>
-    </div>
-  </span>
-  <span class="info-container">
-    <p>Entrada</p>
-    <div class="field-information">
-      <p>{{ informations.Entrada }}</p>
     </div>
   </span>
 </template>
@@ -70,13 +60,13 @@ const informations = {
   margin: 1rem auto;
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: var(--white);
   font-weight: 500;
 }
 
 .field-information {
-  background-color: #282828;
-  border: 1px solid #716f6f;
+  background-color: var(--dark-grey);
+  border: 1px solid var(--lightest-grey);
   padding: 0.8rem;
   border-radius: 0.4rem;
 }
@@ -91,6 +81,6 @@ img {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  border: 2px solid #716f6f;
+  border: 2px solid var(--lightest-grey);
 }
 </style>

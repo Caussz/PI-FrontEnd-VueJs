@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { ref } from "vue";
+import { ColorThemeComponent } from "@/components";
 
 defineProps(["Show", "showAside", "transition", "ShowModal"]);
 import {
@@ -13,7 +13,12 @@ import {
   Logout,
   AccountOutline,
   Certificate,
+  Reload,
 } from "@/components/icons";
+
+function RefreshPage(){
+  window.location.reload()
+}
 </script>
 
 <template>
@@ -58,6 +63,11 @@ import {
       </RouterLink>
     </div>
     <div class="aside-bottom">
+      <ColorThemeComponent />
+      <div @click="RefreshPage">
+        <Reload />
+        <p>Atualizar</p>
+      </div>
       <RouterLink @click="Show" to="/login">
         <Logout size="20" />
         <p>Sair</p>
@@ -113,7 +123,7 @@ import {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #242424;
+  background-color: var(--darker-grey);
   padding: 0 0 0 5vw;
   z-index: 10;
   top: 0;
@@ -126,8 +136,9 @@ img {
 }
 
 a,
-.navigation div {
-  color: white;
+.navigation div,
+.aside-bottom div {
+  color: var(--white);
   display: flex;
   gap: 1vw;
   padding: 1vh 2vw;
@@ -135,21 +146,21 @@ a,
 }
 
 .navigation {
-  color: white;
+  color: var(--white);
 
   & .router-link-exact-active {
     width: 100%;
-    border-right: white 3px solid;
+    border-right: var(--white) 3px solid;
   }
 
   & a:hover,
   div:hover {
-    background-color: #ffffff08;
+    background-color: var(--white) 08;
   }
 }
 
 .aside-bottom {
-  color: white;
+  color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

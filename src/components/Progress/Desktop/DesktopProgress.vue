@@ -13,20 +13,20 @@ div {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 20vw;
+  margin: 2vw 20vw;
   height: auto;
 
   span {
-    color: #99b898;
+    color: var(--light-green);
   }
 }
 
 h1 {
-  color: #99b898;
+  color: var(--light-green);
 }
 
 a {
-  border: 1px #505050 solid;
+  border: 1px var(--lightest-grey) solid;
   width: 2rem;
   height: 2rem;
   border-radius: 20px;
@@ -38,7 +38,7 @@ a {
   top: 4%;
 
   & span {
-    color: white;
+    color: var(--white);
     display: flex;
   }
 }
