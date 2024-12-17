@@ -21,7 +21,7 @@ a {
   top: 4%;
 
   & span {
-    color: white;
+    color: var(--white);
     display: flex;
   }
 }

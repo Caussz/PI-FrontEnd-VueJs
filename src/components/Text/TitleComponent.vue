@@ -40,7 +40,7 @@ const props = defineProps({
 
 h1 {
     font-size: 1rem;
-    color: var(--var(--white));
+    color: var(--white);
 }
 
 .more-container {

@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { ref } from "vue";
+import { ColorThemeComponent } from "@/components";
 
 defineProps(["Show", "showAside", "transition", "ShowModal"]);
 import {
@@ -56,6 +56,7 @@ import {
         <AccountGroup size="20" />
         <p>Turma</p>
       </RouterLink>
+      <ColorThemeComponent/>
     </div>
     <div class="aside-bottom">
       <RouterLink @click="Show" to="/login">
@@ -127,7 +128,7 @@ img {
 
 a,
 .navigation div {
-  color: white;
+  color: var(--white);
   display: flex;
   gap: 1vw;
   padding: 1vh 2vw;
@@ -135,11 +136,11 @@ a,
 }
 
 .navigation {
-  color: white;
+  color: var(--white);
 
   & .router-link-exact-active {
     width: 100%;
-    border-right: white 3px solid;
+    border-right: var(--white) 3px solid;
   }
 
   & a:hover,
@@ -149,7 +150,7 @@ a,
 }
 
 .aside-bottom {
-  color: white;
+  color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

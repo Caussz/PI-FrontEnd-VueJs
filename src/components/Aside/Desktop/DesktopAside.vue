@@ -1,8 +1,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { SelectYear } from "@/components";
+import { SelectYear, ColorThemeComponent } from "@/components";
 import { ref } from "vue";
-
 
 const modalYear = ref(false);
 
@@ -65,6 +64,7 @@ import {
       </RouterLink>
     </div>
     <div class="aside-bottom">
+      <ColorThemeComponent />
       <RouterLink to="/login">
         <Logout size="20" />
         <p>Sair</p>
@@ -82,6 +82,7 @@ aside {
   justify-content: space-between;
   background-color: var(--darker-grey);
   position: fixed;
+  border-right: 1px solid var(--light-grey);
 }
 
 img {
@@ -91,7 +92,7 @@ img {
 
 a,
 .navigation div {
-  color: white;
+  color: var(--white);
   display: flex;
   gap: 1vw;
   padding: 0.5vw 2vw;
@@ -99,24 +100,24 @@ a,
 }
 
 .navigation {
-  color: white;
+  color: var(--white);
 
   & a {
     display: flex;
     gap: 1vw;
     padding: 0.5vw 2vw;
     align-items: center;
-    color: white;
+    color: var(--white);
   }
 
   & .router-link-exact-active {
     width: 100%;
-    border-right: white 3px solid;
+    border-right: var(--white) 3px solid;
   }
 
   & a:hover,
   div:hover {
-    background-color: var(--white)08;
+    background-color: var(--white) 08;
   }
 }
 
