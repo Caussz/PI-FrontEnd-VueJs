@@ -1,12 +1,11 @@
 <script setup>
-import { onMounted } from "vue";
+import { onMounted } from 'vue'
 
-import { useUserStore } from "@/stores";
+import { useUserStore } from '@/stores'
 
-const userStore = useUserStore();
+const userStore = useUserStore()
 
-onMounted(() => (userStore.user));
-
+onMounted(() => userStore.user)
 </script>
 <template>
   <main>
@@ -57,7 +56,7 @@ main {
   align-items: center;
   justify-content: center;
   padding-left: 10vw;
-  margin-left: -25vw;
+  margin-left: -22vw;
 }
 
 .container {
@@ -67,9 +66,9 @@ main {
 }
 
 .info div {
+  display: flex;
   background-color: var(--dark-grey);
   border-radius: 7px;
-  width: 22vw;
   color: var(--white);
   padding: 0.7vw 1.2vw;
   border: 1px var(--lightest-grey) solid;
@@ -101,8 +100,15 @@ input:focus {
   }
 
   & .image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
     & img {
       width: 8vw;
+      height: 8vw;
+      border-radius: 100%;
     }
   }
 
