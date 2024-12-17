@@ -110,13 +110,6 @@ table {
 }
 
 .inside-table {
-  border: solid 2px #2c2c2c;
-  border-top: 0;
-  color: #728971;
-  border-collapse: collapse;
-}
-
-.inside-table {
   border: solid 2px var(--light-grey);
   border-top: 0;
   border-collapse: collapse;
