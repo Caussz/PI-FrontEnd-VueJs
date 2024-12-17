@@ -7,14 +7,11 @@ const userStore = useUserStore();
 <template>
   <div class="loading" v-if="userStore.loading">
     <v-progress-circular
-      :model-value="value"
-      :rotate="360"
-      :size="100"
-      :width="15"
-      color="#99B898"
-    >
-      <template v-slot:default> {{ value }} % </template>
-    </v-progress-circular>
+      color="primary"
+      indeterminate
+      :size="80"
+      :width="4"
+    ></v-progress-circular>
   </div>
 </template>
 
