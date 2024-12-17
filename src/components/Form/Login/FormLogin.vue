@@ -2,10 +2,8 @@
 import { ref, reactive } from "vue";
 import { useRouter } from "vue-router";
 import { useUserStore, useStudentStore } from "@/stores";
-import PopUpLoginComponent from "@/components/PopUp/PopUpLoginComponent.vue";
-import PopUpFinishComponent from "@/components/PopUp/PopUpFinishComponent.vue";
-import EyeOffOutline from "vue-material-design-icons/EyeOffOutline.vue";
-import EyeOutline from "vue-material-design-icons/EyeOutline.vue";
+
+import { EyeOffOutline, EyeOutline } from '@/components/icons';
 
 const userStore = useUserStore();
 const studentStore = useStudentStore();
@@ -21,8 +19,12 @@ const showPass = ref(false);
 
 const entrar = async () => {
   studentStore.setStudent(user.name, user.pass)
+  console.log('teste');
   await userStore.login(user.name, user.pass)
-  router.push({ name: "home" });
+  console.log('teste2');
+  router.push('/');
+  console.log('teste3');
+
 };
 </script>
 
@@ -48,8 +50,6 @@ const entrar = async () => {
     <p class="terms-text">
       Li e concordo com os termos da <a>politica de privacidade</a>
     </p>
-    <PopUpLoginComponent v-if="userStore.user.loggedStatus == 1" />
-    <PopUpFinishComponent v-if="userStore.user.loggedStatus == 2" />
   </form>
 </template>
 

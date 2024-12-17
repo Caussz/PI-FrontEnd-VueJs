@@ -49,9 +49,9 @@ const router = createRouter({
           component: () => import('../views/CommuniqueView.vue')
         }
       ],
-      // meta: {
-      //   requiresAuth: true
-      // }
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/login',

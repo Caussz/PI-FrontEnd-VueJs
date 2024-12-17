@@ -2,12 +2,12 @@ import axios from 'axios';
 
 class GradeService {
 
-  async getGradesInfo(user, pass, index) {
+  async getGradesInfo(username, password, index) {
     try {
-      const { data } = await axios.get('http://localhost:3000/api/sigaa/notas', {
+      const { data } = await axios.get('https://backend-pi-e6a356cd1d5a.herokuapp.com/api/grades/', {
         params: {
-          user,
-          pass,
+          username,
+          password,
           index
         }
       });

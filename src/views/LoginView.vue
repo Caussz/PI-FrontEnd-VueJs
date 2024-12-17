@@ -1,8 +1,5 @@
 <script setup>
-import {LoadingComponent, DefaultLoginForm} from '@/components';
-import { useScreen } from '@/composables';
-
-const { isMobile } = useScreen()
+import { DefaultLoginForm } from '@/components';
 </script>
 
 <template>

@@ -1,18 +1,15 @@
 import axios from 'axios';
-import { useUserStore } from '@/stores';
 
 class AuthService {
-  async getUserInfo(user, pass) {
+  async getUserInfo(username, password) {
 
-    const userStore = useUserStore();
     try {
-      const { data } = await axios.get('http://localhost:3000/api/sigaa/student', {
+      const { data } = await axios.get('https://backend-pi-e6a356cd1d5a.herokuapp.com/api/students/', {
         params: {
-          user,
-          pass
+          username,
+          password
         }
       });
-      userStore.user.loggedStatus = 1;
       return data;
     } catch (error) {
       console.error('Erro ao obter as informacoes:', error);
@@ -20,12 +17,12 @@ class AuthService {
     }
   }
 
-  async getGradesInfo(user, pass, index) {
+  async getGradesInfo(username, password, index) {
     try {
-      const { data } = await axios.get('http://localhost:3000/api/sigaa/notas', {
+      const { data } = await axios.get('https://backend-pi-e6a356cd1d5a.herokuapp.com/api/grades/', {
         params: {
-          user,
-          pass,
+          username,
+          password,
           index
         }
       });
