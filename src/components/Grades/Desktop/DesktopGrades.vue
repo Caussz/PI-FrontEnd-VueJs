@@ -14,47 +14,47 @@
       <th>Recuperação</th>
     </tr>
     <tr>
-      <th>
+      <th class="father-inside-table">
         <table class="inside-table">
           <tr>
-            <th class="inside-tr">AV1</th>
-            <th class="inside-tr">AV2</th>
-            <th class="inside-tr">AV3</th>
+            <th>AV1</th>
+            <th>AV2</th>
+            <th>AV3</th>
           </tr>
           <tr>
-            <th class="inside-tr">8</th>
-            <th class="inside-tr">8</th>
-            <th class="inside-tr">8</th>
+            <th>8</th>
+            <th>8</th>
+            <th>8</th>
           </tr>
         </table>
       </th>
       <th></th>
-      <th>
+      <th class="father-inside-table">
         <table class="inside-table">
           <tr>
-            <th class="inside-tr">AV1</th>
-            <th class="inside-tr">AV2</th>
-            <th class="inside-tr">AV3</th>
+            <th>AV1</th>
+            <th>AV2</th>
+            <th>AV3</th>
           </tr>
           <tr>
-            <th class="inside-tr">8</th>
-            <th class="inside-tr">8</th>
-            <th class="inside-tr">8</th>
+            <th>8</th>
+            <th>8</th>
+            <th>8</th>
           </tr>
         </table>
       </th>
       <th></th>
-      <th>
+      <th class="father-inside-table">
         <table class="inside-table">
           <tr>
-            <th class="inside-tr">AV1</th>
-            <th class="inside-tr">AV2</th>
-            <th class="inside-tr">AV3</th>
+            <th>AV1</th>
+            <th>AV2</th>
+            <th>AV3</th>
           </tr>
           <tr>
-            <th class="inside-tr">8</th>
-            <th class="inside-tr">8</th>
-            <th class="inside-tr">8</th>
+            <th>8</th>
+            <th>8</th>
+            <th>8</th>
           </tr>
         </table>
       </th>
@@ -88,12 +88,19 @@ table {
   border-collapse: collapse;
 }
 
+.father-inside-table {
+  padding: 0;
+  border: 0;
+  border-collapse: collapse;
+}
+
 .inside-table {
   border: solid 2px #2c2c2c;
+  border-top: 0;
   color: #728971;
   border-collapse: collapse;
 
-  & .inside-tr {
+  & th {
     border: none;
     font-weight: 400;
   }
