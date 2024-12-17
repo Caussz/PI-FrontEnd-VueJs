@@ -102,7 +102,7 @@ header {
   position: fixed;
   background-color: var(--darker-grey);
   z-index: 10;
-  color: var(--var(--white));
+  color: var(--white);
 }
 
 img {

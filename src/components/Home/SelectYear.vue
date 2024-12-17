@@ -76,6 +76,7 @@ main {
   background-color: var( --darker-grey);
   color: var(--white);
   padding: 2rem 2rem 4rem 2rem;
+  border: 1px solid var(--light-grey);
   border-radius: 2rem;
 }
 
@@ -139,7 +140,7 @@ table {
       display: flex;
       align-items: center;
       top: 25%;
-      color: var(--var(--white));
+      color: var(--white);
     }
   }
 

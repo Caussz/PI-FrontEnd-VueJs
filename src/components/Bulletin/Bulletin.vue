@@ -105,7 +105,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: var(--white);
   font-size: 0.8rem;
 }
 
@@ -167,7 +167,7 @@ table {
   & .absence-info td:last-of-type {
     background-color: var(--light-grey);
     padding: 0.6rem;
-    color: white;
+    color: var(--white);
     text-align: start;
   }
 }

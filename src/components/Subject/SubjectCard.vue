@@ -47,7 +47,7 @@ const props = defineProps({
 }
 
 .container p:nth-child(1) {
-    color: var(--var(--white));
+    color: var(--white);
 }
 
 .gradient-text {

@@ -1,10 +1,8 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { NotebookOutline } from "@/components/icons";
-import { ColorThemeComponent } from "@/components";
 import { useUserStore } from "@/stores";
 
-const modalYear = ref(false);
 const userStore = useUserStore();
 
 onMounted(() => userStore.user);
@@ -183,7 +181,6 @@ onMounted(() => userStore.user);
       </table>
     </div>
     <div>
-      <ColorThemeComponent />
     <div class="profile-container">
       <img :src="userStore.user.photo" :alt="userStore.user.name" />
       <h2>{{ userStore.user.name }}</h2>
@@ -245,9 +242,9 @@ td {
   gap: 1vw;
   color: var(--light-green);
 
-  & p {
-    color: var(--white);
-  }
+}
+p, h2 {
+  color: var(--white);
 }
 
 .content-container {

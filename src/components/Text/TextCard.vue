@@ -79,7 +79,7 @@ const props = defineProps({
 }
 
 .container p:nth-child(1) {
-    color: var(--var(--white));
+    color: var(--white);
     font-size: 1rem;
     font-weight: 500;
 }
