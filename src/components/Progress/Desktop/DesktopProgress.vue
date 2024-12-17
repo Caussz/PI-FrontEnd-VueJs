@@ -13,7 +13,7 @@ div {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 20vw;
+  margin: 2vw 20vw;
   height: auto;
 
   span {

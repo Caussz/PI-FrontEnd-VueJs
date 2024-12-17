@@ -1,5 +1,5 @@
 <script setup>
-import { MobileGrades, DesktopGrades } from "@/components";
+import { MobileProgress, DesktopGrades } from "@/components";
 import { useScreen } from "@/composables";
 
 const { isMobile } = useScreen();
@@ -7,7 +7,7 @@ const { isMobile } = useScreen();
 
 <template>
   <section>
-    <MobileGrades v-if="isMobile" />
+    <MobileProgress v-if="isMobile" />
     <DesktopGrades v-else />
   </section>
 </template>

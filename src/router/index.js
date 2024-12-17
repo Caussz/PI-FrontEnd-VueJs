@@ -30,7 +30,7 @@ const router = createRouter({
         },
         {
           path: '/grades',
-          name: 'grades',
+          name: 'Notas',
           component: () => import('../views/GradesView.vue')
         },
         {
