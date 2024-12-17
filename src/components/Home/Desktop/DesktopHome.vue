@@ -70,7 +70,7 @@ const subjects = [
       <div class="profile-container">
         <img :src="userStore.user.photo" :alt="userStore.user.name" />
         <h2>{{ userStore.user.name }}</h2>
-        <p>{{ userStore.user.matricula }}</p>
+        <p>{{ userStore.user.enrollment }}</p>
       </div>
     </div>
   </div>

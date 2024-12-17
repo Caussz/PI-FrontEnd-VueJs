@@ -33,7 +33,7 @@ function ShowModal() {
       <img :src="user.photo" :alt="user.name" />
       <div class="user-info">
         <p>{{ user.name }}</p>
-        <p>{{ user.matricula }}</p>
+        <p>{{ user.enrollment }}</p>
       </div>
     </div>
     <div class="title-container" v-else>
